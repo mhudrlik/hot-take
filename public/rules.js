@@ -8,7 +8,7 @@ window.HotTakeRules = {
       <ol>
         <li>One person starts a game and becomes the <strong>host</strong>. Everyone else joins on their phone
             by scanning the QR code or typing the 4-letter room code. You need 3 to 12 players.</li>
-        <li>The host picks a deck and the settings, then starts the game.</li>
+        <li>The host picks one or more decks and the settings, then starts the game.</li>
         <li>Everyone is dealt ${handSize} answer cards.</li>
       </ol>
       <h3>Each round</h3>

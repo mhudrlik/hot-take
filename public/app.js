@@ -329,18 +329,41 @@
       </div>`;
   }
 
+  const num = (n) => n.toLocaleString('en-US');
+
   function deckPicker() {
-    const current = state.decks.find((d) => d.id === state.settings.deckId) || state.decks[0];
-    const control = isHost()
-      ? `<select id="deck" data-change="deck" aria-label="Deck"${busyAttr()}>
-           ${state.decks.map((d) => `<option value="${esc(d.id)}"${d.id === current.id ? ' selected' : ''}>${esc(d.name)}</option>`).join('')}
-         </select>`
-      : `<div class="setting"><span>Deck</span><output>${esc(current.name)}</output></div>`;
+    const selected = new Set(state.settings.deckIds);
+    const chosen = state.decks.filter((d) => selected.has(d.id));
+    const { prompts, answers } = state.deckTotals;
+    const summary = `
+      <p class="muted small">${plural(chosen.length, 'deck')} · ${num(prompts)} prompts · ${num(answers)} answers
+        ${chosen.length > 1 ? '<br>Cards that appear in more than one deck are only counted once.' : ''}</p>`;
+
+    if (!isHost()) {
+      return `
+        <div class="deck-row">
+          <span class="eyebrow">Decks</span>
+          <div class="deck-chips">${chosen.map((d) => `<span class="pill">${esc(d.name)}</span>`).join('')}</div>
+          ${summary}
+        </div>`;
+    }
+
+    const options = state.decks.map((d) => {
+      const on = selected.has(d.id);
+      return `
+        <button class="deck-opt${on ? ' on' : ''}" role="checkbox" aria-checked="${on}" data-act="deck" data-id="${esc(d.id)}"${busyAttr()}>
+          <span class="box" aria-hidden="true">${on ? '✓' : ''}</span>
+          <span class="deck-info">
+            <span class="deck-name">${esc(d.name)}</span>
+            <span class="deck-desc">${d.description ? `${esc(d.description)} · ` : ''}${num(d.answers)} answers</span>
+          </span>
+        </button>`;
+    }).join('');
     return `
       <div class="deck-row">
-        ${isHost() ? '<label for="deck" class="eyebrow">Deck</label>' : ''}
-        ${control}
-        <p class="muted small">${current.description ? `${esc(current.description)} · ` : ''}${current.prompts} prompts, ${current.answers} answers</p>
+        <span class="eyebrow">Decks · pick one or more</span>
+        ${summary}
+        <div class="deck-list" role="group" aria-label="Decks">${options}</div>
       </div>`;
   }
 
@@ -704,6 +727,17 @@
       case 'start':
         act('start');
         break;
+      case 'deck': {
+        const ids = new Set(state.settings.deckIds);
+        if (ids.has(id) && ids.size === 1) {
+          toast('Keep at least one deck selected.');
+          break;
+        }
+        if (ids.has(id)) ids.delete(id);
+        else ids.add(id);
+        act('settings', { settings: { deckIds: [...ids] } });
+        break;
+      }
       case 'card': {
         const pick = state.prompt.pick;
         const at = ui.cards.indexOf(id);
@@ -746,10 +780,6 @@
         }
         break;
     }
-  });
-
-  document.addEventListener('change', (e) => {
-    if (e.target.dataset.change === 'deck') act('settings', { settings: { deckId: e.target.value } });
   });
 
   document.addEventListener('keydown', (e) => {

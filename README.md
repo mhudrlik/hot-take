@@ -164,7 +164,7 @@ You can use either while cards are being played, as long as you haven't played y
     <td width="33%"><img src="docs/screenshots/watching.png" alt="Non-judge view while the judge decides"></td>
   </tr>
   <tr>
-    <td align="center"><b>Settings.</b> Deck, points to win (3–20), cards in hand (5–12).</td>
+    <td align="center"><b>Settings.</b> One or more decks, points to win (3–20), cards in hand (5–12).</td>
     <td align="center"><b>Menu.</b> Scores, invite QR, rules, remove players, skip a round.</td>
     <td align="center"><b>Everyone</b> follows along on their own phone.</td>
   </tr>
@@ -172,7 +172,7 @@ You can use either while cards are being played, as long as you haven't played y
 
 The first player to create the room is the **host**. The host can:
 
-- choose the **deck** and **settings** (only between games),
+- choose one or more **decks** and the **settings** (only between games),
 - **start** the game once 3 players are connected, and **play again** after it ends,
 - **remove** a player (the × next to their name),
 - **skip a round**, for when the judge's phone dies. Nobody scores and played cards go back to their owners.
@@ -195,7 +195,11 @@ If the host leaves, host passes to the next player.
 ## Decks
 
 Twelve decks ship in `data/decks/`. **Family Edition is listed first and is the default**, so every new
-room starts kid-safe; the host can switch decks in the lobby.
+room starts kid-safe.
+
+**The host can tick any number of decks** in the lobby, and the game shuffles them into one pile. That's handy
+for a big group or a long game. A card that appears in more than one selected deck is only dealt once, and the
+lobby shows the combined total so you can see how many cards you've got. At least one deck must stay selected.
 
 | # | Deck | Prompts | Answers | Notes |
 |---:|---|---:|---:|---|
@@ -355,11 +359,11 @@ hot-take/
 ```bash
 npm install
 npm run dev    # restarts the server when files change
-npm test       # 26 tests: rules engine, decks, sockets, invite endpoints
+npm test       # 30 tests: rules engine, decks, sockets, invite endpoints
 ```
 
 The tests cover:
-- **rules engine:** judge rotation, scoring and game end, pick-2 validation, no duplicate cards anywhere, mulligan and trade, judge or host leaving mid-round, reshuffling when the deck runs out, deck selection;
+- **rules engine:** judge rotation, scoring and game end, pick-2 validation, no duplicate cards anywhere, mulligan and trade, judge or host leaving mid-round, reshuffling when the deck runs out, choosing and combining decks;
 - **socket integration test:** three simulated phones play a round, drop, reconnect to the same seat, and time out;
 - **endpoints:** the QR code and invite URLs, including behind a reverse proxy;
 - **shipped decks:** every deck in `data/decks/` is valid and large enough for a full game.

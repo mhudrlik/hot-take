@@ -302,12 +302,55 @@ test('host picks the deck in the lobby; game deals from it', () => {
   const host = room.join('H');
   const guest = room.join('G');
   room.join('X');
-  assert.equal(room.settings.deckId, 'one');
-  assert.throws(() => room.updateSettings(guest.id, { deckId: 'two' }), /host/);
-  assert.throws(() => room.updateSettings(host.id, { deckId: 'nope' }), /does not exist/);
-  room.updateSettings(host.id, { deckId: 'two' });
+  assert.deepEqual(room.settings.deckIds, ['one']);
+  assert.throws(() => room.updateSettings(guest.id, { deckIds: ['two'] }), /host/);
+  assert.throws(() => room.updateSettings(host.id, { deckIds: ['nope'] }), /does not exist/);
+  room.updateSettings(host.id, { deckIds: ['two'] });
   room.start(host.id);
   assert.ok(room.players.every((p) => p.hand.every((c) => c.text.startsWith('two '))));
-  assert.throws(() => room.updateSettings(host.id, { deckId: 'one' }), /between games/);
+  assert.throws(() => room.updateSettings(host.id, { deckIds: ['one'] }), /between games/);
   assert.deepEqual(room.viewFor(guest.id).decks.map((d) => d.id), ['one', 'two']);
+});
+
+test('several decks can be combined into one pile', () => {
+  const room = new Room('TEST', [makeDeck({ id: 'one' }), makeDeck({ id: 'two' }), makeDeck({ id: 'three' })]);
+  const host = room.join('H');
+  room.join('G');
+  room.join('X');
+  // Ticked out of order; stored in lobby order.
+  room.updateSettings(host.id, { deckIds: ['three', 'one'] });
+  assert.deepEqual(room.settings.deckIds, ['one', 'three']);
+  // makeDeck() gives every deck the same prompt text, so prompts collapse; answers are distinct.
+  assert.deepEqual(room.viewFor(host.id).deckTotals, { prompts: 20, answers: 400 });
+  room.start(host.id);
+  const prefixes = new Set(room.players.flatMap((p) => p.hand.map((c) => c.text.split(' ')[0])));
+  assert.ok([...prefixes].every((x) => x === 'one' || x === 'three'));
+});
+
+test('combining overlapping decks never deals the same card twice', () => {
+  const a = normalizeDeck({ prompts: [{ text: 'Shared ____' }, { text: 'Only A ____' }], answers: ['Same', 'A1', 'A2'] }, 'a');
+  const b = normalizeDeck({ prompts: [{ text: 'shared  ____' }], answers: ['same', 'B1'] }, 'b');
+  const room = new Room('TEST', [a, b]);
+  const host = room.join('H');
+  room.updateSettings(host.id, { deckIds: ['a', 'b'] });
+  assert.deepEqual(room.deck.prompts.map((p) => p.text), ['Shared ____', 'Only A ____']);
+  assert.deepEqual(room.deck.answers.map((x) => x.text), ['Same', 'A1', 'A2', 'B1']);
+});
+
+test('at least one deck must stay selected', () => {
+  const { room, host } = setup(3);
+  assert.throws(() => room.updateSettings(host.id, { deckIds: [] }), /at least one deck/);
+  assert.throws(() => room.updateSettings(host.id, { deckIds: 'test' }), /at least one deck/);
+  assert.deepEqual(room.settings.deckIds, ['test']);
+});
+
+test('the too-small-deck error counts the combined pile', () => {
+  const room = new Room('TEST', [makeDeck({ id: 'x', answers: 12 }), makeDeck({ id: 'y', answers: 12 })]);
+  const host = room.join('H');
+  room.join('G');
+  room.join('X');
+  room.updateSettings(host.id, { deckIds: ['x', 'y'] });
+  assert.throws(() => room.start(host.id), /The 2 selected decks have 24 answer cards.*need 27/);
+  room.updateSettings(host.id, { handSize: 5 });
+  room.start(host.id); // 3 x (5 + 2) = 21 <= 24
 });

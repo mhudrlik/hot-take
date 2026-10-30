@@ -94,7 +94,7 @@ function cleanName(raw) {
  * Every mutating method throws GameError on an illegal move; callers broadcast state afterwards.
  */
 class Room {
-  /** `decks` is an array of normalizeDeck() results; the first one is the default. */
+  /** `decks` is an array of normalizeDeck() results; the first one is selected by default. */
   constructor(code, decks) {
     if (!decks.length) throw new Error('A room needs at least one deck');
     this.code = code;
@@ -104,7 +104,7 @@ class Room {
     this.phase = 'lobby';
     this.settings = {
       ...Object.fromEntries(Object.entries(SETTING_LIMITS).map(([k, v]) => [k, v.default])),
-      deckId: decks[0].id,
+      deckIds: [decks[0].id],
     };
     this.round = 0;
     this.judgeId = null;
@@ -122,8 +122,25 @@ class Room {
 
   // ---- lookups -----------------------------------------------------------
 
+  /**
+   * The selected decks merged into one pile. A card that appears in more than one deck (the
+   * "Everything" deck overlaps the others, for example) is only included once.
+   */
   get deck() {
-    return this.decks.find((d) => d.id === this.settings.deckId) || this.decks[0];
+    const key = this.settings.deckIds.join('|');
+    if (this.combined?.key !== key) {
+      const chosen = this.decks.filter((d) => this.settings.deckIds.includes(d.id));
+      const seenPrompts = new Set();
+      const seenAnswers = new Set();
+      const once = (seen, text) => !seen.has(normalizeText(text)) && seen.add(normalizeText(text));
+      this.combined = {
+        key,
+        name: chosen.length === 1 ? `The ${chosen[0].name} deck has` : `The ${chosen.length} selected decks have`,
+        prompts: chosen.flatMap((d) => d.prompts).filter((p) => once(seenPrompts, p.text)),
+        answers: chosen.flatMap((d) => d.answers).filter((a) => once(seenAnswers, a.text)),
+      };
+    }
+    return this.combined;
   }
 
   player(id) {
@@ -246,9 +263,12 @@ class Room {
       if (!Number.isFinite(value)) continue;
       this.settings[key] = Math.min(limits.max, Math.max(limits.min, value));
     }
-    if (changes.deckId !== undefined) {
-      if (!this.decks.some((d) => d.id === changes.deckId)) throw new GameError('That deck does not exist.');
-      this.settings.deckId = changes.deckId;
+    if (changes.deckIds !== undefined) {
+      const ids = Array.isArray(changes.deckIds) ? changes.deckIds : [];
+      if (ids.length === 0) throw new GameError('Pick at least one deck.');
+      if (ids.some((id) => !this.decks.some((d) => d.id === id))) throw new GameError('That deck does not exist.');
+      // Keep the lobby's deck order regardless of the order they were ticked in.
+      this.settings.deckIds = this.decks.map((d) => d.id).filter((id) => ids.includes(id));
     }
     this.touch();
   }
@@ -262,7 +282,7 @@ class Room {
     const needed = this.players.length * (this.settings.handSize + 2);
     if (this.deck.answers.length < needed) {
       throw new GameError(
-        `The ${this.deck.name} deck has ${this.deck.answers.length} answer cards; `
+        `${this.deck.name} ${this.deck.answers.length} answer cards; `
         + `${this.players.length} players with ${this.settings.handSize}-card hands need ${needed}.`,
       );
     }
@@ -470,6 +490,8 @@ class Room {
       decks: this.decks.map((d) => ({
         id: d.id, name: d.name, description: d.description, prompts: d.prompts.length, answers: d.answers.length,
       })),
+      // Totals for the selected decks combined, after removing cards they share.
+      deckTotals: { prompts: this.deck.prompts.length, answers: this.deck.answers.length },
       hostId: this.hostId,
       judgeId: this.judgeId,
       players: this.players.map((p) => ({

@@ -37,7 +37,7 @@ test('three phones play a full round over sockets', async (t) => {
   assert.ok(cy.ok);
 
   assert.match((await phones[1].call('action', { type: 'start' })).error, /host/);
-  assert.ok((await phones[0].call('action', { type: 'settings', settings: { deckId: '02-main' } })).ok);
+  assert.ok((await phones[0].call('action', { type: 'settings', settings: { deckIds: ['02-main'] } })).ok);
   assert.ok((await phones[0].call('action', { type: 'start' })).ok);
   await settle();
 
