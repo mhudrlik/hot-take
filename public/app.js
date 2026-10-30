@@ -194,22 +194,21 @@
 
   // ---- shell pieces ------------------------------------------------------
 
+  // Menu on the left, logo centered, room code and rules on the right.
   function appbar() {
-    const info = `<button class="icon-btn yellow" data-act="rules" aria-label="How to play" title="How to play">${icons.info}</button>`;
-    if (!state) {
-      return `<header class="appbar"><span class="logo">Hot<span>Take</span></span><span class="spacer"></span>${info}</header>`;
-    }
-    const count = state.players.length;
+    const menu = state ? `<button class="icon-btn" data-act="menu" aria-label="Menu: players and scores">${icons.menu}</button>` : '';
+    const room = state
+      ? `<button class="room-chip" data-act="invite" aria-label="Room ${esc(state.code)}: invite players" title="Invite players">
+           <span>${esc(state.code)}</span></button>`
+      : '';
     return `
       <header class="appbar">
+        <div class="bar-left">${menu}</div>
         <span class="logo">Hot<span>Take</span></span>
-        <button class="icon-btn" data-act="menu" aria-label="Menu">${icons.menu}</button>
-        <span class="spacer"></span>
-        <button class="players-chip" data-act="menu" aria-label="${plural(count, 'player')}" title="${plural(count, 'player')}">
-          ${icons.users}<span class="count">${count}</span></button>
-        <button class="room-chip" data-act="invite" aria-label="Room ${esc(state.code)}: invite players" title="Invite players">
-          ${icons.link}<span>${esc(state.code)}</span></button>
-        ${info}
+        <div class="bar-right">
+          ${room}
+          <button class="icon-btn yellow" data-act="rules" aria-label="How to play" title="How to play">${icons.info}</button>
+        </div>
       </header>`;
   }
 
@@ -560,8 +559,11 @@
          <p class="muted small">Use this if the judge's phone died. Played cards go back to their owners.</p>`
       : '';
     return sheet(`Room ${state.code}`, `
-      ${playerList({ allowKick: isHost() })}
-      <p class="muted small">First to ${state.settings.pointsToWin} wins.</p>
+      <div>
+        <div class="panel-head"><span class="eyebrow">Players · ${state.players.length}</span>
+          <span class="muted small">First to ${state.settings.pointsToWin} wins</span></div>
+        ${playerList({ allowKick: isHost() })}
+      </div>
       <button class="btn dark" data-act="invite">${icons.link} Invite players (QR code)</button>
       <button class="btn dark" data-act="rules">${icons.info} How to play</button>
       ${hostTools}

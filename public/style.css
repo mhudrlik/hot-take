@@ -62,47 +62,41 @@ h2 { font-size: 1.2rem; }
 .shell { height: 100%; display: flex; flex-direction: column; }
 
 .appbar {
-  flex: none; display: flex; align-items: center; gap: 8px;
+  /* Equal side columns keep the logo centered; a side only grows past half if its buttons need it. */
+  flex: none; display: grid; grid-template-columns: 1fr auto 1fr; align-items: center; gap: 8px;
   background: var(--bar);
   padding: calc(var(--safe-top) + 10px) var(--gutter) 10px;
 }
+.bar-left, .bar-right { display: flex; align-items: center; gap: 8px; }
+.bar-right { justify-content: flex-end; }
 .logo {
   font-size: 1.5rem; font-weight: 900; letter-spacing: -.04em; line-height: 1; white-space: nowrap;
-  transform: rotate(-2deg); margin-right: 2px;
+  transform: rotate(-2deg);
 }
 .logo span { color: var(--yellow); }
 
-/* Player count and room code sit in the top bar between the menu and the rules button. */
-.players-chip, .room-chip {
-  height: 46px; flex: none; display: inline-flex; align-items: center; gap: 6px;
+.room-chip {
+  height: 46px; flex: none; display: inline-flex; align-items: center;
   background: var(--panel-2); color: var(--text); border: 2px solid #2b2c35; border-radius: 13px;
-  padding: 0 10px; font: inherit; font-weight: 800; cursor: pointer;
+  padding: 0 10px; font: inherit; font-weight: 800; letter-spacing: .06em; cursor: pointer;
 }
-.players-chip .ico, .room-chip .ico { width: 18px; height: 18px; color: var(--muted); }
-.room-chip { letter-spacing: .12em; }
-.room-chip span { margin-right: -.12em; } /* balance trailing letter-spacing */
-.count {
-  display: inline-grid; place-items: center; min-width: 26px; height: 26px; padding: 0 6px;
-  border-radius: 99px; background: var(--yellow); color: var(--yellow-ink); font-size: .9rem; font-weight: 900;
-  border: 2px solid var(--ink);
-}
+.room-chip span { margin-right: -.06em; } /* balance trailing letter-spacing */
 
-/* Smaller phones: tighten the bar so everything stays on one line, even for wide codes like WWWW. */
+/* Smaller phones: shrink the bar so the logo stays centered, even for wide codes like WWWW. */
 @media (max-width: 419px) {
   .appbar { gap: 6px; padding-left: 12px; padding-right: 12px; }
+  .bar-right { gap: 6px; }
   .logo { font-size: 1.3rem; }
-  .appbar .icon-btn, .players-chip, .room-chip { height: 42px; }
+  .appbar .icon-btn, .room-chip { height: 42px; }
   .appbar .icon-btn { width: 42px; border-radius: 12px; }
-  .players-chip, .room-chip { padding: 0 8px; gap: 4px; }
-  .players-chip .ico { width: 16px; height: 16px; }
-  .room-chip { letter-spacing: .06em; }
-  .room-chip span { margin-right: -.06em; }
-  .room-chip .ico { display: none; }
+  .room-chip { padding: 0 8px; letter-spacing: .04em; }
+  .room-chip span { margin-right: -.04em; }
 }
-/* Very narrow: the player-count chip already opens the menu, so the ☰ button can go. */
-@media (max-width: 359px) {
+@media (max-width: 374px) {
   .logo { font-size: 1.15rem; }
-  .appbar .icon-btn[data-act=menu] { display: none; }
+  .appbar .icon-btn, .room-chip { height: 38px; }
+  .appbar .icon-btn { width: 38px; border-radius: 11px; }
+  .room-chip { padding: 0 6px; font-size: .9rem; }
 }
 
 .stage { flex: 1; overflow-y: auto; -webkit-overflow-scrolling: touch; }

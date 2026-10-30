@@ -36,7 +36,7 @@ window.HotTakeRules = {
         <li>Every answer card in a deck is unique, so two players can never play the same answer in a round.</li>
         <li>If your phone drops, reopen the link within 2 minutes to get your seat and score back.
             The round won't wait for you.</li>
-        <li>If the judge disappears, the host can skip the round from the menu (tap the player count in the top bar). Played cards go back
+        <li>If the judge disappears, the host can skip the round from the ☰ menu in the top-left corner. Played cards go back
             to their owners.</li>
       </ul>
       <h3>Credits</h3>

@@ -170,9 +170,8 @@ You can use either while cards are being played, as long as you haven't played y
   </tr>
 </table>
 
-The top bar is always visible during a game. Tap the **player count** (or ☰) for the scores and menu, the
-**room code** to show the invite QR code for late joiners, and the yellow **(i)** for the rules. On very narrow
-phones the ☰ button is hidden, because the player count opens the same menu.
+The top bar is always visible during a game: **☰** on the left opens the players, scores and menu; the
+**room code** on the right shows the invite QR code for late joiners; and the yellow **(i)** opens the rules.
 
 The first player to create the room is the **host**. The host can:
 
