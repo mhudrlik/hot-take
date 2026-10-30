@@ -1,0 +1,470 @@
+{
+  "name": "Super Box",
+  "description": "Expansion. Adults only.",
+  "prompts": [
+    {
+      "text": "____?!? In this economy?",
+      "pick": 1
+    },
+    {
+      "text": "¡Arriba!\nGet ready for Taco Bell Cantina. We've got all your Taco Bell favorites, plus ____!",
+      "pick": 1
+    },
+    {
+      "text": "\"If you want a picture of the future, imagine ____... forever.\"\n-George Orwell",
+      "pick": 1
+    },
+    {
+      "text": "A true Man of Science must be willing to experiment with anything, even ____.",
+      "pick": 1
+    },
+    {
+      "text": "According to JD Vance, ____ isn't racist, it's \"just common sense.\"",
+      "pick": 1
+    },
+    {
+      "text": "According to RFK Jr., ____ causes autism.",
+      "pick": 1
+    },
+    {
+      "text": "Alright students, listen up. If you want an easy A, you're in the wrong place. There's only one way to pass this class: ____.",
+      "pick": 1
+    },
+    {
+      "text": "Amazon MGM has officially announced that the new James Bond will be ____.",
+      "pick": 1
+    },
+    {
+      "text": "As a reminder, for the safety of our guests, Disney does not permit ____ anywhere inside our parks.",
+      "pick": 1
+    },
+    {
+      "text": "Bienvenue and welcome to Paris, the City of ____!",
+      "pick": 1
+    },
+    {
+      "text": "Bro. Chicks dig ____.",
+      "pick": 1
+    },
+    {
+      "text": "Check out my Spotify playlist! It's called \"Songs for ____.\"",
+      "pick": 1
+    },
+    {
+      "text": "Do NOT stay at this Airbnb. The location is beautiful, but the house is full of ____.",
+      "pick": 1
+    },
+    {
+      "text": "Doctor, you should know:\nI have a family history of ____.",
+      "pick": 1
+    },
+    {
+      "text": "Every morning, I look in the mirror and say: \"I am beautiful. I am powerful. I deserve ____.\"",
+      "pick": 1
+    },
+    {
+      "text": "Everything's bigger in Texas, especially ____!",
+      "pick": 1
+    },
+    {
+      "text": "Good news! Your Dasher Nicolas is approaching with ____.",
+      "pick": 1
+    },
+    {
+      "text": "Has anyone read your palm before? The curve of your life line is very unusual. Hmmm… I see ____ in your future.",
+      "pick": 1
+    },
+    {
+      "text": "Hey Christians, if the Bible is the Word of God, how come it has nothing to say about ____?",
+      "pick": 1
+    },
+    {
+      "text": "Hi, Mr. Balloon Man? Can you make me a balloon in the shape of ____?",
+      "pick": 1
+    },
+    {
+      "text": "I think I'm really onto something! ChatGPT says my ideas about ____ are \"way ahead of their time.\"",
+      "pick": 1
+    },
+    {
+      "text": "I'm sorry, I don't have money for the pizza. Can I offer you ____?",
+      "pick": 1
+    },
+    {
+      "text": "In couples therapy, playing the \"blame game\" is never productive. Let's shift the conversation back to ____.",
+      "pick": 1
+    },
+    {
+      "text": "It's no use, Superman. Even your super-strength is no match for ____.",
+      "pick": 1
+    },
+    {
+      "text": "It's your special day, buddy, and if you want ____ at your birthday party, you got it.",
+      "pick": 1
+    },
+    {
+      "text": "Making friends as an adult isn't that hard. Put down your phone and go find people in your town who also like ____.",
+      "pick": 1
+    },
+    {
+      "text": "Mom, how many times have I told you? I'm too busy to get a job. I'm doing very important work on ____.",
+      "pick": 1
+    },
+    {
+      "text": "Moms of Reddit, I need your help! What's an age-appropriate way to explain ____ to my 5-year-old?",
+      "pick": 1
+    },
+    {
+      "text": "My confidence has skyrocketed ever since I started ____-maxxing!",
+      "pick": 1
+    },
+    {
+      "text": "My fellow Americans, I'm ____ and I'm running for president.",
+      "pick": 1
+    },
+    {
+      "text": "On your left are the freshman dorms, and on your right is the new Campus Center for ____.",
+      "pick": 1
+    },
+    {
+      "text": "Polyamory is working out great for me! I've got two boyfriends: one for ____, and one for ____.",
+      "pick": 2
+    },
+    {
+      "text": "PornHub has revealed that this year's most common search was \"stepsister ____.\"",
+      "pick": 1
+    },
+    {
+      "text": "Sir, 9-1-1 is only for emergencies. ____ is not an emergency.",
+      "pick": 1
+    },
+    {
+      "text": "Sweetheart, I love your drawings. They're so fun and colorful! But… why did you put ____ in all of them?",
+      "pick": 1
+    },
+    {
+      "text": "Symptoms of depression include feelings of hopelessness and a loss of interest in ____.",
+      "pick": 1
+    },
+    {
+      "text": "Thank you for your email! I am currently out of the office due to ____. I will respond as soon an I can.",
+      "pick": 1
+    },
+    {
+      "text": "The secret to ____ is ____.",
+      "pick": 2
+    },
+    {
+      "text": "The Supreme Court has ruled that Alabama may continue to perform executions using ____.",
+      "pick": 1
+    },
+    {
+      "text": "They've finally done it. They invented Pumpkin Spice ____.",
+      "pick": 1
+    },
+    {
+      "text": "To ensure America's military supremacy in the 21st century, the Pentagon has poured billions into research on ____.",
+      "pick": 1
+    },
+    {
+      "text": "Top 5 signs you're autistic:\n1) You know WAY too much about ____.",
+      "pick": 1
+    },
+    {
+      "text": "Try the new Applebee's Ultimate Trio! One appetizer, one entree, and ____ for just $14.99!",
+      "pick": 1
+    },
+    {
+      "text": "What a win for representation! They finally added an emoji for ____.",
+      "pick": 1
+    },
+    {
+      "text": "What can I say, I'm a slut for ____.",
+      "pick": 1
+    },
+    {
+      "text": "What sucks if you're sober but awesome if you're high?",
+      "pick": 1
+    },
+    {
+      "text": "What the fuck, Steve? Why does your dick smell like ____?",
+      "pick": 1
+    },
+    {
+      "text": "What you want, my American friend? Girls? Boys? ____? I hook you up.",
+      "pick": 1
+    },
+    {
+      "text": "What's a vibe?",
+      "pick": 1
+    },
+    {
+      "text": "What's the wettest?",
+      "pick": 1
+    },
+    {
+      "text": "Who's ready for girls' night? We'll start with margaritas at Pepe's head to the club, and end with ____!",
+      "pick": 1
+    },
+    {
+      "text": "You think YOUR landlord is bad? MY landlord is ____.",
+      "pick": 1
+    },
+    {
+      "text": "Young man, your great-grandpa didn't fight the Nazis so that you could waste your life on ____!",
+      "pick": 1
+    },
+    {
+      "text": "Your son is a pleasure to have in class. But I find that he's easily distracted by ____.",
+      "pick": 1
+    }
+  ],
+  "answers": [
+    "53-year-old pussy.",
+    "A better card than this one.",
+    "A bicep with a tattoo that says \"bicep.\"",
+    "A big pile of rocks.",
+    "A bisexual walrus.",
+    "A combination of genetic and environmental factors.",
+    "A Diddy party.",
+    "A different guy named Jeffrey Epstein.",
+    "A fucking $25 cocktail.",
+    "A full-sized Avatar sex doll.",
+    "A good spankin'.",
+    "A healthy long-term relationship.",
+    "A joke.",
+    "A Make-A-Wish kid who just wants a handjob.",
+    "A Patriot missile.",
+    "A performance art piece where I shit my pants.",
+    "A positive pregnancy test.",
+    "A prolapsed anus.",
+    "A puppy and a duckling who are best friends.",
+    "A secretly gay Republican senator.",
+    "A sexy woman with sexy antlers.",
+    "A special theater for seeing Avatar movies where you're allowed to smoke weed and masturbate.",
+    "A Spotify playlist called \"Songs To Smother Your Grandpa To.\"",
+    "A suspicious quantity of baby oil.",
+    "A viral TikTok trend where teens slap the shit out of their grandmas.",
+    "A white power book club.",
+    "A woman who can crush an apple with her vagina.",
+    "Advanced AI features that will 10x your productivity!",
+    "Aftercare.",
+    "AI-generated SpongeBob porn.",
+    "All the dumb sluts on \"Love Island.\"",
+    "American citizenship.",
+    "An actual douche bag.",
+    "An actual dumpster full of actual cum.",
+    "An asshole.",
+    "An old Polish woman.",
+    "An SUV full of ICE agents.",
+    "Anal hygiene.",
+    "Anne Frank.",
+    "Another fucking Avatar movie.",
+    "Another Sun Chip.",
+    "Anyone who looks Mexican.",
+    "Apologizing to the Native Americans for stealing their land and massacring their people.",
+    "Assassinating the CEO of UnitedHealthcare.",
+    "Baba ghanoush.",
+    "Back pain.",
+    "Bassoon lessons.",
+    "Becoming an alcoholic at age 11.",
+    "Being a lesbian in Saudi Arabia.",
+    "Being offended by the game \"Hungry Hungry Hippos\" because my brother is a fat piece of shit.",
+    "Being replaced by AI.",
+    "Being too drunk for make penis work.",
+    "Being too fat to ride a roller coaster but not fat enough to get a show on TLC.",
+    "Being too poor for therapy.",
+    "Blowing the ice cream man for a free Choco Taco.",
+    "Butts.",
+    "Calling in a bomb threat.",
+    "Caring.",
+    "ChatGPT in a sexy robot body.",
+    "Chicken vindaloo.",
+    "Chinese.",
+    "Chipotle mayo.",
+    "Christians.",
+    "Coming out to Mom and Dad as a squirter.",
+    "Committing suicide to avoid exposure to any more Jurassic World movies.",
+    "Comparing vaginas with Mom.",
+    "Contemplating my own mortality.",
+    "Cool lasers.",
+    "Cutting off a man's penis without his permission.",
+    "Dead Charlie Kirk.",
+    "Deep-cleaning my pussy with Tide® Power PODS®.",
+    "Deporting our way to a free and prosperous America.",
+    "Dirt.",
+    "DMing teen girls.",
+    "Dog.",
+    "Dousing my family in gasoline, just as a prank.",
+    "Drowning.",
+    "Drugs.",
+    "Early-onset Alzheimer's.",
+    "Eating babies.",
+    "Eating my wife's pussy.",
+    "Either Trinidad or Tobago, I forget which one.",
+    "Everything that's wrong with this country.",
+    "Evil.",
+    "Explaining to the kids that the divorce is all their fault.",
+    "Falling down forty flights of stairs over the course of an hour.",
+    "Finding a woman who's into bald losers with no social skills.",
+    "Fish.",
+    "Following women home from the subway.",
+    "Foreigners.",
+    "Four margaritas.",
+    "Freezing my eggs.",
+    "French people and all their French bullshit.",
+    "Fuckboys.",
+    "Fucking my wife's sister while my wife is in the hospital.",
+    "Galloping through the McDonald's drive-thru on horseback.",
+    "Gargathoth, the Toilet Demon of Cincinnati.",
+    "Gas station boner pills.",
+    "Getting a swastika tattoo.",
+    "Getting abducted by ICE.",
+    "Getting banned from Instagram.",
+    "Getting chased by a little naked guy with a spear. But, just to clarify, he's white.",
+    "Getting cummed on by five different species.",
+    "Getting groomed.",
+    "Getting railed by a German backpacker in a hostel bunk.",
+    "Getting rid of a body.",
+    "Getting sued by Disney.",
+    "Giving me one hundred dollars.",
+    "Giving myself road head.",
+    "Glowing in the dark.",
+    "Going back in time to fuck myself.",
+    "Going to a second therapist to talk about fucking my first therapist, and then fucking the second therapist.",
+    "Good old-fashioned regular porn with pterodactyls and bleeding gorillas.",
+    "Gooning.",
+    "Head.",
+    "Hellen Keller.",
+    "Heroin withdrawal.",
+    "Hiding in the closet while my family is murdered.",
+    "Hooters.",
+    "Hormone replacement therapy.",
+    "Horses and their distracting penises.",
+    "Hosting a reality TV show called \"Who Wants to Have Sex With Me?\"",
+    "How slutty Mom looks in that blouse.",
+    "Infanticide.",
+    "Jake Paul.",
+    "Jeremy.",
+    "Kidnapping the President of Venezuela.",
+    "Kissing my phone and asking ChatGPT if she likes it.",
+    "Kyle–you know, Kyle from youth group! The one with all the lice!",
+    "Le pizza.",
+    "Leg-lengthening surgery.",
+    "Life in prison.",
+    "Like a lot of unpaid parking tickets.",
+    "Literally anything.",
+    "Livestreaming my suicide.",
+    "Looksmaxxing.",
+    "Losing.",
+    "Making love to my dead wife in the Metaverse.",
+    "Mild disappointment.",
+    "Mommy's hard cock.",
+    "Mormons and their whole deal.",
+    "Multiple sclerosis.",
+    "My big, hairy balls.",
+    "My dad fucking your dad.",
+    "My dog fucking your dog.",
+    "My pet python, \"Cop Killer.\"",
+    "My repeated sexual advances.",
+    "My stupid fucking kids.",
+    "My wife's hairy asshole.",
+    "Nausea, heartburn, indigestion, upset stomach, and diarrhea.",
+    "Nice, lumpy boy turds.",
+    "Nipple clamps.",
+    "No Jews.",
+    "No penis.",
+    "Offering my GrubHub driver an extra $50 to kill me.",
+    "Other boys.",
+    "Our signature blend of herbs and spices.",
+    "Over-the-clothes hand stuff.",
+    "Ozempic.",
+    "Patriotic music and eagle screeches.",
+    "Pegging my landlord in exchange for free utilities.",
+    "Photos of my hairy vagina.",
+    "Pickles.",
+    "Pissing on my father's grave.",
+    "Posting softcore porn on LinkedIn.",
+    "Pretending to breastfeed my baby so I can show off my amazing boobs.",
+    "Pretending to know stuff about wine.",
+    "Probable cause.",
+    "Protein.",
+    "Proudly announcing that I have a small penis.",
+    "Putting my whole mouth around the doorknob.",
+    "Quoting \"Mein Kampf.\"",
+    "Removing the tag on the mattress that's illegal to remove.",
+    "RFK Jr.",
+    "Runaway inflation.",
+    "Seed oils.",
+    "Self-righteous political stand-up comedy with no jokes.",
+    "Selling my parents' house to Chinese real estate speculators.",
+    "Several baked potatoes.",
+    "Sex with bull.",
+    "Sharia law.",
+    "Shaving Mom's bush.",
+    "Shooting protesters in the back.",
+    "Show business, baby!",
+    "Showing a picture of my penis to ChatGPT and asking for feedback.",
+    "Showing hole for Palestine.",
+    "Sissy hypno porn.",
+    "Slop.",
+    "Society, man.",
+    "Some appetizers to start things off.",
+    "Special granola for lesbians.",
+    "Stuff.",
+    "Sydney Sweeney.",
+    "Taking a moment to enjoy this incredible sunset.",
+    "Taking a shit in the Home Depot display toilet.",
+    "Taking any kind of responsibility whatsoever.",
+    "Taking molly for the first time.",
+    "Targeted advertisements.",
+    "Tear gas and rubber bullets.",
+    "Ted Cruz's tight shaved pussy.",
+    "Thawing a Smucker's Uncrustable® between my ass cheeks.",
+    "The ability to talk to animals but they don't talk back.",
+    "The babysitter.",
+    "The black hole that destroyed my home planet.",
+    "The crabs.",
+    "The fucking useless Democratic Party.",
+    "The good news that Jesus Christ died for our sins and He loves you.",
+    "The Holocaust.",
+    "The New England Patriots.",
+    "The silence of God.",
+    "The Soviet Union.",
+    "The Sunglass Hut.",
+    "The veterinarian who does my abortions.",
+    "The witch that stole my penis.",
+    "The wrong hole.",
+    "These gay-ass hummingbirds.",
+    "This very moment, right now, and it's gone.",
+    "Throwing a used tampon at the President.",
+    "TikTok medical advice.",
+    "Tiny Republican penis-men sneaking into my home at night and fucking my eardrums.",
+    "Tongs.",
+    "Tradwives.",
+    "Trains.",
+    "Transvestigating.",
+    "Trying not to cum.",
+    "Trying to pass off Fanta as urine in a drug test.",
+    "Type 2 diabetes.",
+    "Unwanted children.",
+    "Up to 3% cash back.",
+    "Very friendly naked men.",
+    "Watercolors of the English countryside.",
+    "Whatever's going on with Britney Spears these days.",
+    "White flight.",
+    "White genocide.",
+    "White people problems.",
+    "Who gives a shit?",
+    "Wiping my bro's poopy with Dude Wipes.",
+    "Women and children.",
+    "Wondering if I'm a little bit autistic.",
+    "Words.",
+    "Writing a lo-fi indie folk album in a remote cabin.",
+    "Writing a self-help book about how to write self-help books.",
+    "Your daughter.",
+    "Your mom's OnlyFans.",
+    "Zionism.",
+    "Zohran Mamdani."
+  ]
+}

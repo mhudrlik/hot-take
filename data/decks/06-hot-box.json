@@ -1,0 +1,428 @@
+{
+  "name": "Hot Box",
+  "description": "The 2023 expansion. Adults only.",
+  "prompts": [
+    {
+      "text": "According to a new report from the Pentagon, the greatest threat to national security is ____.",
+      "pick": 1
+    },
+    {
+      "text": "Alright! Answered two whole emails. Time to reward myself with ____.",
+      "pick": 1
+    },
+    {
+      "text": "At our dojo, you'll learn that your greatest weapon is not a punch or a kick. It's ____.",
+      "pick": 1
+    },
+    {
+      "text": "Boomers love ____.",
+      "pick": 1
+    },
+    {
+      "text": "BREAKING NEWS: Elon Musk has acquired ____.",
+      "pick": 1
+    },
+    {
+      "text": "Cecilia! I'm down on my knees.\nI'm begging you please for ____.",
+      "pick": 1
+    },
+    {
+      "text": "Congress has approved a $10 billion aid package to provide Ukraine with ____.",
+      "pick": 1
+    },
+    {
+      "text": "Dear Diary:\nI met the cutest boy today. He has gorgeous blue eyes, and he loves ____.",
+      "pick": 1
+    },
+    {
+      "text": "God damnit! The wife's complainin' about ____ again.",
+      "pick": 1
+    },
+    {
+      "text": "Hello, I'm Mark Zuckerberg. Welcome to The Metaverse, where you can experience ____ like never before.",
+      "pick": 1
+    },
+    {
+      "text": "Hello, is this the front desk? Yeah, uh, I'm having a little trouble with ____ in my room.",
+      "pick": 1
+    },
+    {
+      "text": "Hi, my name is Alex, and I'm an addict. It's not the pills or the booze for me. It's ____.",
+      "pick": 1
+    },
+    {
+      "text": "Hoooo LAWD!\nAll this ____ makin' me sweat like a pig!",
+      "pick": 1
+    },
+    {
+      "text": "I don't care what a guy looks like. As long as he's ____, I'll fuck him.",
+      "pick": 1
+    },
+    {
+      "text": "I swear, ladies, all the good men are either gay, taken, or ____.",
+      "pick": 1
+    },
+    {
+      "text": "I'd like to thank my husband, the cast and crew... but most importantly, I couldn't have done it without ____!",
+      "pick": 1
+    },
+    {
+      "text": "I'm afraid your college application needs some work. \"____\" is not an extracurricular activity.",
+      "pick": 1
+    },
+    {
+      "text": "I'm Kaylee, and welcome to my YouTube channel, \"Mama Knows Best.\" Follow me for more tips on ____!",
+      "pick": 1
+    },
+    {
+      "text": "If you follow my system, you'll be able to sleep with anyone you want. I call it \"The ____ Method.\"",
+      "pick": 1
+    },
+    {
+      "text": "In Japanese culture, ____ is considered very disrespectful.",
+      "pick": 1
+    },
+    {
+      "text": "Kids grow up so fast! One day they're learning to ride a bike, the next thing you know they're ____.",
+      "pick": 1
+    },
+    {
+      "text": "Ladies, if he doesn't like ____, dump his ass!",
+      "pick": 1
+    },
+    {
+      "text": "Little Dylan is battling Leukemia. To lift his spirits, the Make-A-Wish® Foundation surprised him with ____.",
+      "pick": 1
+    },
+    {
+      "text": "My love language is ____.",
+      "pick": 1
+    },
+    {
+      "text": "My morning routine?\nProtein shake.\nLift. Cold Shower.\n____.",
+      "pick": 1
+    },
+    {
+      "text": "My wife and I saw you across the bar, and we love your vibe. Would you be interested in ____?",
+      "pick": 1
+    },
+    {
+      "text": "Nah man, I don't fuck with ____.",
+      "pick": 1
+    },
+    {
+      "text": "Oh no, Joe Biden's talking about ____ again.",
+      "pick": 1
+    },
+    {
+      "text": "Okay, so...\nis it a red flag if your date just talks about ____ the whole time?",
+      "pick": 1
+    },
+    {
+      "text": "Please, please support my friend Katie's GoFundMe. She really needs money for ____.",
+      "pick": 1
+    },
+    {
+      "text": "Rest in peace, Grandma. Every time I see ____, I'll think of you.",
+      "pick": 1
+    },
+    {
+      "text": "So beautiful! Watch as this little boy with new cochlear implants hears ____ for the first time.",
+      "pick": 1
+    },
+    {
+      "text": "Stop mom-shaming me! There's nothing wrong with posting a pic of my kids enjoying ____.",
+      "pick": 1
+    },
+    {
+      "text": "Subscribe to my OnlyFans for daily nudes and pictures of ____.",
+      "pick": 1
+    },
+    {
+      "text": "Thanks for listening. If you have any more questions, my email is Dave@____.com.",
+      "pick": 1
+    },
+    {
+      "text": "Uncle Steve, this is a funeral. This is not the time for ____.",
+      "pick": 1
+    },
+    {
+      "text": "Welcome to Roscoe's House of Chicken 'N ____!",
+      "pick": 1
+    },
+    {
+      "text": "Welcome to the WORLD'S SPOOKIEST Haunted House! We've got THRILLS! We've got CHILLS! We've got ____!",
+      "pick": 1
+    },
+    {
+      "text": "What's actually slang for anal?",
+      "pick": 1
+    },
+    {
+      "text": "What's better naked?",
+      "pick": 1
+    }
+  ],
+  "answers": [
+    "\"Weird Al\" Yankovic.",
+    "$200,000 of student loan debt.",
+    "157 open Chrome tabs.",
+    "A 7-dimensional pie that bakes itself and then never existed.",
+    "A bottle of lube with a picture of my dad on it.",
+    "A cat named \"Penis.\"",
+    "A detective that sits in the car honking the horn and screaming until the murderer shows up.",
+    "A groundbreaking new kind of discrimination.",
+    "A grown man.",
+    "A guitar solo so mind-blowing it reunites your divorced parents.",
+    "A KNIFE!!!",
+    "A master's degree in being a fucking loser.",
+    "A passive-aggressive frog.",
+    "A rough, terse blowjob from Ernest Hemingway.",
+    "A salad that's just croutons.",
+    "A seven-hour black-and-white film about the collapse of a farming collective in post-communist Hungary.",
+    "A sincere apology.",
+    "A text message that just says \"ok.\"",
+    "A toddler named \"Brench.\"",
+    "A total lack of accountability.",
+    "A turd slowly emerging from my belly button.",
+    "A white-trash genie trapped in an Arizona® iced tea can.",
+    "A woman in STEM.",
+    "Accepting that I'm a 6, at best.",
+    "Accidentally calling the teacher \"mom\" during sex.",
+    "Accidentally shaking a man's balls instead of his hand.",
+    "ACTING!",
+    "Actually reading the Bible.",
+    "Admitting defeat.",
+    "An anal-sex-themed roller coaster.",
+    "An ice cream truck that's too fast for children to catch.",
+    "An x-ray of a Buzz Lightyear doll stuck in a man's ass.",
+    "Another failed marriage.",
+    "Ass-flavored LaCroix®.",
+    "Assisted suicide.",
+    "Baba Vanga, the blind Bulgarian mystic.",
+    "Balloons.",
+    "Basic bitches.",
+    "Begging for cock.",
+    "Being an absolute girlboss.",
+    "Being falsely accused of murder.",
+    "Being Latino.",
+    "Big fancy bullshit.",
+    "Big labia.",
+    "Black Santa.",
+    "Body shaming.",
+    "Breaking my man's big cock in half and sucking out the sweet pulp.",
+    "Brown Gatorade that makes you worse at sports.",
+    "Canadian Prime Minister Justin Trudeau.",
+    "Carbon monoxide.",
+    "Carefully guiding a coffee straw down my man's urethra.",
+    "Chanting \"USA! USA!\"",
+    "Charging a vibrator at Starbucks.",
+    "Christian hip-hop.",
+    "Chunks.",
+    "Cigarettes.",
+    "Clicking \"Yes, I would like to receive promotional emails.\"",
+    "Comparing dicks with Dad.",
+    "Competitive shitting.",
+    "Correctly using a semicolon.",
+    "Counting all my plates every night to make sure no one stole any of my plates.",
+    "Crippling economic sanctions.",
+    "Crucifying a rodeo clown.",
+    "Dad's golf buddy, Gordon.",
+    "David, the man with a 24/7 erection.",
+    "Demanding to speak with a hotter manager.",
+    "Dismembering people.",
+    "Disruptive financial technologies that redefine the relationship between banks and clients.",
+    "Ditching my kids at the playground and GOING TO KOHL'S!!!",
+    "Dogshit.",
+    "Doing a Donald Duck voice on the suicide hotline.",
+    "Doing cocaine with Grandma.",
+    "Doing just fine, thanks.",
+    "Donating blood because \"oooooooh look at me I'm such a good person!\"",
+    "Dried cum.",
+    "Drizzling agave syrup on my penis and slowly inserting it into a termite mound.",
+    "Dumps.",
+    "Eels.",
+    "Eight guys named Josh.",
+    "Elder abuse.",
+    "Emotional labor.",
+    "Ending business calls with \"I love you.\"",
+    "Exfoliating.",
+    "Farting so hard you dislodge your IUD.",
+    "Fat, juicy pussy.",
+    "Filipinos.",
+    "Finding out how many marshmallows fit inside my vagina.",
+    "Finding out that Dad's password is \"FUCKHOG420.\"",
+    "Firework-related genital injuries.",
+    "Following a trail of Skittles into a sewer.",
+    "Forsaking God.",
+    "Fucking my cousin Bobby in an empty swimming pool.",
+    "Fucking my husband's brother as a form of self-care.",
+    "Fucking two marines inside a porta-potty.",
+    "Gas station sushi.",
+    "Generational trauma.",
+    "Gentrification.",
+    "Getting a Green Card.",
+    "Getting cucked.",
+    "Getting cyberbullied by a child.",
+    "Getting fucked through a drive-thru window.",
+    "Getting Mom pregnant.",
+    "Getting served divorce papers.",
+    "Getting shot by a 6-year-old.",
+    "Getting the email chain started for an orgy.",
+    "Girth.",
+    "Giving old women piggyback rides.",
+    "Gnomes.",
+    "God's boyfriend, Zach.",
+    "God's plan.",
+    "Going clubbing with all my bros from Goldman Sachs.",
+    "Going goblin mode.",
+    "Going sicko mode on some cottage cheese.",
+    "Greta Thunberg.",
+    "Grindr.",
+    "Having a small penis but a huge Funko Pop collection.",
+    "Having no ass whatsoever.",
+    "Homeopathic nonsense.",
+    "HOOAH! HOOWAH! HOT MAMA! HOO BOY! HOT DAMN! HOOCHIE MAMA! HANG NUT! DUCK NUGGET! FUCK TRUCK! HUCKA MUCKA!",
+    "Hoping things will get better on their own without taking any action whatsoever.",
+    "Impersonating a police officer.",
+    "Incels.",
+    "Inducing labor with a McFlurry® spoon.",
+    "Infidelity.",
+    "Inquiring about one's readiness to rock.",
+    "Invading Ukraine.",
+    "Jacking off goats for science reasons.",
+    "Jerk off instructions.",
+    "Judeo-Christian values.",
+    "Keeping a journal of corn memories.",
+    "KFC.",
+    "Killing my boss.",
+    "Kink shaming.",
+    "Kissing all of my action figures goodnight.",
+    "Liberals takin' our guns!",
+    "Licking and sealing the labia shut like an envelope.",
+    "Lin-Manuel Miranda.",
+    "Literally Hitler.",
+    "Long COVID.",
+    "Looking stupid in a crappy haircut.",
+    "Louis C.K.",
+    "Lululululemon!",
+    "Making babies.",
+    "Making her bajinkles bajoink.",
+    "Making yet another TikTok about ADHD.",
+    "Math camp.",
+    "Microplastics.",
+    "Minorities.",
+    "Misgendering people.",
+    "Missing children.",
+    "Moisture.",
+    "Monetizing my depression.",
+    "Mongolians.",
+    "My dog, who is a racist.",
+    "My homophobic parents.",
+    "My own cum.",
+    "My own personal 9/11.",
+    "My piece-of-shit husband who won't even lick my butthole on my birthday.",
+    "My sister's vibrator.",
+    "My stupid little titties.",
+    "My Tesla.",
+    "Nice Mormon boys.",
+    "One of those FOX News bimbos.",
+    "Osteoporosis.",
+    "Our Father, who art in Heaven.",
+    "Ovaries.",
+    "Pathetic, flabby glutes.",
+    "Paying $1,500 a month for a windowless basement studio.",
+    "Peasants.",
+    "Pegging my stepson.",
+    "Pico de gallo.",
+    "Playing \"Hot Cross Buns\" on a recorder.",
+    "Poor appetite and a lack of interest in everyday activities.",
+    "Practicing eating ass on a bagel.",
+    "Pretending to be busy.",
+    "Prison food.",
+    "Proficiency in Microsoft Excel.",
+    "Pulverizing my prostate.",
+    "Pussy that tastes better than artichokes but worse than spaghetti.",
+    "Quarterly performance reviews.",
+    "Questioning my sexuality.",
+    "Racial slurs.",
+    "Reaching for a cop's gun.",
+    "Receiving oral pleasure.",
+    "Reciting the Quran from memory.",
+    "Reproducing asexually.",
+    "Resetting the goddamn router.",
+    "Ripping ass at a PTA meeting.",
+    "Rolling a dead body up in a carpet.",
+    "Ron DeSantis.",
+    "Rubbing one out before church.",
+    "Russian roulette.",
+    "Santa laying a softball-sized egg under the Christmas tree and going back up the chimney.",
+    "Saying the word \"blockchain\" a lot to sound smart.",
+    "Scared little white boys.",
+    "Schlepping through life one forgettable day after another.",
+    "Scooby Doo.",
+    "Segregation.",
+    "Sewing our ballsacks together.",
+    "Sex right next to the dog.",
+    "Sheet-pan coriander chicken with caramelized brussels sprouts.",
+    "Shitting into a pelican's mouth.",
+    "Shitting with the door open.",
+    "Shoplifting.",
+    "Shouting \"FUCK THE POLICE!\"",
+    "Shoving something, like literally anything, into my anus.",
+    "Slipping into something a little more comfortable.",
+    "Slowly getting my pussy all the way around Howie Mandel's head.",
+    "Solitary confinement.",
+    "Some kind of moose-lobster hybrid.",
+    "Some really cool rocks I found.",
+    "Some Yoda-lookin' bitch.",
+    "Somehow looking sexier without teeth.",
+    "Something...\nbrown?",
+    "Sorting by price, low to high.",
+    "Spankin' my kids, beatin' my wife, and hatin' Mexicans!",
+    "Staring directly into the sun.",
+    "Stealing all the plates from an Airbnb.",
+    "Stealing an election.",
+    "Sucking and fucking.",
+    "Sunning my gooch.",
+    "Synthetic marijuana from a gas station.",
+    "That big-ass hat the Pope wears.",
+    "That one teacher who's probably a pedophile.",
+    "The \"uncut\" style of penis.",
+    "The 2008 financial crisis.",
+    "The biggest slut in the hospice care facility.",
+    "The bombing of Pearl Harbor.",
+    "The FBI list of known homosexuals.",
+    "The Founding Daddies.",
+    "The kind of toad you lick to get high.",
+    "The kind of guy who posts on Reddit.",
+    "The new Citibank® mobile app, which puts the power and convenience of Citibank® right in your pocket.",
+    "The processed blood of young boys.",
+    "The Second Amendment.",
+    "The slut to my left.",
+    "The soup daddy got cookin'.",
+    "The Taliban.",
+    "The Ten Commandments.",
+    "The way Dad looks at me.",
+    "Toronto.",
+    "Trombone sounds.",
+    "Trying really, really hard.",
+    "Trying to eat a bag of Fritos as quietly as possible while getting eaten out.",
+    "Tweeting the word \"nutsack\" 7,000 times in a row.",
+    "Two-factor authentication.",
+    "Ugly.",
+    "Unions.",
+    "Using \"Hail to the Chief\" as sex music.",
+    "Using a gun to kill a spider.",
+    "Using my lover's urine as bong water.",
+    "Waking up during surgery.",
+    "Wandering naked onto the freeway.",
+    "Watering Grandma like a houseplant.",
+    "Welcoming death.",
+    "Welfare.",
+    "White rappers.",
+    "Writing a nice thank-you note for the oral sex.",
+    "Yelling \"Church! Church! Church!\" on the way to church.",
+    "Yo' legs."
+  ]
+}

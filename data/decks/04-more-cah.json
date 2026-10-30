@@ -1,0 +1,1013 @@
+{
+  "name": "More Cards Against Humanity",
+  "description": "The big standalone expansion. Adults only.",
+  "prompts": [
+    {
+      "text": "____ is back! Only at McDonald's.",
+      "pick": 1
+    },
+    {
+      "text": "____ will never be the same after ____.",
+      "pick": 2
+    },
+    {
+      "text": "____. Awesome in theory, kind of a mess in practice.",
+      "pick": 1
+    },
+    {
+      "text": "2 AM in the city that never sleeps. The door swings open and she walks in, legs up to here. Something in her eyes tells me she's looking for ____.",
+      "pick": 1
+    },
+    {
+      "text": "A remarkable new study has shown that chimps have evolved their own primitive version of ____.",
+      "pick": 1
+    },
+    {
+      "text": "Adventure. Romance. ____. From Paramount Pictures, \"____.\"",
+      "pick": 2
+    },
+    {
+      "text": "After months of practice with ____, I think I’m finally ready for ____.",
+      "pick": 2
+    },
+    {
+      "text": "And I would have gotten away with it, too, if it hadn't been for ____!",
+      "pick": 1
+    },
+    {
+      "text": "Armani suit: $1,000. Dinner for two at that swanky restaurant: $300. The look on her face when you surprise her with ____: priceless.",
+      "pick": 1
+    },
+    {
+      "text": "Art isn’t just a painting in a stuffy museum. Art is alive. Art is ____.",
+      "pick": 1
+    },
+    {
+      "text": "Awww shit! ____ in da house!",
+      "pick": 1
+    },
+    {
+      "text": "Awww, sick! I just saw this skater do a 720 kickflip into ____!",
+      "pick": 1
+    },
+    {
+      "text": "Bay Area tech bros are paying thousands of dollars just to experience ____.",
+      "pick": 1
+    },
+    {
+      "text": "Best you go back where you came from, now. We don’t take too kindly to ____ in these parts.",
+      "pick": 1
+    },
+    {
+      "text": "Bro, she's so into me. She sent me a pic of her ____.",
+      "pick": 1
+    },
+    {
+      "text": "Call the law offices of Goldstein & Goldstein, because no one should have to tolerate ____ in the workplace.",
+      "pick": 1
+    },
+    {
+      "text": "Charades was ruined for me forever when my mom had to act out ____.",
+      "pick": 1
+    },
+    {
+      "text": "CNN breaking news! Scientists discover ____.",
+      "pick": 1
+    },
+    {
+      "text": "Come to Dubai, where you can relax in our world-famous spas, experience the nightlife, or simply enjoy ____ by the poolside.",
+      "pick": 1
+    },
+    {
+      "text": "Coming soon to Netflix! One cop plays by the book. The other's only interested in one thing: ____.",
+      "pick": 1
+    },
+    {
+      "text": "Congratulations! You have been selected for our summer internship program. While we are unable to offer a salary, we can offer you ____.",
+      "pick": 1
+    },
+    {
+      "text": "Dammit, Gary. You can't just solve every problem with ____.",
+      "pick": 1
+    },
+    {
+      "text": "Do not fuck with me! I am literally ____ right now.",
+      "pick": 1
+    },
+    {
+      "text": "Doctor, you've gone too far! The human body wasn't meant to withstand that amount of ____!",
+      "pick": 1
+    },
+    {
+      "text": "Don't worry, kid. It gets better. I've been living with ____ for 20 years.",
+      "pick": 1
+    },
+    {
+      "text": "Errbody in the club ____.",
+      "pick": 1
+    },
+    {
+      "text": "Every step towards ____ gets me a little bit closer to ____.",
+      "pick": 2
+    },
+    {
+      "text": "Everybody join hands and close your eyes. Do you sense that? That's the presence of ____ in this room.",
+      "pick": 1
+    },
+    {
+      "text": "Father O'Connor, if God is all-good and all-powerful, why does he allow ____?",
+      "pick": 1
+    },
+    {
+      "text": "Feeling so grateful! #amazing #mylife #____.",
+      "pick": 1
+    },
+    {
+      "text": "Girls just wanna have ____.",
+      "pick": 1
+    },
+    {
+      "text": "Google Calendar alert: ____ in 10 minutes.",
+      "pick": 1
+    },
+    {
+      "text": "Having the worst day EVER. #____",
+      "pick": 1
+    },
+    {
+      "text": "Here at the Academy for Gifted Children, we allow students to explore ____ at their own pace.",
+      "pick": 1
+    },
+    {
+      "text": "Hey baby, come back to my place and I’ll show you ____.",
+      "pick": 1
+    },
+    {
+      "text": "Hi MTV! My name is Kendra, I live in Malibu, I'm into ____, and I love to have a good time.",
+      "pick": 1
+    },
+    {
+      "text": "Hi, this is Jim from accounting. We noticed a $1,200 charge labeled \"____.\" Can you explain?",
+      "pick": 1
+    },
+    {
+      "text": "Honey, I have a new role-play I want to try tonight! You can be ____, and I'll be ____.",
+      "pick": 2
+    },
+    {
+      "text": "How am I compensating for my tiny penis?",
+      "pick": 1
+    },
+    {
+      "text": "I am become ____, destroyer of ____!",
+      "pick": 2
+    },
+    {
+      "text": "I don’t believe in God. I believe in ____.",
+      "pick": 1
+    },
+    {
+      "text": "I have a strict policy. First date, dinner. Second date, kiss. Third date, ____.",
+      "pick": 1
+    },
+    {
+      "text": "I just took a DNA test. Turns out I'm 100% ____.",
+      "pick": 1
+    },
+    {
+      "text": "I learned the hard way that you can't cheer up a grieving friend with ____.",
+      "pick": 1
+    },
+    {
+      "text": "I love being a mom. But it's tough when my kids come home filthy from ____. That's why there's Tide®.",
+      "pick": 1
+    },
+    {
+      "text": "I love my life! I'm young, hot, and full of ____.",
+      "pick": 1
+    },
+    {
+      "text": "I may not be much to look at, but I fuck like ____.",
+      "pick": 1
+    },
+    {
+      "text": "I tell you, it was a non-stop fuckfest. When it was over, my asshole looked like ____.",
+      "pick": 1
+    },
+    {
+      "text": "I work my ass off all day for this family, and this is what I come home to? ____!?",
+      "pick": 1
+    },
+    {
+      "text": "I’ll take the BBQ bacon burger with friend egg and fuck it how about ____.",
+      "pick": 1
+    },
+    {
+      "text": "I'm Miss Tennessee, and if I could make the world better by changing one thing, I would get rid of ____.",
+      "pick": 1
+    },
+    {
+      "text": "I'm sorry, honey. I'm just not in the mood for ____ tonight.",
+      "pick": 1
+    },
+    {
+      "text": "I'm sorry, Mrs. Chen, but there was nothing we could do. At 4:15 this morning, your son succumbed to ____.",
+      "pick": 1
+    },
+    {
+      "text": "I’m sorry, sir, but your insurance plan doesn’t cover injuries caused by ____.",
+      "pick": 1
+    },
+    {
+      "text": "I've got rhythm, I’ve got music, I’ve got ____. Who could ask for anything more?",
+      "pick": 1
+    },
+    {
+      "text": "I’ve had a horrible vision, father. I saw mountains crumbling, stars falling from the sky. I saw ____.",
+      "pick": 1
+    },
+    {
+      "text": "If you can't handle ____, you'd better stay away from ____.",
+      "pick": 2
+    },
+    {
+      "text": "If you had to describe me, the Card Czar, using only one of the cards in your hand, which one would it be?",
+      "pick": 1
+    },
+    {
+      "text": "In his newest and most difficult stunt, David Blaine must escape from ____.",
+      "pick": 1
+    },
+    {
+      "text": "In Irish culture, mourners express their grief through a traditional practice of ____.",
+      "pick": 1
+    },
+    {
+      "text": "In return for my soul, the Devil promised me ____, but all I got was ____.",
+      "pick": 2
+    },
+    {
+      "text": "In the 1950s, psychologists prescribed ____ as a cure for homosexually.",
+      "pick": 1
+    },
+    {
+      "text": "In the seventh circle of Hell, sinners must endure ____ for all eternity.",
+      "pick": 1
+    },
+    {
+      "text": "It lurks in the night. It hungers for flesh. This summer, no one is safe from ____.",
+      "pick": 1
+    },
+    {
+      "text": "James is a lonely boy. But when he discovers a secret door in his attic, he meets a magical new friend: ____.",
+      "pick": 1
+    },
+    {
+      "text": "John Wick is a man of focus, commitment. I once saw him kill three men... with ____.",
+      "pick": 1
+    },
+    {
+      "text": "Life's pretty tough in the fast lane. That's why I never leave the house without ____.",
+      "pick": 1
+    },
+    {
+      "text": "Listen Gary, I like you. But if you want that corner office, you're going to have to show me ____.",
+      "pick": 1
+    },
+    {
+      "text": "Listen, son. If you want to get involved with ____, I won’t stop you. Just steer clear of ____.",
+      "pick": 2
+    },
+    {
+      "text": "Little Miss Muffet Sat on a tuffet, Eating her curds and ____.",
+      "pick": 1
+    },
+    {
+      "text": "LSD + ____ = really bad time.",
+      "pick": 1
+    },
+    {
+      "text": "Mama gets what Mama wants, and Mama wants ____.",
+      "pick": 1
+    },
+    {
+      "text": "Mom’s to-do list:\n* Buy groceries\n* Deal with ____\n* Soccer practice",
+      "pick": 1
+    },
+    {
+      "text": "Money can’t buy me love, but it can buy me ____.",
+      "pick": 1
+    },
+    {
+      "text": "Most Americans would not vote for a candidate who is openly ____.",
+      "pick": 1
+    },
+    {
+      "text": "My grandfather worked his way up from nothing. When he came to this country, all he had was the shoes on his feet and ____.",
+      "pick": 1
+    },
+    {
+      "text": "My gym teacher got fired for adding ____ to the obstacle course.",
+      "pick": 1
+    },
+    {
+      "text": "My mom freaked out when she looked at my browser history and found ____.com/____.",
+      "pick": 2
+    },
+    {
+      "text": "My plan for world domination begins with ____.",
+      "pick": 1
+    },
+    {
+      "text": "Next time on Dr. Phil: How to talk to your child about ____.",
+      "pick": 1
+    },
+    {
+      "text": "No, no, no, no, no, no, NO! I will NOT let ____ ruin this wedding.",
+      "pick": 1
+    },
+    {
+      "text": "Oh man, the edibles must have kicked in because I'm absolutely mesmerized by ____.",
+      "pick": 1
+    },
+    {
+      "text": "Oh my god, Mom, it's so unfair! Why am I the only kid at school who has to deal with ____?",
+      "pick": 1
+    },
+    {
+      "text": "Only two things in life are certain: death and ____.",
+      "pick": 1
+    },
+    {
+      "text": "Ooo, daddy like ____.",
+      "pick": 1
+    },
+    {
+      "text": "Our first date was going horribly until we discovered our shared interest in ____.",
+      "pick": 1
+    },
+    {
+      "text": "Patient presents with ____. Likely a result of ____.",
+      "pick": 2
+    },
+    {
+      "text": "Poor Brandon, still living in his parent’s basement. I heard he never got over ____.",
+      "pick": 1
+    },
+    {
+      "text": "Puberty is a time of change. You might notice hair growing in new places. You might develop an interest in ____. This is normal.",
+      "pick": 1
+    },
+    {
+      "text": "Run, run, as fast as you can! You can’t catch me, I’m ____!",
+      "pick": 1
+    },
+    {
+      "text": "Science will never explain ____.",
+      "pick": 1
+    },
+    {
+      "text": "She’s a lady in the streets, ____ in the sheets.",
+      "pick": 1
+    },
+    {
+      "text": "She’s just one of the guys, you know? She likes beer, and football, and ____.",
+      "pick": 1
+    },
+    {
+      "text": "She's up all night for good fun. I'm up all night for ____.",
+      "pick": 1
+    },
+    {
+      "text": "Son, quit messin' with ____ or folks will think you're queer.",
+      "pick": 1
+    },
+    {
+      "text": "Son, take it from someone who’s been around the block a few times. Nothin’ puts her in the mood like ____.",
+      "pick": 1
+    },
+    {
+      "text": "The Japanese have developed a smaller, more efficient version of ____.",
+      "pick": 1
+    },
+    {
+      "text": "The six things I could never do without: oxygen, facebook, chocolate, netflix, friends, and ____ LOL!",
+      "pick": 1
+    },
+    {
+      "text": "The top Google auto-complete results for Taylor Swift\":\nTaylor Swift age.\nTaylor Swift net worth.\nTaylor Swift ____.",
+      "pick": 1
+    },
+    {
+      "text": "Then the princess kissed the frog, and all of a sudden the frog was ____!",
+      "pick": 1
+    },
+    {
+      "text": "There is no God. It’s just ____ and then you die.",
+      "pick": 1
+    },
+    {
+      "text": "This Friday at the Liquid Lounge, it’s ____ Night! Ladies drink free.",
+      "pick": 1
+    },
+    {
+      "text": "This is AMURICA. If you don't WORK HARD, you don't succeed. I don't care if you're black, white, purple, or ____.",
+      "pick": 1
+    },
+    {
+      "text": "Today's #1 Tip: Spice up your sex life by bringing ____ into the bedroom!",
+      "pick": 1
+    },
+    {
+      "text": "Tonight on 20/20: What you don't know about ____ could kill you.",
+      "pick": 1
+    },
+    {
+      "text": "Tonight we will have sex. And afterwards, If you'd like, a little bit of ____.",
+      "pick": 1
+    },
+    {
+      "text": "Turns out that ____-Man was neither the hero we needed nor wanted.",
+      "pick": 1
+    },
+    {
+      "text": "We never did find ____, but along the way we sure learned a lot about ____.",
+      "pick": 2
+    },
+    {
+      "text": "Welcome to Señor Frog's! Would you like to try our signature cocktail, “____ on the Beach\"?",
+      "pick": 1
+    },
+    {
+      "text": "Well what do you have to say for yourself, Casey? This is the third time you've been sent to the principal's office for ____.",
+      "pick": 1
+    },
+    {
+      "text": "Well, shit. My eyes ain’t so good, but I’ll eat my own boot if that ain’t ____!",
+      "pick": 1
+    },
+    {
+      "text": "Wes Anderson's new film tells the story of a precocious child coming to terms with ____.",
+      "pick": 1
+    },
+    {
+      "text": "What are all those whales singing about?",
+      "pick": 1
+    },
+    {
+      "text": "What makes Grandpa feel young again?",
+      "pick": 1
+    },
+    {
+      "text": "What sucks balls?",
+      "pick": 1
+    },
+    {
+      "text": "What totally destroyed my asshole?",
+      "pick": 1
+    },
+    {
+      "text": "What turned me into a Republican?",
+      "pick": 1
+    },
+    {
+      "text": "What will end racism once and for all?",
+      "pick": 1
+    },
+    {
+      "text": "What’s about to take dance floor to the next level?",
+      "pick": 1
+    },
+    {
+      "text": "What's fun until it gets weird?",
+      "pick": 1
+    },
+    {
+      "text": "What's making things awkward in the sauna?",
+      "pick": 1
+    },
+    {
+      "text": "What’s the gayest?",
+      "pick": 1
+    },
+    {
+      "text": "What’s the most problematic?",
+      "pick": 1
+    },
+    {
+      "text": "When all else fails, I can always masturbate to ____.",
+      "pick": 1
+    },
+    {
+      "text": "When the dog bites / When the bee stings / When I'm feeling sad / I simply remember ____ / And then I don't feel so bad.",
+      "pick": 1
+    },
+    {
+      "text": "Why am I laughing and crying and taking off my clothes?",
+      "pick": 1
+    },
+    {
+      "text": "Why won't you make love to me anymore? Is it ____?",
+      "pick": 1
+    },
+    {
+      "text": "With a one-time gift of just $10, you can save this child from ____.",
+      "pick": 1
+    },
+    {
+      "text": "Y'all ready to get this thing started? I'm Nick Cannon, and this is America's Got ____.",
+      "pick": 1
+    },
+    {
+      "text": "Yo' mama so fat she ____!",
+      "pick": 1
+    },
+    {
+      "text": "You are not alone. Millions of Americans struggle with ____ every day.",
+      "pick": 1
+    },
+    {
+      "text": "You guys, I saw this crazy movie last night. It opens on ____, and then there's some stuff about ____, and then it ends with ____.",
+      "pick": 3
+    },
+    {
+      "text": "You know who else liked ____? Hitler.",
+      "pick": 1
+    },
+    {
+      "text": "You won’t believe what’s in my pussy. It’s ____.",
+      "pick": 1
+    },
+    {
+      "text": "Your persistence is admirable, my dear Prince. But you cannot win my heart with ____ alone.",
+      "pick": 1
+    }
+  ],
+  "answers": [
+    "$8.27.",
+    "10 football players with erections barrelling towards you at full speed.",
+    "14,000 unread emails.",
+    "A big ol’ plate of fettuccine alfredo.",
+    "A bigger, blacker dick.",
+    "A Black friend.",
+    "A Black-owned and operated business.",
+    "A bomb that detonates if you stop masturbating.",
+    "A boo-boo.",
+    "A bunch of idiots playing a card game instead of interacting like normal humans.",
+    "A cold and indifferent universe.",
+    "A commitment to hiring diverse talent.",
+    "A complicated relationship with food.",
+    "A constant need for validation.",
+    "A crazy little thing called love.",
+    "A creature made of penises that must constantly arouse itself to survive.",
+    "A creepy child singing a nursery rhyme.",
+    "A dance move that's just sex.",
+    "A dildo signed by Jimmy Carter.",
+    "A dolphin that learns to talk and becomes the Dean of Harvard Law School.",
+    "A duffel bag full of lizards.",
+    "A face full of horse cum.",
+    "A fart.",
+    "A fortuitous turnip harvest.",
+    "A genetic predisposition for alcoholism.",
+    "A global cabal of pedophile billionaires.",
+    "A groundbreaking new masturbation technique.",
+    "A hopeless amount of spiders.",
+    "A horse with no legs.",
+    "A hug.",
+    "A Japanese toaster you can fuck.",
+    "A lil’ stupid ass bitch.",
+    "A man in a suit with perfect hair who tells you beautiful lies.",
+    "A man with the head of a goat and the body of a goat.",
+    "A massive collection of child pornography.",
+    "A medium horchata.",
+    "A metaphor for something.",
+    "A phantasmagoria of anal delights.",
+    "A piñata full of scorpions.",
+    "A pinky up the butt.",
+    "A pizza guy who fucked up.",
+    "A PowerPoint presentation.",
+    "A real sad guy.",
+    "A self-microwaving burrito.",
+    "A sofa that says “I have style, but I like to be comfortable.”",
+    "A special kind of yogurt called “cum.”",
+    "A strong horse and enough rations for thirty days.",
+    "A superspreader event.",
+    "A surprising amount of hair.",
+    "A terrified fat child who won’t come out of the bushes.",
+    "A tiny fireman who puts out tiny fires.",
+    "A turd.",
+    "A vagina that leads to another dimension.",
+    "A website dedicated entirely to pornography.",
+    "A weird guy who says weird stuff and weirds me out.",
+    "A whole lotta woman.",
+    "A whole new kind of porn.",
+    "A woman.",
+    "A woman’s perspective.",
+    "A woman’s right to choose.",
+    "A zero-risk way to make $5,000 from home.",
+    "Aborting the shit out of a fetus.",
+    "Acknowledging that we stand on the unceded lands of Indigenous peoples.",
+    "Africa.",
+    "Albert Einstein but if he had huge muscles and a rhinoceros cock.",
+    "All my friends dying.",
+    "All the single ladies.",
+    "American cultural hegemony.",
+    "An active shooter.",
+    "An incurable homosexual.",
+    "An oppressed people with a vibrant culture.",
+    "An unforgettable quinceañera.",
+    "An unhinged Ferris wheel rolling toward the sea.",
+    "Anal fissures like you wouldn't believe.",
+    "Anal.",
+    "Ancient Athenian boy-fucking.",
+    "André the Giant's enormous, leathery scrotum.",
+    "Angelheaded hipsters burning for the ancient heavenly connection to the starry dynamo in the machinery of the night.",
+    "Antidepressants.",
+    "Attention to detail and follow-through.",
+    "Bad shrimp for poor people.",
+    "Barely legal boys.",
+    "Bathing in moonsblood and dancing around the ancient oak.",
+    "Being a danger to myself and others.",
+    "Being a dinosaur.",
+    "Being a hideous beast that no one could love.",
+    "Being a terrible mother.",
+    "Being awesome at sex.",
+    "Being Black.",
+    "Being high all the time.",
+    "Being nine years old.",
+    "Being pleasured by a thousand tiny Adam Sandlers.",
+    "Being sad and horny.",
+    "Being useless.",
+    "Being very rich and incredibly stupid.",
+    "Being white.",
+    "Being worshipped as the one true God.",
+    "Beloved television star Bill Cosby.",
+    "Beyoncé.",
+    "Big bad mama nipples.",
+    "Big Bird's brown, crusty asshole.",
+    "Big, smart money boys tap-tapping on their keyboards.",
+    "Bill Clinton, naked on a bearskin rug with a saxophone.",
+    "Bitches who knit.",
+    "Blackface.",
+    "Blossoming into a beautiful young woman.",
+    "Blowing some dudes in an alley.",
+    "Blowjobs for everyone.",
+    "Body dysmorphia.",
+    "Bouncing up and down.",
+    "Breastfeeding a ten-year-old.",
+    "Breastfeeding in public like a radiant Earth goddess.",
+    "Brett Kavanaugh.",
+    "Brunch.",
+    "Bullets.",
+    "Bullshit.",
+    "Butt stuff.",
+    "Cancer.",
+    "Centuries of inbreeding.",
+    "Cheap immigrant labor.",
+    "Child Protective Services.",
+    "Childhood obesity.",
+    "China.",
+    "Chipotle.",
+    "Chonk in the donk.",
+    "Clams.",
+    "Cock.",
+    "Common-sense gun control legislation.",
+    "Comprehensive immigration reform.",
+    "Consensual, nonreproductive incest.",
+    "Consent.",
+    "Consequences.",
+    "Continuing to ignore the Uyghurs.",
+    "Copyright infringement.",
+    "Crabapples all over the fucking sidewalk.",
+    "Crazy anal orgasms.",
+    "Creamy slices of real California avocado.",
+    "Crippling social anxiety.",
+    "Crushing the patriarchy.",
+    "Crying and shitting and eating spaghetti.",
+    "Cumming deep inside my best bro.",
+    "Cutting off a flamingo's legs with garden shears.",
+    "Dad's funny balls.",
+    "Daddy.",
+    "Daddy's credit card.",
+    "Deez nuts.",
+    "Dem titties.",
+    "Demonic possession.",
+    "Denying the Holocaust.",
+    "Destigmatizing sex work.",
+    "Dis bitch.",
+    "Disco fever.",
+    "Discovering that what I really want in life is to kill people and have sex with their corpses.",
+    "Doing pervert stuff in the shed.",
+    "Dominating a man by peeing on his eldest son.",
+    "Double penetration.",
+    "Drinking my bro's pee-pee right out of his peen.",
+    "Drinking responsibly.",
+    "Dropping dead in a Sbarro’s bathroom and not being found for 72 hours.",
+    "Dumpster juice.",
+    "Dying alone and in pain.",
+    "Eating ass.",
+    "Eating human flesh.",
+    "Eating together like a god damn family for once.",
+    "Ejaculating inside another man's wife.",
+    "Ejaculating live bees and the bees are angry.",
+    "Every man’s ultimate fantasy: a perfectly cylindrical vagina.",
+    "Everything.",
+    "Existing.",
+    "Exploring each other’s buttholes.",
+    "Facilitating dialogue and deconstructing binaries.",
+    "Farting a huge shit out of my pussy.",
+    "Farting all over my face with your tight little asshole.",
+    "Feeling the emotion of anger.",
+    "Female genital mutilation.",
+    "Feminism.",
+    "Figuring out how to have sex with a dolphin.",
+    "Filling my son with spaghetti.",
+    "Film roles for actresses over 40.",
+    "Former gifted kids with self-diagnosed ADHD.",
+    "Four Black guys, four white guys, some laundry, a few pine cones, and a dead camel.",
+    "Free ice cream, yo.",
+    "Fresh dill from the patio.",
+    "Fucking a corpse back to life.",
+    "Fucking me good and taking me to Red Lobster®.",
+    "Fucking my therapist.",
+    "Gary.",
+    "Gary's thick, uncut hog.",
+    "Gay thoughts.",
+    "Gazpacho.",
+    "Genghis Khan's DNA.",
+    "Getting aborted.",
+    "Getting down to business to defeat the Huns.",
+    "Getting evicted.",
+    "Getting high with mom.",
+    "Getting killed and dragged up a tree by a leopard.",
+    "Getting older and uglier.",
+    "Getting pegged.",
+    "Getting shot by the police.",
+    "Getting the Dorito crumbs out of my pubes.",
+    "Getting trapped in a conversation about Ayn Rand.",
+    "Getting unfairly canceled just for killing and eating a few children.",
+    "Going around pulling people’s tampons out.",
+    "Going night-night.",
+    "Going to a high school reunion on ketamine.",
+    "Going to bed at a reasonable hour.",
+    "Gout.",
+    "Grandma shakin’ her ass.",
+    "Grandpa's ashes.",
+    "Gregor, my largest son.",
+    "Gringos.",
+    "Grunting for ten minutes and then peeing sand.",
+    "Guns.",
+    "Hamas.",
+    "Happy daddies with happy sandals.",
+    "Hating Jews.",
+    "Having $57 in the bank.",
+    "Having a vagina.",
+    "Having been dead the whole time.",
+    "Having sex on top of a pizza.",
+    "Having sex with your mom.",
+    "Holding the proper political beliefs of my time to attract a mate.",
+    "Hot brown piss.",
+    "Hot lettuce.",
+    "How awesome it is to be white.",
+    "How good lead paint taste.",
+    "How great my ass looks in these jeans.",
+    "How inconvenient it would be for society if boy cum cured cancer.",
+    "How strange it is to be anything at all.",
+    "How wet my pussy is.",
+    "Huge big balls full of jizz.",
+    "Huge tits and a can-do attitude.",
+    "Immunity from criminal prosecution.",
+    "Indescribable loneliness.",
+    "Informing you that I am a registered sex offender.",
+    "Injecting speed into one arm and horse tranquilizer into the other.",
+    "Intellectual masturbation.",
+    "Irrefutable evidence that God is real.",
+    "ISIS.",
+    "Israel.",
+    "It being too late to stop having sex with a horse.",
+    "Jafar.",
+    "Jeff Bezos.",
+    "Jesus.",
+    "Jizz.",
+    "Joining the Aryan Brotherhood.",
+    "Just the tip.",
+    "Kim Jong-un.",
+    "Late-stage dementia.",
+    "Letting everyone down.",
+    "Letting out 20 years’ worth of farts.",
+    "Libertarians.",
+    "Licking French’s Brown Mustard out of a llama’s asshole.",
+    "Like a million alligators.",
+    "Literally eating shit.",
+    "Liver failure.",
+    "Living in a trash can.",
+    "Looking all fucked-up from plastic surgery.",
+    "Looking at my underpants and saying, \"oh no.\"",
+    "Lots and lots of abortions.",
+    "Maintaining eye contact with a grown man while he takes a shit.",
+    "Making my man squirt.",
+    "Making shit up.",
+    "Making the penises kiss.",
+    "Masturbating in a robe like a rich person.",
+    "Math.",
+    "Maximizing ROI on supply chain and operations risk management.",
+    "Me.",
+    "Medieval Times® Dinner & Tournament.",
+    "Mediocrity.",
+    "Melanin.",
+    "Menopause.",
+    "Mental illness.",
+    "Microaggressions.",
+    "Misogyny.",
+    "Mom.",
+    "Mommy and daddy fighting all the time.",
+    "Munchin’ puss.",
+    "My boyfriend's stupid penis.",
+    "My dad's dumb fucking face.",
+    "My dead son's baseball glove.",
+    "My father, who died when I was seven.",
+    "My first period.",
+    "My huge penis and substantial fortune.",
+    "My lover's piss.",
+    "My manservant, Claude.",
+    "My mom, WHO IS BEING SUCH A BITCH RIGHT NOW.",
+    "My puffy clit.",
+    "My shameful naked body.",
+    "My third husband.",
+    "My wife spending all my money on bullshit.",
+    "My worthless son.",
+    "Naughty little boys who need to be punished.",
+    "Neil Diamond's Greatest Hits.",
+    "Not believing in giraffes.",
+    "Not contributing to society in any meaningful way.",
+    "Not having sex.",
+    "Nothing.",
+    "Objectifying women.",
+    "Old lesbians.",
+    "Oncoming traffic.",
+    "One of them big-city Jew lawyers.",
+    "One of those “blow jobs” I’ve been hearing so much about.",
+    "One Ring to rule them all.",
+    "One thousand Slim Jims.",
+    "Our baby.",
+    "Overthrowing the democratically-elected government of Chile.",
+    "P.F. Chang himself.",
+    "Participating.",
+    "Peeing into a girl's butt to make a baby.",
+    "Playing my asshole like a trumpet.",
+    "Plowing that ass like a New England corn farmer.",
+    "Political correctness.",
+    "Pooping in a leotard and hoping no one notices.",
+    "Pooping in the potty.",
+    "Prematurely ejaculating like a total loser.",
+    "Pretending to be one of the guys but actually being the Spider God.",
+    "Prince Ali, fabulous he, Ali Ababwa.",
+    "Profound regret.",
+    "Pumping out a baby every nine months.",
+    "Pussy.",
+    "Putting more Black people in jail.",
+    "Quacking like a duck in lieu of a rational argument.",
+    "Quiche.",
+    "Quinoa.",
+    "Racial profiling.",
+    "Raising three kids on minimum wage.",
+    "Resexualizing formerly desexualized Asian men.",
+    "Restoring Germany to its former glory.",
+    "Reverse cowgirl.",
+    "Ripping open a man’s chest and pulling out his still-beating heart.",
+    "Rock-hard tits and a huge vagina.",
+    "Roland the Farter, flatulist to the king.",
+    "Russian super-tuberculosis.",
+    "Salsa Night at Dave’s Cantina.",
+    "Samuel L. Jackson.",
+    "Santa Claus.",
+    "Saying something problematic.",
+    "Scrotum tickling.",
+    "Seeing my village burned and my family slaughtered before my eyes.",
+    "Seeing things from Hitler's perspective.",
+    "Seizing control of the means of production.",
+    "September 11th, 2001.",
+    "Setting my balls on fire and cartwheeling to Ohio.",
+    "Sexual intercourse.",
+    "Shaft.",
+    "Shitting all over the floor like a bad, bad girl.",
+    "Shitting on my tits.",
+    "Showing all the boys my pussy.",
+    "Slapping a racist old lady.",
+    "Slowly easing down onto a cucumber.",
+    "Sluts.",
+    "Smashing my balls at the moment of climax.",
+    "Smoking crack, for instance.",
+    "Sneezing, farting, and cumming at the same time.",
+    "Snorting coke off a clown's boner.",
+    "Some kind of bird-man.",
+    "Some of that good dick.",
+    "Some really fucked-up shit.",
+    "Special musical guest, Lizzo.",
+    "Sports.",
+    "Stinking like shit.",
+    "Storing a bunch of acorns in my pussy.",
+    "Stuffing a child's face with Fun Dip® until he starts having fun.",
+    "Stupid.",
+    "Such a big boy.",
+    "Sucking all the milk out of a yak.",
+    "Sudden and unwanted slam poetry.",
+    "Sudden Poop Explosion Disease.",
+    "Suicidal thoughts.",
+    "Suicide bombers.",
+    "Supporting small businesses.",
+    "Survivor's guilt.",
+    "Swedes.",
+    "Syphilis.",
+    "Systems and policies designed to preserve centuries-old power structures.",
+    "Tables.",
+    "Taking a man's eyes and balls out and putting his eyes where his balls go and then his balls in the eye holes.",
+    "Tender chunks of all-white-meat chicken.",
+    "Texas.",
+    "That ass.",
+    "That chicken from Popeyes®.",
+    "That photo of Einstein flitting his slutty little tongue.",
+    "The all-new Nissan Pathfinder with 0.9% APR financing!",
+    "The amount of baby carrots I can fit up my ass.",
+    "The amount of gay I am.",
+    "The basic suffering that pervades all of existence.",
+    "The best taquito in the galaxy.",
+    "The body of a 46-year-old man.",
+    "The Church of Jesus Christ of Latter-Day Saints.",
+    "The collapse of the Chinese real estate market.",
+    "The day the birds attacked.",
+    "The economy.",
+    "The eight gay warlocks who dictate the rules of fashion.",
+    "The eighth graders.",
+    "The euphoric rush of strangling a drifter.",
+    "The feeling of going to McDonald’s as a 6-year-old.",
+    "The flute.",
+    "The full force of the American military.",
+    "The full-blown marginalization of ugly people.",
+    "The government.",
+    "The graceful path of an autumn leaf as it falls to its earthen cradle.",
+    "The hottest MILF in Dallas.",
+    "The intoxicating fragrance of my own balls.",
+    "The jizz-summoning ritual.",
+    "The kind of family where you get to have sex with each other.",
+    "The lingering scent of gardenias.",
+    "The lived experience of African Americans.",
+    "The moist, demanding chasm of his mouth.",
+    "The peaceful and nonthreatening rise of China.",
+    "The people of Florida.",
+    "The police.",
+    "The power of the Dark Side.",
+    "The primal, ball-slapping sex your parents are having right now.",
+    "The Quesadilla Explosion Salad™ from Chili’s®.",
+    "The right amount of cocaine.",
+    "The Rwandan Genocide.",
+    "The safe word.",
+    "The size of my penis.",
+    "The sweet song of sword against sword and the braying of mighty war beasts.",
+    "The sweet, forbidden meat of the monkey.",
+    "The swim team, all at once.",
+    "The systematic destruction of an entire people and their way of life.",
+    "The unbelievable world of mushrooms.",
+    "The white half of Barack Obama.",
+    "The wind.",
+    "Three hours of nonstop penetration.",
+    "Three or four ladies, rubbing their tits together or something.",
+    "Throwing stones at a man until he dies.",
+    "Tiny, rancid girl farts.",
+    "Tongue.",
+    "Too much cocaine.",
+    "Trans-exclusionary radical feminists.",
+    "Trees.",
+    "Trevor, the world’s greatest boyfriend.",
+    "Tripping balls.",
+    "Turning 32.",
+    "Turning the rivers red with the blood of infidels.",
+    "Twisting my cock and balls into a balloon poodle.",
+    "Two beautiful pig sisters.",
+    "Two shitty kids and a garbage husband.",
+    "Unsheathing my massive horse cock.",
+    "Upgrading to Pornhub Premium.",
+    "Vegetarian options.",
+    "Velcro™.",
+    "Verizon customer service.",
+    "Vietnam flashbacks.",
+    "Walking into a glass door.",
+    "Warm, velvety muppet sex.",
+    "Watching you die.",
+    "Wearing glasses and sounding smart.",
+    "Wearing sweatpants to showcase the penis.",
+    "What Jesus would do.",
+    "Whatever you wish, mother.",
+    "When the big truck goes “Toot! Toot!”",
+    "Whining like a little bitch.",
+    "White culture.",
+    "White people getting offended on behalf of people who aren't offended.",
+    "White power.",
+    "Who really did 9/11.",
+    "Winning first place at the Tallahassee Pig Fucking Tournament.",
+    "Work.",
+    "Yodeling into a pregnant woman’s vagina.",
+    "You.",
+    "Your dad, who says “hi.”"
+  ]
+}

@@ -1,0 +1,14 @@
+services:
+  hot-take:
+    build: .
+    image: hot-take:latest
+    ports:
+      - "3000:3000"
+    restart: unless-stopped
+    # Inside Docker the server can't see your LAN IP. If you open the game at http://localhost:3000,
+    # set this so the QR code and invite link point somewhere other phones can reach:
+    # environment:
+    #   PUBLIC_URL: http://192.168.1.20:3000
+    # Uncomment to use your own decks without rebuilding the image:
+    # volumes:
+    #   - ./data/decks:/app/data/decks:ro

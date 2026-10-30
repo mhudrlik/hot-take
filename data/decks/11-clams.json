@@ -1,0 +1,908 @@
+{
+  "name": "Clams Aclamst Huclamity",
+  "description": "The clam-themed parody edition. Very silly. Adults only.",
+  "prompts": [
+    {
+      "text": "____ + ____ + clams = ____",
+      "pick": 3
+    },
+    {
+      "text": "____ is a creamy slope that leads to ____.",
+      "pick": 2
+    },
+    {
+      "text": "____; clamboy-tested, clammother-approved.",
+      "pick": 1
+    },
+    {
+      "text": "____: Creamy!",
+      "pick": 1
+    },
+    {
+      "text": "____. High five, clambro.",
+      "pick": 1
+    },
+    {
+      "text": "★✰✰✰✰\nDo NOT go here! Found ____ in my clams alfredo!",
+      "pick": 1
+    },
+    {
+      "text": "50% of all mayorriages end in ____.",
+      "pick": 1
+    },
+    {
+      "text": "A romantic candlelit clamdinner would be incomplete without ____.",
+      "pick": 1
+    },
+    {
+      "text": "After four platinum albums, and three Clammys, it's time to get back to mayo roots, to what inspired me to make music in the first place: ____.",
+      "pick": 1
+    },
+    {
+      "text": "And the Clamcademy Award for ____ goes to ____.",
+      "pick": 2
+    },
+    {
+      "text": "As the mom of five rambunctious clamboys, I'm no stranger to ____.",
+      "pick": 1
+    },
+    {
+      "text": "Brought to you by Clam Light™, the Official Mayonnaise of ____.",
+      "pick": 1
+    },
+    {
+      "text": "But before I kill you, Mr. Clambo, I must show you ____.",
+      "pick": 1
+    },
+    {
+      "text": "Check me out, yo! I call this clamdance move \"____.\"",
+      "pick": 1
+    },
+    {
+      "text": "Clamdudes.\nI just found out that ____ is ____.",
+      "pick": 2
+    },
+    {
+      "text": "Clamma Mayo.\nHere I go again.\nMy my! How clam I resist?",
+      "pick": 1
+    },
+    {
+      "text": "Clamming to Broadway this season, ____: The Mayosical.",
+      "pick": 1
+    },
+    {
+      "text": "Clamtime™ presents \"____: the Story of ____\"",
+      "pick": 2
+    },
+    {
+      "text": "Clulu's new reality show features twelve hot single clams living with ____.",
+      "pick": 1
+    },
+    {
+      "text": "Daddy, why is Clammommy crying?",
+      "pick": 1
+    },
+    {
+      "text": "Dear Clamby,\nI'm having some trouble with ____ and would like your advice.",
+      "pick": 1
+    },
+    {
+      "text": "Designers! For this week's challenge,you must make a clamshell bikini designed for ____.",
+      "pick": 1
+    },
+    {
+      "text": "Dude, do not go in that clamroom. There's ____ in there.",
+      "pick": 1
+    },
+    {
+      "text": "For my next trick, I will clampull ____ out of ____.",
+      "pick": 2
+    },
+    {
+      "text": "Fun tip! When your clam asks you to go down on him, try surprising him with ____ instead.",
+      "pick": 1
+    },
+    {
+      "text": "Here is the clamchurch\nHere is the creamsteeple\nOpen the clamdoors\nAnd there is ____.",
+      "pick": 1
+    },
+    {
+      "text": "Hey Clamreddit! I'm ____. Ask me anything.",
+      "pick": 1
+    },
+    {
+      "text": "Hey guys, welcome to Long John Silver's! Would you like to start the night off mayo-right with ____?",
+      "pick": 1
+    },
+    {
+      "text": "How did I lose my clamginity?",
+      "pick": 1
+    },
+    {
+      "text": "Howdy, clamneighbor! I couldn't help but notice you struggling with ____. Need a clam?",
+      "pick": 1
+    },
+    {
+      "text": "I drink old clam juice to forget ____.",
+      "pick": 1
+    },
+    {
+      "text": "I get by with a little clamhelp from ____.",
+      "pick": 1
+    },
+    {
+      "text": "I got 99 clamproblems but ____ ain't one.",
+      "pick": 1
+    },
+    {
+      "text": "I never truly understood ____ until I enclamtered ____.",
+      "pick": 2
+    },
+    {
+      "text": "I'm ClamBron Jamayonnaise, and when I'm not clamslamming dunks, I love ____.",
+      "pick": 1
+    },
+    {
+      "text": "I'm going on a cleanse this week. Nothing but Clam-O-Naise and ____.",
+      "pick": 1
+    },
+    {
+      "text": "I'm no oceanographer, but I'm pretty sure what you're suffering from is called \"____.\"",
+      "pick": 1
+    },
+    {
+      "text": "I'm sorry, Professor, but I couldn't complete my oceanography homework because of ____.",
+      "pick": 1
+    },
+    {
+      "text": "I'm Tangy Robbins, and over the next sixty minutes, I'm going to teach you how to harness the clampower of ____!",
+      "pick": 1
+    },
+    {
+      "text": "If you can't be with the clams you love, love ____.",
+      "pick": 1
+    },
+    {
+      "text": "IF you like ____ YOU MIGHT BE A CLAMNECK.",
+      "pick": 1
+    },
+    {
+      "text": "In the new Disney Channel Original Movie, Hannah Clamtana struggles with ____ for the first time.",
+      "pick": 1
+    },
+    {
+      "text": "Instead of clams, Santa now gives the bad children ____.",
+      "pick": 1
+    },
+    {
+      "text": "Introducing the replacement for Aquaman and Aqualad! It's ____ and ____!",
+      "pick": 2
+    },
+    {
+      "text": "Introducing X-treme Clamball! It's like clamball, but with ____!",
+      "pick": 1
+    },
+    {
+      "text": "It's a pity that clams these days are all getting involved with ____.",
+      "pick": 1
+    },
+    {
+      "text": "Just once, I'd like to hear you say \"Thanks, Clammom. Thanks for ____.\"",
+      "pick": 1
+    },
+    {
+      "text": "Just saw this real tangy video! Please retweet!! #stop____",
+      "pick": 1
+    },
+    {
+      "text": "Kids, I don't need Clam-O-Naise to get high. I'm high on ____.",
+      "pick": 1
+    },
+    {
+      "text": "Life for the Clamerican Indians was forever changed when the Mayo-white Man introduced them to ____.",
+      "pick": 1
+    },
+    {
+      "text": "Long John Silver's: We Have ____.",
+      "pick": 1
+    },
+    {
+      "text": "Make a clam-haiku.",
+      "pick": 3
+    },
+    {
+      "text": "Maybe she's born with clams. Maybe it's ____.",
+      "pick": 1
+    },
+    {
+      "text": "Mayo-white people like ____.",
+      "pick": 1
+    },
+    {
+      "text": "Mayoly shit!\nMy video of ____ has ten million clamviews!",
+      "pick": 1
+    },
+    {
+      "text": "Mitch ClamConnell can't cum without ____.",
+      "pick": 1
+    },
+    {
+      "text": "Mr. and Mrs. Diaz, we called you in because we're concerned about Clamthia. Are you aware that your clamdaughter is ____?",
+      "pick": 1
+    },
+    {
+      "text": "My favortie clamsex position is called \"____-style.\"",
+      "pick": 1
+    },
+    {
+      "text": "My fellow Clamericans: Before this decade is out, we will have ____ on the moon!",
+      "pick": 1
+    },
+    {
+      "text": "My name is Peter Parker. I was bitten by a radioactive clam, and now I'm ____.",
+      "pick": 1
+    },
+    {
+      "text": "Next from J.K. Mayoling: Clammy Potter and the Chamber of ____.",
+      "pick": 1
+    },
+    {
+      "text": "Next on ESPCLAM2: The World Series of ____.",
+      "pick": 1
+    },
+    {
+      "text": "Old MAyoClamnald had ____. E-I-E-I-O.",
+      "pick": 1
+    },
+    {
+      "text": "Premiering tonight: NBC's new heartfelt clamily drama. \"This Is ____.\"",
+      "pick": 1
+    },
+    {
+      "text": "Step 1: ____.\nStep 2: ____.\nStep 3: Clams.",
+      "pick": 2
+    },
+    {
+      "text": "That's right, I clammurdered ____. How, you ask? ____.",
+      "pick": 2
+    },
+    {
+      "text": "The class field trip was clampletely ruined by ____.",
+      "pick": 1
+    },
+    {
+      "text": "The new Chevy Ta-Mayonnaise-hoe. With the power and space to take ____ everywhere you go.",
+      "pick": 1
+    },
+    {
+      "text": "They said we were mayo-crazy. They said we couldn't put ____ inside of ____. They were wrong.",
+      "pick": 2
+    },
+    {
+      "text": "This is the way the worlds ends\nThis is the way the world ends\nNot with a clam but with ____.",
+      "pick": 1
+    },
+    {
+      "text": "This season at the Steppenwolf Theatre, Clamuel Beckett's classic existential play: Waiting for ____.",
+      "pick": 1
+    },
+    {
+      "text": "Today on Maury: Help! my clamboy is ____!\"",
+      "pick": 1
+    },
+    {
+      "text": "TSA guidelines now prohibit ____ on submarines.",
+      "pick": 1
+    },
+    {
+      "text": "Uh, hey guys, I know this was mayo idea, but I'm having serious clamdoubts about ____.",
+      "pick": 1
+    },
+    {
+      "text": "US WEEKLY EXCLUSIVE! Mayoghan Markle's Secret Clambattle With ____.",
+      "pick": 1
+    },
+    {
+      "text": "Well if you'll excuse me, mayonnaisemen, I have a date with ____.",
+      "pick": 1
+    },
+    {
+      "text": "What are my clamparents hiding from me?",
+      "pick": 1
+    },
+    {
+      "text": "What ended my last clamationship?",
+      "pick": 1
+    },
+    {
+      "text": "What gives me uncontrollable clamgas?",
+      "pick": 1
+    },
+    {
+      "text": "What is Clamala Harris's guilty pleasure?",
+      "pick": 1
+    },
+    {
+      "text": "What made my first clamkiss so awkward?",
+      "pick": 1
+    },
+    {
+      "text": "What never fails to liven up the clamparty?",
+      "pick": 1
+    },
+    {
+      "text": "What will always get you creamed?",
+      "pick": 1
+    },
+    {
+      "text": "What would Clamdma find disturbing, yet oddly charming?",
+      "pick": 1
+    },
+    {
+      "text": "What's a clam's best friend?",
+      "pick": 1
+    },
+    {
+      "text": "What's my secret clampower?",
+      "pick": 1
+    },
+    {
+      "text": "What's that clamsound?",
+      "pick": 1
+    },
+    {
+      "text": "What's that tangy smell?",
+      "pick": 1
+    },
+    {
+      "text": "What's the best mayotaphor for our political system?",
+      "pick": 1
+    },
+    {
+      "text": "What's the most clammy?",
+      "pick": 1
+    },
+    {
+      "text": "What's there a ton of in clam-heaven?",
+      "pick": 1
+    },
+    {
+      "text": "When I am a billionaire, I shall erect a 50-foot mayonnaise statue to commemorate.",
+      "pick": 1
+    },
+    {
+      "text": "When I am Clam-President, I will create the Clampartment of ____.",
+      "pick": 1
+    },
+    {
+      "text": "When I was tripping on clams, ____ turned into ____.",
+      "pick": 2
+    },
+    {
+      "text": "While eating clam, I like to think about ____.",
+      "pick": 1
+    },
+    {
+      "text": "Why am I clammy?",
+      "pick": 1
+    },
+    {
+      "text": "Why clamn't I sleep at night?",
+      "pick": 1
+    },
+    {
+      "text": "Why does my mayonnaise hurt all over?",
+      "pick": 1
+    },
+    {
+      "text": "Why is Brett so tangy?",
+      "pick": 1
+    },
+    {
+      "text": "Your creamdreams are one click away! Learn more at ____.com.",
+      "pick": 1
+    }
+  ],
+  "answers": [
+    "50 clamograms of mayonnaise daily.",
+    "50,000 creamvolts straight to the clamnipples.",
+    "8 oz. of Mexican black-shell clams.",
+    "A ball of clams, mayonnaise, and toenail clippings.",
+    "A bleached creamhole.",
+    "A Bop-Clam.™",
+    "A bowl of Clam-O-Naise and human teeth.",
+    "A certain je ne sais clam.",
+    "A clam fetus.",
+    "A clam gambling problem.",
+    "A clam giving a handjob and smoking a cigarette.",
+    "A clam on the brink of orgasm.",
+    "A clam that shits human turds.",
+    "A clam-Karen.",
+    "A clam-man playing a mayo-woman.",
+    "A clam-narc.",
+    "A Clam-O-Crucifixion.",
+    "A clam-slap.",
+    "A clam-traveling Chinese general from the Mayonnaise Dynasty.",
+    "A clamboner that lasts longer than four hours.",
+    "A clambortion.",
+    "A clamloser like you.",
+    "A clammy touch on the lower back.",
+    "A disappointing birthday clam.",
+    "A fart so powerful it wakes the giant clams from their thousand-year slumber.",
+    "A fuck-ton of clams.",
+    "A good clamsniff.",
+    "A good, strong clam.",
+    "A gossamer stream of Clam-O-Naise that catches the light as it arcs through the morning air.",
+    "A horde of Viklams.",
+    "A lifetime of clamsadness.",
+    "A little boy who won't shut the fuck up about mayonnaise.",
+    "A live studio clam-audience.",
+    "A Mayoedipus complex.",
+    "A mayoerotic vollyball montage.",
+    "A mayonnaise tumor.",
+    "A mayostake.",
+    "A microclam wearing a tiny raincoat and booties.",
+    "A microclam.",
+    "A middle-aged clam on roller skates.",
+    "A mopey zoo clam.",
+    "A much tangier woman.",
+    "A non-disclamsure agreement.",
+    "A pangender clam who roams the cosmayos in search of love.",
+    "A positive clamitute!",
+    "A really cool clam.",
+    "A sad clamjob.",
+    "A salty clamprise.",
+    "A sorry excuse for a clamfather.",
+    "A stray clam.",
+    "A Super Soaker full of clam juice.",
+    "A three-way with my wife and Shaqlambo O'Mayonnaise.",
+    "A tiny clam.",
+    "A whole thing of mayonnaise.",
+    "A windmill full of clam corpses.",
+    "Academy Award winner Mayorl Streep.",
+    "Active clam-listening,",
+    "All the clams I've fucked.",
+    "An all mayo-white jury.",
+    "An AR-15 assault clam.",
+    "An endless cream of tangy choderrhea.",
+    "An old clam who's almost dead.",
+    "An older woman who knows her way around the clam.",
+    "An unwanted clampregnancy.",
+    "Anal pearls.",
+    "Announcing that I clam about to cum.",
+    "Applying topical ointment to my clamfather's infected shell.",
+    "Assless clams.",
+    "Aunt Jemima's™ racist clam pancake sauce.",
+    "Authentic Mexican clamcuisine.",
+    "Backing over a baby clam with the Buick.",
+    "Barack O-Clambo.",
+    "Barely making 25,000 clams a year.",
+    "BATCLAM!",
+    "Battlefield clamputations.",
+    "Becoming a clam.",
+    "Being a dick to clams.",
+    "Being a female clam.",
+    "Being a fucking pathetic clam.",
+    "Being a motherfucking clam.",
+    "Being able to talk to clams.",
+    "Being clamfat and creamstupid.",
+    "Being margiclamized.",
+    "Being mayorich.",
+    "Black Clams.",
+    "Blowing my boyfriend so hard he shits mayonnaise.",
+    "Boneless buffalo clams.",
+    "Braiding three clampenises into a Creamtwizzler.",
+    "Breaking mayout into tang and dance.",
+    "Brown clams.",
+    "Bryan Clamston, of all people.",
+    "Bubble butt bottom clamboys.",
+    "Burgers and clams.",
+    "Calling the cops on an innocent clam.",
+    "Casually suggesting a threeclam.",
+    "Chowder that is too hot.",
+    "Chowderful thighs.",
+    "Clam breath.",
+    "Clam conversion therapy.",
+    "Clam dungeon porn.",
+    "Clam emotions.",
+    "Clam envy.",
+    "Clam goblins.",
+    "Clam herpes.",
+    "Clam hope.",
+    "Clam Jesus.",
+    "Clam landmines.",
+    "Clam Lunchables.",
+    "Clam meat.",
+    "Clam memes.",
+    "Clam music.",
+    "Clam Nazis.",
+    "Clam Nye the Mayonnaise Guy.",
+    "Clam Oprah.",
+    "Clam permanence.",
+    "Clam racism.",
+    "Clam science.",
+    "Clam sideboob.",
+    "Clam Stalin.",
+    "Clam suffrage.",
+    "Clam therapy.",
+    "Clam time.",
+    "Clam-fellowship in Christ.",
+    "Clam-O-Police brutality.",
+    "Clam-o-Poverty.",
+    "Clam.",
+    "Clamala Harris.",
+    "Clamanas.",
+    "Clamayonide.",
+    "Clamballs.",
+    "Clamberjack fantasies.",
+    "Clambirth control.",
+    "Clambitches.",
+    "Clamboogers.",
+    "Clamboomers.",
+    "Clamboys.",
+    "Clamcaine for lunch.",
+    "Clamcest.",
+    "Clamcoholism.",
+    "Clamcringe.",
+    "Clamcuddling.",
+    "Clamdaddy issues.",
+    "Clamderall.™",
+    "Clamdick pics.",
+    "Clamdma.",
+    "Clamdying.",
+    "Clamexandria Mayocasio-Clamtez.",
+    "Clamfarting and walking away.",
+    "Clamfox News.",
+    "Clamfriction.",
+    "Clamgeese.",
+    "Clamgoat.",
+    "Clamgod.",
+    "Clamgriculture.",
+    "ClamGurt.™",
+    "Clamiel Radcliffe's delicious mayonnaise.",
+    "Clamjobs.",
+    "Clammi B.",
+    "Clammitting treason.",
+    "Clammurder.",
+    "Clammy Devito.",
+    "Clammy Potter erotica.",
+    "Clamnatural selection.",
+    "Clamophilia.",
+    "Clampetely unwarranted confidence.",
+    "Clamplaining.",
+    "Clampox blankets.",
+    "Clamprosy.",
+    "Clampuberty.",
+    "Clampulling out.",
+    "Clampuppies!",
+    "Clamqueefing.",
+    "Clams Aclamst Huclamity.",
+    "Clams all over the god damn carpet.",
+    "Clams for the table.",
+    "Clams of color.",
+    "Clams?",
+    "Clams? Again?",
+    "Clams.",
+    "Clamsaws for hands.",
+    "Clamsensual sex.",
+    "Clamsidering whether or not to clamkill mayoself.",
+    "Clamsilence.",
+    "Clamskin.",
+    "Clamslamming a police officer.",
+    "Clamsplaining.",
+    "Clamstablishing dominance.",
+    "Clamstrogen.",
+    "Clamstrual rage.",
+    "Clamswooping.",
+    "Clamtalians.",
+    "Clamteens.",
+    "Clamversity.",
+    "CLAMVID-19.",
+    "Clamxactly what you'd expect.",
+    "Clamye West.",
+    "Clamyeast.",
+    "Climbing a teleclam pole and becoming one with the T-Mayobile network.",
+    "Corporate Clamerica.",
+    "Covering mayoself with Clam-O-Naise because I am turkey sandwich.",
+    "Cream dreams.",
+    "Cream samples.",
+    "Creamguzzling clam-o-line to see what it tastes like.",
+    "Creaming a little bit.",
+    "Creaming in my thirsty clam.",
+    "Creaming on fire.",
+    "Creamsalvation.",
+    "Creamshame.",
+    "Creamsplosions.",
+    "Creamsquirting.",
+    "Creamtangles.",
+    "Creamy shit, like real tangy stuff.",
+    "Crippling clamdebt.",
+    "Critical clam theory.",
+    "Da clam.",
+    "Darth Chowder.",
+    "Dead clamparents.",
+    "Dead clams everywhere.",
+    "Doin' clams in the butt.",
+    "Doing clamcrimes.",
+    "Doing mayo-white people shit with a bunch of mayo-white people.",
+    "Donald J Creamtrumpet.",
+    "Drinking out of the toilet and eating clams.",
+    "Dropping hot mayonnaise out of my cream hole.",
+    "Drowning the kids in mayonnaise.",
+    "Dwayne \"The Clam\" Johnson.",
+    "Eating a hard boiled egg out of my husband's clamshell.",
+    "Eating Clam-O-Naise alone.",
+    "Eating clams with my kids.",
+    "Eggcepting the way things are.",
+    "Emerging from the chowder and clampaging through Tokyo.",
+    "Ereclamtyle dysfunction.",
+    "Ethnic clamsing.",
+    "Executing a clam every hour.",
+    "Explaining how clams work.",
+    "Explaining the difference between clams and mussels.",
+    "Extremely tight clampants.",
+    "Fading away into tanginess.",
+    "Fake clams.",
+    "Feeing Clam-O-Naise to my creamslut.",
+    "Fiery clams.",
+    "Firing a rifle into the air while balls deep in mayonnaise.",
+    "Flightless clams.",
+    "Floating down the Hudson Chowdersnake with the other clamtrash.",
+    "Former President George W.W.W. Clam.",
+    "Fucking all my dad's clams.",
+    "Fucking my clamsister.",
+    "Fucking the weatherclam on live television.",
+    "Gay clams.",
+    "Genuine human clamnection.",
+    "Geoduck fingers.",
+    "Getting clams off the street and into my body.",
+    "Getting creamed on.",
+    "Getting creamfingered.",
+    "getting crushed between Serena Williams' clams.",
+    "Getting crushed by a giant jar of mayonnaise.",
+    "Getting decapitated by a clamboat propeller.",
+    "Getting into a pretty bad clamboat accident.",
+    "Getting married, having a few clams, buying some mayonnaise, retiring to Florida and dying.",
+    "Getting naked and watching Nickemayolodeon.",
+    "Getting really high on Clam-O-Naise.",
+    "Getting serial clamkilled.",
+    "Ghost clams.",
+    "Giggling like an anime clam.",
+    "Giving birth to a clam in prison.",
+    "Giving birth to the Clamtichrist.",
+    "Grabbing my clam by his love handles and fuking his big shell.",
+    "Half-assed clamplay.",
+    "Having a clamstroke.",
+    "Having big creamdreams but no realistic way to clamchieve them.",
+    "Having clams for eyes.",
+    "Having clams for the first time.",
+    "Heartwarming baby clams.",
+    "Her Clamajesty, Queen Elizamayo II.",
+    "Heteroclamativity.",
+    "Hobo clams.",
+    "Holding a Clam-O-Naise jar for some reason.",
+    "Holding down a clamboy and farting all over him.",
+    "Hospice clams.",
+    "Hot Asian clambros.",
+    "Hot clampeople.",
+    "Hot mayonnaise.",
+    "How amazing it is to eat clams.",
+    "How bad my daughter fucked up her clamdance.",
+    "How far I can get mayown penis up my clambutt.",
+    "However many clams $20 can buy.",
+    "Huffing clampaint.",
+    "Hurting those clams closest to me.",
+    "Illegal clams.",
+    "Inappropriate chowdering.",
+    "Inserting a Mason jar full of Clam-O-Naise into my anus.",
+    "Invading Clampoland.",
+    "Irritable chowder syndrome.",
+    "Itchy clam.",
+    "J.D. Power and his clamsociates.",
+    "J'mayo Biden.",
+    "Jammin' my clammer.",
+    "Jewclams.",
+    "Jizz clams.",
+    "Judge Judyclam.",
+    "Judging everyclam.",
+    "Kayaking with my clamsluts.",
+    "Kissing grandma on the forehead and turning off her mayonnaise.",
+    "Laughing over clampagne flutes while the poor freeze to death outside.",
+    "Laying a mayonegg.",
+    "Liberal clams.",
+    "Licking clams to claim them as your own.",
+    "Like, clamever.",
+    "Lips that could suck the mayonnaise out of a clam.",
+    "Listening to her clamproblems without trying to solve them.",
+    "Literally begging for a clam.",
+    "Male clams discussing their feelings in an emotionally healthy way.",
+    "Manclam meat.",
+    "Many clams.",
+    "Mayo-white people.",
+    "Mayo-white privilege.",
+    "Mayo.",
+    "MAYOAIDS.",
+    "Mayognets.",
+    "Mayoholes.",
+    "Mayolactation.",
+    "Mayonnaise Airlines.",
+    "Mayonnaise finger painting.",
+    "Mayonnaise loathing.",
+    "Mayonnaise PTSD.",
+    "Mayosmegma.",
+    "Mayosturbating.",
+    "Mayouschwitz.",
+    "Me jubbly chowderbubblies.",
+    "More clamcock than I bargained for.",
+    "Multiple clam wounds.",
+    "My abusive boyfriend who really is a clam once you get to know him.",
+    "My bright pink clam.",
+    "My clam on your face.",
+    "My clam.",
+    "My clamboss.",
+    "My clamgenitals.",
+    "My clammy ass.",
+    "My clamsex life.",
+    "My collection of japanese sex clamtoys.",
+    "My creaming son-of-a-clam husband.",
+    "My ex-clamwife.",
+    "My fat clamdaughter.",
+    "My fuckslave, Clambo.",
+    "My gay clam friend.",
+    "My good clamshell bra.",
+    "My horny, horny clam.",
+    "My inner clam demons.",
+    "My neck, my back, my mayonnaise, and my clams.",
+    "My pet mayonnaise scorpion, Tina.",
+    "My relationship status with clams.",
+    "My Uber driver, Clambo.",
+    "My ugly clam and bad mayonnaise.",
+    "My wife eating your wife's clam.",
+    "Natural clamgas.",
+    "NBA superstar LeClam Jamayonnaise.",
+    "Nicholas Mayocage.",
+    "Nipple clamblades.",
+    "Nobody giving a shit about clams or mayonnaise anymore.",
+    "Non-Fungible Clams (NFCs).",
+    "Not creamciprocating oral sex.",
+    "Not vaccinating my children because I am clam.",
+    "Not wearing clampants.",
+    "Old mayo-man smell.",
+    "One clamtitty hanging out.",
+    "One trillion moneyclams.",
+    "Only dating Asian clams.",
+    "Opposable clamthumbs.",
+    "Our tangy dildo.",
+    "Over 10,000 clam migrants.",
+    "Owning and operating a Long John Silver's franchise.",
+    "Pac-Man uncontrollably guzzling Clam-O-Naise.",
+    "Pedoclams.",
+    "Permanent Creamgasm-Face Disorder.",
+    "Pictures of clams.",
+    "Pixelated mayokkake.",
+    "Pooping clam back and forth. Forever.",
+    "Pooping in a clamshell and closing it.",
+    "Poor clampeople.",
+    "Poor seafood choices.",
+    "Prescription tang killers.",
+    "Pretending to be an oceanographer.",
+    "Pretending to care about Clam-O-Naise.",
+    "Pro-clam protesters.",
+    "Prostate clamulation.",
+    "Punching a congressclam in the face.",
+    "Putting clamboys in cages.",
+    "Putting the clams where they go.",
+    "Racially biased CLAMSAT questions.",
+    "Republiclams.",
+    "Ronald Reaclam.",
+    "Running out of mayonnaise.",
+    "Saudi mayonnaise money.",
+    "Saying \"I love you, clam.\"",
+    "Saying everyclam is mayokay when everyclam is clearly not mayokay.",
+    "Seeing Clamdma naked.",
+    "Seeing my clamfather cry.",
+    "Seeing what happens when you lock people in a room with hungry clams.",
+    "Seething with tangy resentment.",
+    "Selling clams to children.",
+    "Seven dead clams and three in critical condition.",
+    "Sex with clams.",
+    "Sexually active mayonnaise geeks.",
+    "Shutting up so I can watch the mayonnaise.",
+    "Sitting on mayo face and telling me I'm garbage.",
+    "Slamming clam juice like a smug piece of shit.",
+    "Slaughtering innocent clams.",
+    "Smelling of Clam-O-Naise.",
+    "Smooth and creamy forces beyond our clamtrol.",
+    "Sniffing and kissing my clam.",
+    "Soft, clammy mayonnaise sex.",
+    "Solving problems with clams.",
+    "Some bitch who loves clams.",
+    "Some clamguy.",
+    "Some god-clam peace and mayonnaise.",
+    "Some punk kid who stole my clam sandwich.",
+    "Still being a clamvirgin.",
+    "Strong female clams.",
+    "Stuffing my clamhole with Tic Tacs.",
+    "Sunshine and mayonnaise.",
+    "Swamp clams.",
+    "Switching to Clamco.™",
+    "Tanghi.",
+    "Tangy drinking water.",
+    "Tangy, creamy nudity.",
+    "Tearing that clam up like wrapping paper on Christmas mayorning.",
+    "Telling a creamy clamstory that goes nowhere.",
+    "Tentaclam porn.",
+    "The arrival of the clam pizza.",
+    "The Big Mayobang.",
+    "The clam-past.",
+    "The Clamato of Christ.",
+    "The Clamburglar.",
+    "The clamcenta.",
+    "The clamclitoris.",
+    "The Clamdevil himself.",
+    "The Clamelorette season finale.",
+    "The Clamerican Dream.",
+    "The Clamfederate flag.",
+    "The Clamish.",
+    "The clamming of Nagasaki.",
+    "The clampon from my vagina.",
+    "The Clampope.",
+    "The Clamrussians.",
+    "The Clamsouth.",
+    "The Clamtriacrchy.",
+    "The cool, refreshing taste of Clam-O-Naise.",
+    "The creamsmith.",
+    "The entire Mayormon Clambernacle Choir.",
+    "The female clamgasm.",
+    "The glass clamceiling.",
+    "The Great Depressclam.",
+    "The heart of a clam.",
+    "The Holy Clambible.",
+    "The illusion of choice in a late-stage clampitalist society.",
+    "The Kool-Aid Clam.",
+    "The Ku Klux Klam.",
+    "The Long John Silver's Spicy Clamwich.",
+    "The magic of mayonnaise theatre.",
+    "The mayonnaise death penalty.",
+    "The mayonnaise...the terrible mayonnaise.",
+    "The mayopiod epidemic.",
+    "The miracle of clambirth.",
+    "The only gay clam in a hundred miles.",
+    "The rhythms of Clamfrica.",
+    "The Three-Fifths Clampromise.",
+    "The true meaning of Clamstmas.",
+    "The ugliest clam in town.",
+    "The Underground Clamroad.",
+    "The violation of our most basic clam rights.",
+    "The whole clamchilada.",
+    "The wifi clamword.",
+    "These tangy hoes.",
+    "This month's mayonnaise shooting.",
+    "Three clams at the same time.",
+    "Three ounces of fresh, clean clams.",
+    "Throwing a clamvirgin into a mayocano.",
+    "Throwing clams at a man until he loses touch with reality.",
+    "Tiny mayonnaise jars that say \"Yippie!\" when you touch them.",
+    "Touching a clam right on its penis.",
+    "Toxic clamsculinity.",
+    "Two Xanclams and a jar of mayonnaise.",
+    "Using a clamdom.",
+    "Using mayonnaise as a coping mechanism.",
+    "Vehicular clamslaughter.",
+    "Viclamgra.™",
+    "Vigorous clam hands.",
+    "Vladiclam Putin.",
+    "Vomiting clams and bleeding anally.",
+    "Waiting till marriage to eat clam.",
+    "Waking up half naked in a Long John Silver's parking lot.",
+    "Webclamsite.",
+    "What that clam do.",
+    "Whatever's in the fridge, as long as it's Clam-O-Naise.",
+    "Women in mayonnaise commercials.",
+    "Wondering if it's possible to get some of that Clam-O-Salsa to go.",
+    "Working in a Clamazon mayohouse.",
+    "Worshipping that clam.",
+    "Your momclam.",
+    "Your weird clambrother."
+  ]
+}

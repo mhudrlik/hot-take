@@ -1,0 +1,9 @@
+{
+  "name": "Hot Take",
+  "short_name": "Hot Take",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#0c0d11",
+  "theme_color": "#000000",
+  "icons": [{ "src": "/icon.svg", "sizes": "any", "type": "image/svg+xml" }]
+}
