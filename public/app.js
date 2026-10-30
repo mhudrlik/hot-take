@@ -195,24 +195,22 @@
   // ---- shell pieces ------------------------------------------------------
 
   function appbar() {
-    const menu = state ? `<button class="icon-btn" data-act="menu" aria-label="Menu">${icons.menu}</button>` : '';
+    const info = `<button class="icon-btn yellow" data-act="rules" aria-label="How to play" title="How to play">${icons.info}</button>`;
+    if (!state) {
+      return `<header class="appbar"><span class="logo">Hot<span>Take</span></span><span class="spacer"></span>${info}</header>`;
+    }
+    const count = state.players.length;
     return `
       <header class="appbar">
         <span class="logo">Hot<span>Take</span></span>
-        ${menu}
+        <button class="icon-btn" data-act="menu" aria-label="Menu">${icons.menu}</button>
         <span class="spacer"></span>
-        <button class="icon-btn yellow" data-act="rules" aria-label="How to play" title="How to play">${icons.info}</button>
+        <button class="players-chip" data-act="menu" aria-label="${plural(count, 'player')}" title="${plural(count, 'player')}">
+          ${icons.users}<span class="count">${count}</span></button>
+        <button class="room-chip" data-act="invite" aria-label="Room ${esc(state.code)}: invite players" title="Invite players">
+          ${icons.link}<span>${esc(state.code)}</span></button>
+        ${info}
       </header>`;
-  }
-
-  function subbar() {
-    return `
-      <nav class="subbar">
-        <button class="lobby-btn" data-act="menu">${icons.users}<span>${state.phase === 'lobby' ? 'Lobby' : 'Players'}</span>
-          <span class="count">${state.players.length}</span></button>
-        <span class="spacer"></span>
-        <button class="room-chip" data-act="invite" aria-label="Invite players">${icons.link}<span>${esc(state.code)}</span></button>
-      </nav>`;
   }
 
   function stageHead(eyebrow, title) {
@@ -625,7 +623,6 @@
     app.innerHTML = `
       <div class="shell">
         ${appbar()}
-        ${state ? subbar() : ''}
         <main class="stage" data-keep-scroll="stage"><div class="stage-inner">${view.body}</div></main>
         ${view.dock || ''}
       </div>`;

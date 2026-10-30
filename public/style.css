@@ -62,38 +62,48 @@ h2 { font-size: 1.2rem; }
 .shell { height: 100%; display: flex; flex-direction: column; }
 
 .appbar {
-  flex: none; display: flex; align-items: center; gap: 10px;
+  flex: none; display: flex; align-items: center; gap: 8px;
   background: var(--bar);
   padding: calc(var(--safe-top) + 10px) var(--gutter) 10px;
 }
 .logo {
-  font-size: 1.6rem; font-weight: 900; letter-spacing: -.04em; line-height: 1;
-  transform: rotate(-2deg); margin-right: 4px;
+  font-size: 1.5rem; font-weight: 900; letter-spacing: -.04em; line-height: 1; white-space: nowrap;
+  transform: rotate(-2deg); margin-right: 2px;
 }
 .logo span { color: var(--yellow); }
 
-.subbar {
-  flex: none; display: flex; align-items: center; gap: 10px;
-  padding: 6px var(--gutter);
-  background: #101116; border-bottom: 1px solid #1b1c23;
+/* Player count and room code sit in the top bar between the menu and the rules button. */
+.players-chip, .room-chip {
+  height: 46px; flex: none; display: inline-flex; align-items: center; gap: 6px;
+  background: var(--panel-2); color: var(--text); border: 2px solid #2b2c35; border-radius: 13px;
+  padding: 0 10px; font: inherit; font-weight: 800; cursor: pointer;
 }
-.lobby-btn {
-  display: inline-flex; align-items: center; gap: 10px;
-  background: none; border: 0; color: var(--text); padding: 4px 0;
-  font: inherit; font-weight: 800; font-size: 1.1rem; cursor: pointer;
-}
-.lobby-btn .ico { color: var(--muted); }
+.players-chip .ico, .room-chip .ico { width: 18px; height: 18px; color: var(--muted); }
+.room-chip { letter-spacing: .12em; }
+.room-chip span { margin-right: -.12em; } /* balance trailing letter-spacing */
 .count {
-  display: inline-grid; place-items: center; min-width: 28px; height: 28px; padding: 0 6px;
-  border-radius: 99px; background: var(--yellow); color: var(--yellow-ink); font-size: .95rem; font-weight: 900;
+  display: inline-grid; place-items: center; min-width: 26px; height: 26px; padding: 0 6px;
+  border-radius: 99px; background: var(--yellow); color: var(--yellow-ink); font-size: .9rem; font-weight: 900;
   border: 2px solid var(--ink);
 }
-.room-chip {
-  display: inline-flex; align-items: center; gap: 8px;
-  background: var(--panel-2); color: var(--text); border: 2px solid var(--ink); border-radius: 12px;
-  padding: 7px 12px; font: inherit; font-weight: 800; letter-spacing: .14em; cursor: pointer;
+
+/* Smaller phones: tighten the bar so everything stays on one line, even for wide codes like WWWW. */
+@media (max-width: 419px) {
+  .appbar { gap: 6px; padding-left: 12px; padding-right: 12px; }
+  .logo { font-size: 1.3rem; }
+  .appbar .icon-btn, .players-chip, .room-chip { height: 42px; }
+  .appbar .icon-btn { width: 42px; border-radius: 12px; }
+  .players-chip, .room-chip { padding: 0 8px; gap: 4px; }
+  .players-chip .ico { width: 16px; height: 16px; }
+  .room-chip { letter-spacing: .06em; }
+  .room-chip span { margin-right: -.06em; }
+  .room-chip .ico { display: none; }
 }
-.room-chip .ico { width: 18px; height: 18px; color: var(--muted); }
+/* Very narrow: the player-count chip already opens the menu, so the ☰ button can go. */
+@media (max-width: 359px) {
+  .logo { font-size: 1.15rem; }
+  .appbar .icon-btn[data-act=menu] { display: none; }
+}
 
 .stage { flex: 1; overflow-y: auto; -webkit-overflow-scrolling: touch; }
 .stage-inner {
