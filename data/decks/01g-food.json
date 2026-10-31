@@ -1,0 +1,477 @@
+{
+  "name": "Snack Attack",
+  "description": "Family-friendly. Pizza debates, cereal mascots, cooking fails and the last slice.",
+  "prompts": [
+    {
+      "text": "The secret to perfect pancakes: ____.",
+      "pick": 1
+    },
+    {
+      "text": "On today's cooking show: ____ stuffed with ____.",
+      "pick": 2
+    },
+    {
+      "text": "Breaking news: the food pyramid has been replaced by ____.",
+      "pick": 1
+    },
+    {
+      "text": "What's really in the mystery casserole at the potluck?",
+      "pick": 1
+    },
+    {
+      "text": "The new cereal mascot is a cartoon of ____.",
+      "pick": 1
+    },
+    {
+      "text": "Nobody will touch the last slice because of ____.",
+      "pick": 1
+    },
+    {
+      "text": "My air fryer can make anything, even ____.",
+      "pick": 1
+    },
+    {
+      "text": "Grandma's secret recipe calls for one cup of ____.",
+      "pick": 1
+    },
+    {
+      "text": "The cafeteria's Friday special: ____.",
+      "pick": 1
+    },
+    {
+      "text": "I opened my lunchbox and found ____.",
+      "pick": 1
+    },
+    {
+      "text": "The waiters stopped singing \"Happy Birthday\" halfway through because of ____.",
+      "pick": 1
+    },
+    {
+      "text": "Now available at the food truck: ____ on a stick.",
+      "pick": 1
+    },
+    {
+      "text": "My picky eater will only eat ____.",
+      "pick": 1
+    },
+    {
+      "text": "Leftovers are great until they turn into ____.",
+      "pick": 1
+    },
+    {
+      "text": "The judges on the baking show were speechless when they saw ____.",
+      "pick": 1
+    },
+    {
+      "text": "Pineapple on pizza is fine, but ____ on pizza is where I draw the line.",
+      "pick": 1
+    },
+    {
+      "text": "New ice cream flavor of the month: ____ swirl.",
+      "pick": 1
+    },
+    {
+      "text": "Is ____ a sandwich? Discuss.",
+      "pick": 1
+    },
+    {
+      "text": "The spicy challenge got out of hand when someone added ____.",
+      "pick": 1
+    },
+    {
+      "text": "Rule number one at the family barbecue: never mess with ____.",
+      "pick": 1
+    },
+    {
+      "text": "I went to the store for milk and came home with ____.",
+      "pick": 1
+    },
+    {
+      "text": "My fortune cookie said: \"Beware of ____.\"",
+      "pick": 1
+    },
+    {
+      "text": "Breakfast for dinner is fun. Dinner for breakfast is ____.",
+      "pick": 1
+    },
+    {
+      "text": "This year's trendiest food plan: eating nothing but ____.",
+      "pick": 1
+    },
+    {
+      "text": "The real reason the cake collapsed: ____.",
+      "pick": 1
+    },
+    {
+      "text": "The vending machine swallowed my dollar and gave me ____.",
+      "pick": 1
+    },
+    {
+      "text": "Thanksgiving dinner was going great until ____.",
+      "pick": 1
+    },
+    {
+      "text": "What's the worst prize to find at the bottom of a cereal box?",
+      "pick": 1
+    },
+    {
+      "text": "Chef's special tonight: ____ with a side of ____.",
+      "pick": 2
+    },
+    {
+      "text": "Instead of a gingerbread house, I built ____ out of ____.",
+      "pick": 2
+    },
+    {
+      "text": "My kitchen gadget drawer is mostly ____.",
+      "pick": 1
+    },
+    {
+      "text": "Snack time is serious business. That's why I always carry ____.",
+      "pick": 1
+    },
+    {
+      "text": "The menu says \"market price,\" which really means ____.",
+      "pick": 1
+    },
+    {
+      "text": "The new candy bar is called ____ and it tastes like ____.",
+      "pick": 2
+    },
+    {
+      "text": "Free samples at the grocery store today: ____.",
+      "pick": 1
+    },
+    {
+      "text": "I'm not hungry. I'm just ____.",
+      "pick": 1
+    },
+    {
+      "text": "What did the chef whisper to the soup?",
+      "pick": 1
+    },
+    {
+      "text": "My signature potluck dish: ____.",
+      "pick": 1
+    },
+    {
+      "text": "The drive-thru speaker said something that sounded like ____.",
+      "pick": 1
+    },
+    {
+      "text": "Movie theater snacks have gotten fancy. Now they sell ____.",
+      "pick": 1
+    },
+    {
+      "text": "The lunch lady's secret talent: ____.",
+      "pick": 1
+    },
+    {
+      "text": "Food critics agree: this restaurant's best feature is ____.",
+      "pick": 1
+    },
+    {
+      "text": "The salad was going great until ____ showed up.",
+      "pick": 1
+    },
+    {
+      "text": "Top-secret ingredient in the world's best chili: ____.",
+      "pick": 1
+    },
+    {
+      "text": "Our family has a strict rule about ____ at the dinner table.",
+      "pick": 1
+    },
+    {
+      "text": "I'd trade my whole lunch for ____.",
+      "pick": 1
+    },
+    {
+      "text": "The sprinkles are cleverly hiding ____.",
+      "pick": 1
+    },
+    {
+      "text": "Mom says we have ____ at home.",
+      "pick": 1
+    },
+    {
+      "text": "The kids' menu now comes with ____.",
+      "pick": 1
+    },
+    {
+      "text": "Mixing ____ and ____ was a mistake, but a delicious one.",
+      "pick": 2
+    },
+    {
+      "text": "The recipe says \"serves four,\" but it really serves ____.",
+      "pick": 1
+    },
+    {
+      "text": "My midnight snack of choice: ____.",
+      "pick": 1
+    },
+    {
+      "text": "Coming soon to the cooking channel: ____ versus ____.",
+      "pick": 2
+    },
+    {
+      "text": "At the all-you-can-eat buffet, my strategy is ____.",
+      "pick": 1
+    },
+    {
+      "text": "Dad stands at the grill like he's guarding ____.",
+      "pick": 1
+    },
+    {
+      "text": "We ordered a pizza with ____ on one half and ____ on the other.",
+      "pick": 2
+    }
+  ],
+  "answers": [
+    "Pineapple on pizza, unapologetically.",
+    "The last slice that nobody will admit they want.",
+    "A cereal mascot with a lawyer.",
+    "Breakfast for dinner.",
+    "Ketchup on absolutely everything.",
+    "An air fryer with big ambitions.",
+    "The birthday song from twelve tired waiters.",
+    "A soggy cafeteria tater tot.",
+    "Mystery casserole.",
+    "A sandwich that is legally a taco.",
+    "The great hot dog sandwich debate.",
+    "Grandma's suspicious \"pinch\" of salt.",
+    "A food truck that only parks where you aren't.",
+    "Pizza crusts that nobody eats.",
+    "The good snacks hidden behind the broccoli.",
+    "Fifty packets of ketchup.",
+    "Ghost peppers in everything.",
+    "A glass of milk to put out the fire.",
+    "Crying into a bowl of hot wings.",
+    "Cereal at 11 p.m.",
+    "Leftovers from an unknown year.",
+    "A sad desk salad.",
+    "A fruitcake nobody asked for.",
+    "Rock-hard holiday cookies.",
+    "A cake that leans like a tower.",
+    "A souffle with trust issues.",
+    "Raisins pretending to be chocolate chips.",
+    "A kale smoothie with a bad attitude.",
+    "The free sample lady.",
+    "A shopping cart with one wobbly wheel.",
+    "Twelve kinds of mustard.",
+    "Ranch dressing as a beverage.",
+    "A juice box at full squeeze.",
+    "Cheese that is technically still cheese.",
+    "Spray cheese from a can.",
+    "The corner piece of the brownie.",
+    "The crunchy bits at the bottom of the pan.",
+    "A suspicious amount of sprinkles.",
+    "Rainbow sprinkles on mashed potatoes.",
+    "Broccoli wearing a cheese disguise.",
+    "A chicken nugget shaped like a dinosaur.",
+    "A chicken nugget shaped like a state.",
+    "Mac and cheese from the blue box.",
+    "Instant noodles at 2 a.m.",
+    "A burrito the size of a sleeping bag.",
+    "A taco shell that shatters on the first bite.",
+    "A fortune cookie with bad news.",
+    "Chopsticks used as drumsticks.",
+    "Kids eating only the frosting.",
+    "A birthday cake with too many candles.",
+    "The smoke alarm announcing that dinner is ready.",
+    "Dad at the grill in his lucky apron.",
+    "Dad's famous secret sauce, which is just ketchup.",
+    "A fridge full of nothing to eat.",
+    "Staring into the open fridge for ten minutes.",
+    "Seven half-empty bottles of salad dressing.",
+    "A drawer full of soy sauce packets.",
+    "A drawer full of mystery kitchen gadgets.",
+    "A spiralizer gathering dust.",
+    "An avocado that was ripe for four seconds.",
+    "Avocado toast at a fancy price.",
+    "Toast with a face burned into it.",
+    "Pancakes shaped like abstract art.",
+    "The first pancake, which is always a disaster.",
+    "Syrup on absolutely everything.",
+    "A waffle with every square perfectly filled.",
+    "Cold pizza for breakfast.",
+    "Lava-hot pizza rolls.",
+    "A frozen dinner still icy in the middle.",
+    "The microwave beeping at 2 a.m.",
+    "Popcorn burned in the office microwave.",
+    "Fish reheated in the office microwave.",
+    "Someone else's labeled yogurt.",
+    "A sticky note that says \"DO NOT EAT\" in three colors.",
+    "A lunchbox note from Mom.",
+    "Trading a carrot stick for a cookie.",
+    "The kid with the best lunch at school.",
+    "Square cafeteria pizza.",
+    "Chocolate milk in a tiny carton.",
+    "A spork, the hero we deserve.",
+    "Mashed potatoes with a gravy volcano.",
+    "Gravy as a soup.",
+    "Wobbly gelatin with fruit trapped inside.",
+    "Potato salad with raisins in it.",
+    "Seven identical potato salads at the potluck.",
+    "Aunt Linda's mystery dip.",
+    "A seven-layer dip with a secret eighth layer.",
+    "Double-dipping the chip.",
+    "The last handful of crumbs in the chip bag.",
+    "A chip bag that is ninety percent air.",
+    "Orange cheese-dust fingerprints on everything.",
+    "A jar of pickle juice.",
+    "Deep-fried everything at the state fair.",
+    "Deep-fried ice cream.",
+    "Cotton candy in a rainstorm.",
+    "A snow cone that's all ice and no flavor.",
+    "Brain freeze.",
+    "Ice cream melting faster than you can eat it.",
+    "A single scoop on the sidewalk.",
+    "Mint chocolate chip, the toothpaste flavor.",
+    "Plain vanilla, the bravest flavor.",
+    "Pickle-flavored ice cream.",
+    "Bacon-flavored everything.",
+    "Candy corn, the most controversial candy.",
+    "Black licorice fans, all three of them.",
+    "Gummy bears that have fused into one gummy blob.",
+    "Sour candy that makes your face fold in half.",
+    "The house that hands out full-size candy bars.",
+    "Raisins handed out on Halloween.",
+    "A toothbrush handed out on Halloween.",
+    "Trading Halloween candy like a stockbroker.",
+    "Easter candy in July.",
+    "A chocolate bunny with no ears.",
+    "A gingerbread house held together by hope.",
+    "Frosting as a building material.",
+    "A cupcake that is ninety percent frosting.",
+    "Cake pops that won't stay on the stick.",
+    "A dessert that calls itself a salad.",
+    "A smoothie with a hidden vegetable.",
+    "Kale chips pretending to be a snack.",
+    "Celery, the crunchy water.",
+    "A rice cake, the edible packing foam.",
+    "Cauliflower pretending to be pizza crust.",
+    "Zucchini noodles.",
+    "Oat milk, almond milk and fourteen other milks.",
+    "A latte with a leaf drawn on top.",
+    "A coffee order with eleven modifications.",
+    "Pumpkin spice everything.",
+    "Pumpkin spice ketchup.",
+    "A hot sauce that comes with a warning label.",
+    "Sweating through the spicy challenge.",
+    "A tongue that's still on fire.",
+    "Mild salsa, for the brave.",
+    "Guacamole that costs extra.",
+    "Garlic. So much garlic.",
+    "Anchovies, the pizza villain.",
+    "Olives, the pizza wildcard.",
+    "Stuffed crust.",
+    "A round pizza cut into squares.",
+    "Folding a pizza slice in half like a pro.",
+    "Eating pizza with a fork and knife.",
+    "The pizza delivery driver who knows your name.",
+    "A pizza box used as a plate.",
+    "A cooking show villain.",
+    "A TV chef yelling about undercooked chicken.",
+    "A mystery basket with gummy worms and a turnip.",
+    "Plating food with tweezers.",
+    "A tiny portion on a gigantic plate.",
+    "A fancy drizzle of something.",
+    "Deconstructed lasagna.",
+    "Microgreens.",
+    "Sushi on a conveyor belt.",
+    "A food truck with a two-hour line.",
+    "The world's spiciest grilled cheese.",
+    "Grilled cheese at midnight.",
+    "A squished sandwich from the bottom of the backpack.",
+    "Crusts cut off with surgical precision.",
+    "A PB&J cut into triangles.",
+    "A sandwich with way too much mayo.",
+    "Mayonnaise, the controversial condiment.",
+    "Cereal with water instead of milk.",
+    "Pouring the milk before the cereal.",
+    "Only the marshmallows from the cereal.",
+    "The prize at the bottom of the cereal box.",
+    "A cartoon rabbit who never gets his cereal.",
+    "A leprechaun guarding the marshmallows.",
+    "A breakfast bar that is secretly a candy bar.",
+    "Overnight oats.",
+    "Burnt toast and good intentions.",
+    "A perfectly runny egg yolk.",
+    "Bacon that is half burnt and half chewy.",
+    "A turkey still frozen on Thanksgiving morning.",
+    "Cranberry sauce shaped exactly like the can.",
+    "Stuffing, the best part.",
+    "Sweet potatoes with marshmallows on top.",
+    "Getting stuck at the kids' table at age thirty.",
+    "Elbows on the table.",
+    "Eating dessert first.",
+    "Second dessert.",
+    "A \"small snack\" that becomes a five-course meal.",
+    "Snacking while cooking until you're too full for dinner.",
+    "Licking the spoon.",
+    "Raw cookie dough, the forbidden treat.",
+    "A grocery list that just says \"stuff\" and \"more stuff\" again.",
+    "Grocery shopping while hungry.",
+    "Forty dollars of snacks and zero actual food.",
+    "The self-checkout yelling about an unexpected item.",
+    "Reusable bags left in the car again.",
+    "A whole rotisserie chicken eaten in the parking lot.",
+    "Free refills.",
+    "The complimentary bread basket.",
+    "The waiter saying \"Enjoy!\" and you saying \"You too\" back.",
+    "A menu with no prices.",
+    "A restaurant too dark to read the menu.",
+    "Splitting the bill twelve ways.",
+    "A food photo that took longer than the meal.",
+    "A recipe blog with a twelve-page life story first.",
+    "Mom calling leftovers \"a new recipe\" with a straight face.",
+    "Breakfast in bed with crumbs everywhere.",
+    "A tiny umbrella in a fruit punch.",
+    "A lemonade stand with surge pricing.",
+    "Trick candles that won't stop relighting.",
+    "Four plates at the buffet.",
+    "A chocolate fountain.",
+    "Fondue for one.",
+    "A slow cooker that's been on since Tuesday.",
+    "A watched pot that refuses to boil.",
+    "A sourdough starter named Gary.",
+    "A loaf of bread that could stop a door.",
+    "A baguette used as a walking stick.",
+    "Spaghetti thrown at the wall to test it.",
+    "Slurping noodles in public.",
+    "Eating soup with a fork.",
+    "Soup in a bread bowl.",
+    "A surprise ingredient: socks.",
+    "A chef's kiss.",
+    "A raccoon in a tiny chef's hat.",
+    "A very serious squirrel.",
+    "Grandpa's dance moves.",
+    "An emotional support potato.",
+    "A llama with strong opinions.",
+    "A dramatic slow-motion entrance.",
+    "The entire marching band.",
+    "Interpretive dance.",
+    "My little brother.",
+    "A sock puppet with a dream.",
+    "A goat in a party hat.",
+    "An awkward high five.",
+    "A strongly worded thank-you note.",
+    "A group chat with 400 unread messages.",
+    "Glitter. Everywhere.",
+    "Jazz hands.",
+    "The world's tiniest violin.",
+    "A suspicious duck.",
+    "A participation trophy.",
+    "A seagull who steals your fries.",
+    "Three raccoons in a trench coat.",
+    "A phone at 1% battery.",
+    "Socks with sandals.",
+    "A dad joke that went too far.",
+    "An unnecessary amount of confetti.",
+    "A karaoke power ballad.",
+    "Elevator music.",
+    "The neighbor's cat.",
+    "A lifetime supply of sporks."
+  ]
+}

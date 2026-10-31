@@ -216,29 +216,45 @@ If the host leaves, host passes to the next player.
 
 ## Decks
 
-Twelve decks ship in `data/decks/`. **Family Edition is listed first and is the default**, so every new
-room starts kid-safe.
+Nineteen decks ship in `data/decks/`. **Family Edition is listed first and is the default**, so every new
+room starts kid-safe, followed by seven original themed decks that are also family-friendly and safe for work.
 
 **The host can tick any number of decks** in the lobby, and the game shuffles them into one pile. That's handy
-for a big group or a long game. A card that appears in more than one selected deck is only dealt once, and the
-lobby shows the combined total so you can see how many cards you've got. At least one deck must stay selected.
+for a big group or a long game (try 2000s + '90s Nostalgia for a throwback night). A card that appears in more
+than one selected deck is only dealt once, and the lobby shows the combined total so you can see how many cards
+you've got. At least one deck must stay selected.
 
-| # | Deck | Prompts | Answers | Notes |
-|---:|---|---:|---:|---|
-| 1 | **Family Edition** (default) | 204 | 1,128 | Kid-friendly. Includes the Family Edition packs. |
-| 2 | Main Deck | 100 | 500 | Current US base game (v3.0) |
-| 3 | Classic Main Deck | 90 | 460 | Original US base game (v1.7) |
-| 4 | More Cards Against Humanity | 135 | 465 | |
-| 5 | Absurd Box | 48 | 260 | |
-| 6 | Hot Box | 40 | 260 | |
-| 7 | Super Box | 54 | 246 | |
-| 8 | Everything Box | 50 | 250 | |
-| 9 | Red, Green & Blue Boxes | 246 | 894 | The classic expansions (originally First–Sixth) |
-| 10 | Theme Packs & Promos | 274 | 1,644 | Every small themed, holiday, PAX and promo pack, mixed |
-| 11 | Clams Aclamst Huclamity | 100 | 500 | Clam-themed parody edition |
-| 12 | Everything | 859 | 4,279 | Decks 2–10 combined |
+### Family-friendly and safe for work
 
-> ⚠️ Every deck except Family Edition is **adults only**.
+| Deck | Prompts | Answers | What's in it |
+|---|---:|---:|---|
+| **Family Edition** (default) | 204 | 1,128 | Cards Against Humanity's kid-friendly edition and its packs |
+| Disney | 55 | 220 | Princesses, villains, Pixar, theme parks and sing-alongs |
+| Nerd Alert | 55 | 206 | Video games, D&D, sci-fi, comics, science and tech support |
+| '90s Nostalgia | 55 | 202 | Tamagotchis, dial-up, boy bands, Saturday cartoons and Y2K panic |
+| 2000s Nostalgia | 55 | 211 | Flip phones, MySpace, iPods, Wii Sports and Disney Channel movies |
+| Office Life | 60 | 217 | Meetings, reply-all, the office fridge and corporate buzzwords |
+| Holidays & Family Gatherings | 56 | 211 | The kids' table, ugly sweaters, road trips and white elephant gifts |
+| Snack Attack | 56 | 245 | Pizza debates, cereal mascots, cooking fails and the last slice |
+
+The seven themed decks are original writing for Hot Take. They avoid innuendo, bathroom humor, alcohol, violence,
+religion and politics, and the test suite fails if a banned word ever slips into one of them.
+
+### Adults only
+
+| Deck | Prompts | Answers | Notes |
+|---|---:|---:|---|
+| Main Deck | 100 | 500 | Current US base game (v3.0) |
+| Classic Main Deck | 90 | 460 | Original US base game (v1.7) |
+| More Cards Against Humanity | 135 | 465 | |
+| Absurd Box | 48 | 260 | |
+| Hot Box | 40 | 260 | |
+| Super Box | 54 | 246 | |
+| Everything Box | 50 | 250 | |
+| Red, Green & Blue Boxes | 246 | 894 | The classic expansions (originally First–Sixth) |
+| Theme Packs & Promos | 274 | 1,644 | Every small themed, holiday, PAX and promo pack, mixed |
+| Clams Aclamst Huclamity | 100 | 500 | Clam-themed parody edition |
+| Everything | 859 | 4,279 | All the adult decks above combined |
 
 Every deck has enough cards for the largest possible game (12 players with 12-card hands); the test suite checks this.
 
@@ -263,8 +279,8 @@ The script:
 - skips picture-only cards and the handful too long to fit on a phone (prompts over 280 characters, answers over 160),
 - leaves out tabs that aren't standard prompt/answer decks: Tales, Explains the Joke, Twists, the procedurally generated cards and the regional conversion kits.
 
-The deck list and grouping live in the `DECKS` array at the top of the script. Re-running it replaces every
-`.json` file in `data/decks/`, so keep hand-made decks somewhere else.
+The deck list and grouping live in the `DECKS` array at the top of the script. Re-running it only replaces the
+decks the script itself generates, so the themed decks and any hand-made decks in `data/decks/` are left alone.
 
 ### Making your own deck
 

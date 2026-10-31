@@ -1,0 +1,448 @@
+{
+  "name": "Disney",
+  "description": "Family-friendly. Princesses, villains, Pixar, theme parks and sing-alongs.",
+  "prompts": [
+    {
+      "text": "The real reason the Genie only grants three wishes: ____.",
+      "pick": 1
+    },
+    {
+      "text": "Cinderella lost a glass slipper, but she also left behind ____.",
+      "pick": 1
+    },
+    {
+      "text": "What's really inside Mary Poppins' bag?",
+      "pick": 1
+    },
+    {
+      "text": "Coming soon to the theme park: ____: The Ride.",
+      "pick": 1
+    },
+    {
+      "text": "The line for ____ is now four hours long.",
+      "pick": 1
+    },
+    {
+      "text": "Ursula's fine print said I'd also have to give up ____.",
+      "pick": 1
+    },
+    {
+      "text": "What did the Magic Mirror say when the Queen asked one too many times?",
+      "pick": 1
+    },
+    {
+      "text": "Hakuna Matata means no worries, except for ____.",
+      "pick": 1
+    },
+    {
+      "text": "Simba's least favorite part of being king: ____.",
+      "pick": 1
+    },
+    {
+      "text": "Elsa finally let it go, but she's still holding on to ____.",
+      "pick": 1
+    },
+    {
+      "text": "In the live-action remake, they replaced the talking candlestick with ____.",
+      "pick": 1
+    },
+    {
+      "text": "My Fairy Godmother showed up, but she could only give me ____.",
+      "pick": 1
+    },
+    {
+      "text": "The Seven Dwarfs whistle while they work, but they grumble about ____.",
+      "pick": 1
+    },
+    {
+      "text": "Woody's biggest fear when Andy isn't looking: ____.",
+      "pick": 1
+    },
+    {
+      "text": "Buzz Lightyear's new catchphrase: \"To infinity and ____!\"",
+      "pick": 1
+    },
+    {
+      "text": "Next on the Disney Channel: a teen pop star with a secret double life as ____.",
+      "pick": 1
+    },
+    {
+      "text": "What's the one thing you should never say to a princess?",
+      "pick": 1
+    },
+    {
+      "text": "The villain's evil plan was going great until ____.",
+      "pick": 1
+    },
+    {
+      "text": "Mickey's ears are actually ____.",
+      "pick": 1
+    },
+    {
+      "text": "Rapunzel let down her hair and, unfortunately, also ____.",
+      "pick": 1
+    },
+    {
+      "text": "Fireworks over the castle are best enjoyed with ____.",
+      "pick": 1
+    },
+    {
+      "text": "Gaston's secret to being the best in the village: ____.",
+      "pick": 1
+    },
+    {
+      "text": "What does Goofy do on his days off?",
+      "pick": 1
+    },
+    {
+      "text": "Hidden Mickey spotted in ____!",
+      "pick": 1
+    },
+    {
+      "text": "Coming soon from Pixar: Inside Out 3, featuring a brand-new emotion: ____.",
+      "pick": 1
+    },
+    {
+      "text": "The Little Mermaid traded her voice for legs. I'd trade mine for ____.",
+      "pick": 1
+    },
+    {
+      "text": "Darth Vader is still upset about ____.",
+      "pick": 1
+    },
+    {
+      "text": "Our family vacation plan: churros, fireworks and ____.",
+      "pick": 1
+    },
+    {
+      "text": "The two-hour wait was totally worth it, because at the end was ____.",
+      "pick": 1
+    },
+    {
+      "text": "Olaf's summer bucket list: ____.",
+      "pick": 1
+    },
+    {
+      "text": "What's the most-requested item at the park's lost and found?",
+      "pick": 1
+    },
+    {
+      "text": "Pinocchio's nose grew three inches when he said he loved ____.",
+      "pick": 1
+    },
+    {
+      "text": "Snow White should have skipped the apple and eaten ____ instead.",
+      "pick": 1
+    },
+    {
+      "text": "Moana's grandmother always warned her: never trust ____.",
+      "pick": 1
+    },
+    {
+      "text": "Captain Hook is afraid of the crocodile, but he's even more afraid of ____.",
+      "pick": 1
+    },
+    {
+      "text": "Stitch's favorite way to cause chaos: ____.",
+      "pick": 1
+    },
+    {
+      "text": "The Avengers will assemble, but only for ____.",
+      "pick": 1
+    },
+    {
+      "text": "Meet-and-greet tip: never ask Ariel about ____.",
+      "pick": 1
+    },
+    {
+      "text": "\"Under the Sea\" was almost called \"Under ____.\"",
+      "pick": 1
+    },
+    {
+      "text": "The newest Disney princess will be famous for ____.",
+      "pick": 1
+    },
+    {
+      "text": "The secret ingredient in Remy's famous ratatouille: ____.",
+      "pick": 1
+    },
+    {
+      "text": "Dory forgot everything except ____.",
+      "pick": 1
+    },
+    {
+      "text": "In the remake, Rafiki proudly holds up ____ instead of baby Simba.",
+      "pick": 1
+    },
+    {
+      "text": "Since the pixie dust ran out, Tinker Bell has been relying on ____.",
+      "pick": 1
+    },
+    {
+      "text": "\"A Whole New World,\" now featuring ____!",
+      "pick": 1
+    },
+    {
+      "text": "Maleficent wasn't invited to the royal party because of ____.",
+      "pick": 1
+    },
+    {
+      "text": "What finally made Grumpy smile?",
+      "pick": 1
+    },
+    {
+      "text": "The Beast's castle got a one-star review because of ____.",
+      "pick": 1
+    },
+    {
+      "text": "Pixar's next tearjerker: a lonely ____ who learns to love ____.",
+      "pick": 2
+    },
+    {
+      "text": "In the sequel, ____ teams up with ____ to save the kingdom.",
+      "pick": 2
+    },
+    {
+      "text": "The villain had ____, but the hero had ____.",
+      "pick": 2
+    },
+    {
+      "text": "Tonight's fireworks show is set to ____ and narrated by ____.",
+      "pick": 2
+    },
+    {
+      "text": "I wished upon a star for ____, but I got ____.",
+      "pick": 2
+    },
+    {
+      "text": "Bibbidi-bobbidi-boo! The Fairy Godmother turned ____ into ____.",
+      "pick": 2
+    },
+    {
+      "text": "My Disney vacation in two words: ____ and ____.",
+      "pick": 2
+    }
+  ],
+  "answers": [
+    "A sidekick with way too much attitude.",
+    "Waiting two hours for a 90-second ride.",
+    "The Seven Dwarfs' group chat.",
+    "A churro the length of my arm.",
+    "Mickey ears that light up and play music.",
+    "Olaf's unshakable confidence.",
+    "Gaston's enormous ego.",
+    "A talking teapot with strong opinions.",
+    "A lamp that's really a tiny studio apartment.",
+    "A villain's dramatic cape swish.",
+    "Singing my feelings to a woodland creature.",
+    "A raccoon who helps with the dishes.",
+    "The magic carpet's frequent flyer miles.",
+    "Belle's overdue library books.",
+    "Ursula's terms and conditions.",
+    "Scar's very long monologue.",
+    "Hakuna Matata as a retirement plan.",
+    "A fish who keeps forgetting the plot.",
+    "Buzz Lightyear's plastic wings.",
+    "A snake in my boot.",
+    "The claw machine aliens.",
+    "A chatty teacup named Chip.",
+    "The Cheshire Cat's unsettling grin.",
+    "An unbirthday cake.",
+    "A pumpkin that turns back at midnight.",
+    "One glass slipper, size unknown.",
+    "Seventy feet of magical hair.",
+    "A frying pan, Rapunzel-style.",
+    "Pascal the chameleon's judgy look.",
+    "A horse who thinks he's a police officer.",
+    "Hei Hei the chicken.",
+    "Maui's tattoos arguing with him.",
+    "An ocean that won't stop helping.",
+    "Stitch eating something he shouldn't.",
+    "Experiment 626.",
+    "A hula lesson from Lilo.",
+    "Mushu, the tiny dragon with big plans.",
+    "The Beast's terrible table manners.",
+    "An enchanted rose with one petal left.",
+    "Lumière's extremely French dinner show.",
+    "Cogsworth's color-coded schedule.",
+    "Music lessons from a nervous crab.",
+    "A dinglehopper.",
+    "Flounder, who is not actually a flounder.",
+    "Ariel's collection of forks.",
+    "Iago the very loud parrot.",
+    "Abu stealing a giant ruby.",
+    "A wish that backfires immediately.",
+    "Three wishes and zero planning.",
+    "Prince Charming, who never got a real name.",
+    "A dramatic villain song.",
+    "Bursting into song in the grocery store.",
+    "\"Let It Go\" on repeat for six hours.",
+    "Not talking about Bruno.",
+    "Bruno, who knew this would happen.",
+    "A magical house that gets moody.",
+    "Cruella's coat collection.",
+    "101 dalmatians in one tiny apartment.",
+    "Sharing one plate of spaghetti.",
+    "Dumbo's enormous ears.",
+    "Bambi learning to ice skate.",
+    "Thumper's brutally honest opinion.",
+    "Jiminy Cricket's constant nagging.",
+    "Pinocchio's growing nose.",
+    "Peter Pan, who refuses to grow up.",
+    "Tinker Bell's jealous streak.",
+    "A ticking crocodile.",
+    "Captain Hook's manicure appointment.",
+    "A spoonful of sugar.",
+    "Supercalifragilisticexpialidocious.",
+    "A chimney sweep dance break.",
+    "Goofy's mysterious family tree.",
+    "Donald Duck's temper.",
+    "Understanding zero percent of what Donald says.",
+    "Pluto and Goofy somehow both being dogs.",
+    "Minnie's bow budget.",
+    "Chip and Dale's acorn heist.",
+    "A rat hiding under a chef's hat.",
+    "Mr. Incredible doing math homework.",
+    "Edna Mode banning capes.",
+    "Jack-Jack's surprise powers.",
+    "Frozone looking for his super suit.",
+    "Mike Wazowski's stand-up comedy act.",
+    "A door to a random kid's closet.",
+    "WALL-E's lonely cleaning job.",
+    "A house floating away on balloons.",
+    "A wilderness badge sash with one badge.",
+    "A talking dog distracted by every squirrel.",
+    "Lightning McQueen yelling Ka-chow at strangers.",
+    "Mater driving backwards.",
+    "Joy's relentless optimism.",
+    "Sadness touching all the memories.",
+    "Anger's head bursting into flames.",
+    "Bing Bong.",
+    "Anxiety from Inside Out 2.",
+    "Dory speaking whale.",
+    "A surfer sea turtle who calls everyone dude.",
+    "Seagulls who think everything is theirs.",
+    "Baymax's gentle hug.",
+    "Baymax rating my feelings on a scale of 1 to 10.",
+    "Sven the reindeer.",
+    "Anna's terrible taste in princes.",
+    "Hans, the prince with a plan.",
+    "Elsa accidentally freezing the whole town.",
+    "An ice palace with no heating.",
+    "Timon and Pumbaa's bug buffet.",
+    "The Circle of Life, but with snacks.",
+    "Hyenas who laugh at everything.",
+    "Tiana's beignets.",
+    "A frog who swears he's a prince.",
+    "A shadow with its own plans.",
+    "Merida's wild red curls.",
+    "Aurora sleeping through the whole movie.",
+    "Three good fairies arguing about dress colors.",
+    "Maleficent's grudge.",
+    "A spinning wheel. Do not touch.",
+    "A suspiciously shiny red apple.",
+    "A magic mirror with no filter.",
+    "All the colors of the wind.",
+    "Hercules going from zero to hero.",
+    "Hades' flaming blue hair.",
+    "The Muses singing backup.",
+    "Tarzan's yell.",
+    "Kuzco turning into a llama.",
+    "Kronk pulling the wrong lever.",
+    "Yzma's secret lab.",
+    "Quasimodo ringing the bells too early.",
+    "Vanellope's glitchy driving.",
+    "Judy Hopps writing parking tickets.",
+    "A sloth working at the DMV.",
+    "Fireworks over the castle.",
+    "A character meet-and-greet with a two-hour wait.",
+    "A hug from a six-foot mouse.",
+    "A Dole Whip.",
+    "A turkey leg the size of my head.",
+    "Space Mountain in total darkness.",
+    "\"It's a Small World\" stuck in my head forever.",
+    "The teacups spinning way too fast.",
+    "A stroller traffic jam.",
+    "Lightning Lane regret.",
+    "Matching family vacation T-shirts.",
+    "Mickey-shaped pancakes.",
+    "A pressed penny.",
+    "A rain poncho with mouse ears.",
+    "The 7 a.m. rope-drop sprint.",
+    "Getting soaked on a log flume ride.",
+    "The Haunted Mansion's stretching room.",
+    "A cast member who is VERY committed to the role.",
+    "An autograph book signed by Goofy twice.",
+    "Getting lost in Fantasyland.",
+    "Walking twelve miles in one day.",
+    "A souvenir that costs more than the plane ticket.",
+    "Waving at the parade like it's my job.",
+    "A Disney Channel movie where the basketball team sings.",
+    "A pop star's secret blonde wig.",
+    "Twins running wild in a fancy hotel.",
+    "Phineas and Ferb's summer projects.",
+    "Perry the Platypus in a tiny hat.",
+    "A laugh track that won't stop.",
+    "A live-action remake nobody asked for.",
+    "A realistic CGI lion with zero facial expressions.",
+    "Baby Yoda's little snack.",
+    "A lightsaber made from a wrapping paper tube.",
+    "Darth Vader's heavy breathing.",
+    "A shocking family reveal from Darth Vader.",
+    "Chewbacca's grooming routine.",
+    "A hammer that nobody else can lift.",
+    "A tree who only knows three words.",
+    "Captain America's shield used as a frisbee.",
+    "Spider-Man sticking to the ceiling.",
+    "Pretending I didn't cry at the movie.",
+    "Crying at the movie again, on purpose.",
+    "A strongly worded letter.",
+    "Asking for directions and getting a song instead.",
+    "A nap that lasts a hundred years.",
+    "Doing chores while birds watch.",
+    "Talking to the furniture.",
+    "Group projects.",
+    "Socks with sandals.",
+    "An overly dramatic sigh.",
+    "Dad's terrible jokes.",
+    "Mom's emergency snack bag.",
+    "Losing the TV remote again.",
+    "A sibling who won't stop singing.",
+    "Monday mornings.",
+    "A surprise pop quiz.",
+    "Accidentally becoming royalty.",
+    "Being chosen by a magical object.",
+    "An inspiring speech that goes on way too long.",
+    "A dramatic hair flip.",
+    "A montage where everything gets better.",
+    "The power of friendship.",
+    "Believing in myself, mostly.",
+    "Ninety-seven unread texts.",
+    "A sandwich with the crusts cut off.",
+    "An extremely loud sneeze.",
+    "Singing in the shower at full volume.",
+    "The wrong name on my coffee cup.",
+    "A cat who knows too much.",
+    "A goldfish with big ambitions.",
+    "A tiara from the dollar store.",
+    "Rolling my eyes so hard I see the past.",
+    "A to-do list that just says to be brave.",
+    "Mismatched pajamas.",
+    "Running late in glass shoes.",
+    "An awkward family photo.",
+    "A suitcase that won't zip.",
+    "A wish that's way too specific.",
+    "Overthinking it.",
+    "Reading the instructions after it's too late.",
+    "Clapping when the plane lands.",
+    "Grandpa falling asleep during the movie.",
+    "A villain origin story.",
+    "Becoming the villain after someone steals my fries.",
+    "A best friend who is also a teapot.",
+    "Dancing like nobody's watching while everybody's watching.",
+    "Forgetting the lyrics and humming confidently.",
+    "The middle seat.",
+    "Being way too excited about a parade.",
+    "Twenty minutes looking for the car in the parking lot."
+  ]
+}

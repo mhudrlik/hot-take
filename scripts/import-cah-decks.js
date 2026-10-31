@@ -248,7 +248,9 @@ async function main() {
   }
 
   fs.mkdirSync(OUT_DIR, { recursive: true });
-  for (const f of fs.readdirSync(OUT_DIR)) if (f.endsWith('.json')) fs.unlinkSync(path.join(OUT_DIR, f));
+  // Only replace this script's own decks; hand-made decks in the folder (e.g. the themed ones) are left alone.
+  const ours = new Set(DECKS.map((d) => `${d.id}.json`));
+  for (const f of fs.readdirSync(OUT_DIR)) if (ours.has(f)) fs.unlinkSync(path.join(OUT_DIR, f));
   for (const def of DECKS) {
     const deck = built[def.id];
     fs.writeFileSync(path.join(OUT_DIR, `${def.id}.json`), `${JSON.stringify(deck, null, 2)}\n`);

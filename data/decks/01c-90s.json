@@ -1,0 +1,430 @@
+{
+  "name": "'90s Nostalgia",
+  "description": "Family-friendly. Tamagotchis, dial-up, boy bands, Saturday cartoons and Y2K panic.",
+  "prompts": [
+    {
+      "text": "My Tamagotchi beeped all through math class because it urgently needed ____.",
+      "pick": 1
+    },
+    {
+      "text": "Coming up next on TGIF: a very special episode about ____.",
+      "pick": 1
+    },
+    {
+      "text": "Mom said we have ____ at home.",
+      "pick": 1
+    },
+    {
+      "text": "The Scholastic Book Fair poster that changed my life: a kitten clinging to ____.",
+      "pick": 1
+    },
+    {
+      "text": "On the Oregon Trail, my whole wagon party came down with ____.",
+      "pick": 1
+    },
+    {
+      "text": "I spent my entire allowance on Beanie Babies, a Pog slammer and ____.",
+      "pick": 1
+    },
+    {
+      "text": "Nothing ruined a Saturday morning faster than ____.",
+      "pick": 1
+    },
+    {
+      "text": "Dial-up took four minutes to connect, which gave me plenty of time for ____.",
+      "pick": 1
+    },
+    {
+      "text": "AOL Instant Messenger away message: \"Can't talk, busy with ____.\"",
+      "pick": 1
+    },
+    {
+      "text": "The hottest boy band of 1998 was five guys in matching outfits singing about ____.",
+      "pick": 1
+    },
+    {
+      "text": "Y2K is coming! Quick, stock the basement with canned beans and ____.",
+      "pick": 1
+    },
+    {
+      "text": "Blockbuster was out of every new release, so we rented ____.",
+      "pick": 1
+    },
+    {
+      "text": "The real reason Furby kept talking in the middle of the night: ____.",
+      "pick": 1
+    },
+    {
+      "text": "The note folded into a tiny triangle said only: ____.",
+      "pick": 1
+    },
+    {
+      "text": "My mixtape for my crush was 90 minutes of ____.",
+      "pick": 1
+    },
+    {
+      "text": "What was hiding inside every '90s kid's Trapper Keeper?",
+      "pick": 1
+    },
+    {
+      "text": "This year's must-have holiday toy, causing shoving matches at the mall: ____.",
+      "pick": 1
+    },
+    {
+      "text": "Nickelodeon would slime you for saying \"I don't know\" or for ____.",
+      "pick": 1
+    },
+    {
+      "text": "My Lisa Frank folder featured a rainbow dolphin and ____.",
+      "pick": 1
+    },
+    {
+      "text": "Behold, the trendiest hairdo of 1996: frosted tips and ____.",
+      "pick": 1
+    },
+    {
+      "text": "Who needs a cell phone when you have a pager and ____?",
+      "pick": 1
+    },
+    {
+      "text": "Get off the phone! I need to use the internet for ____!",
+      "pick": 1
+    },
+    {
+      "text": "The secret cheat code for unlimited lives was up, up, down, down, and ____.",
+      "pick": 1
+    },
+    {
+      "text": "The Fresh Prince got sent to Bel-Air because of ____.",
+      "pick": 1
+    },
+    {
+      "text": "My Game Boy's batteries ran out right in the middle of ____.",
+      "pick": 1
+    },
+    {
+      "text": "The real Spice Girl nobody talks about: ____ Spice.",
+      "pick": 1
+    },
+    {
+      "text": "The class computer was strictly for Oregon Trail and ____.",
+      "pick": 1
+    },
+    {
+      "text": "In 1997, being \"all that and a bag of chips\" required ____.",
+      "pick": 1
+    },
+    {
+      "text": "Wearing overalls with one strap down was a cry for ____.",
+      "pick": 1
+    },
+    {
+      "text": "Rewind your tapes or Blockbuster charges a late fee AND ____.",
+      "pick": 1
+    },
+    {
+      "text": "The 1999 school talent show was nothing but kids lip-syncing to ____.",
+      "pick": 1
+    },
+    {
+      "text": "Late-night infomercial: Call now and get ____ for three easy payments!",
+      "pick": 1
+    },
+    {
+      "text": "Sorry I missed your call. My pager only shows ____.",
+      "pick": 1
+    },
+    {
+      "text": "Coming soon to a VHS near you: ____: The Movie!",
+      "pick": 1
+    },
+    {
+      "text": "Slap bracelets were banned from school after the incident with ____.",
+      "pick": 1
+    },
+    {
+      "text": "What did my Magic 8-Ball say when I asked if I'd marry a Backstreet Boy?",
+      "pick": 1
+    },
+    {
+      "text": "The Super Soaker fight escalated quickly when someone brought ____.",
+      "pick": 1
+    },
+    {
+      "text": "I keep my most treasured memories on a 3.5-inch floppy disk labeled ____.",
+      "pick": 1
+    },
+    {
+      "text": "Excuse me, the new Tickle Me Elmo has been upgraded to ____.",
+      "pick": 1
+    },
+    {
+      "text": "What's the password for the clubhouse in the treehouse?",
+      "pick": 1
+    },
+    {
+      "text": "My Polly Pocket compact opened to reveal a tiny ____.",
+      "pick": 1
+    },
+    {
+      "text": "The video store clerk judged me silently for renting ____.",
+      "pick": 1
+    },
+    {
+      "text": "What made the Pogo ball so dangerous?",
+      "pick": 1
+    },
+    {
+      "text": "Inside my JanSport backpack, worn on one shoulder only: ____.",
+      "pick": 1
+    },
+    {
+      "text": "My parents grounded me from the Nintendo 64 because of ____.",
+      "pick": 1
+    },
+    {
+      "text": "\"As if!\" I said, when asked to give up ____.",
+      "pick": 1
+    },
+    {
+      "text": "Before Google, we answered our burning questions with ____.",
+      "pick": 1
+    },
+    {
+      "text": "Forget Pogs. The real playground currency was ____.",
+      "pick": 1
+    },
+    {
+      "text": "Be kind, rewind: ____ and ____.",
+      "pick": 2
+    },
+    {
+      "text": "I traded my rarest Pog for ____ and ____.",
+      "pick": 2
+    },
+    {
+      "text": "Coming this fall on Saturday morning: ____ meets ____!",
+      "pick": 2
+    },
+    {
+      "text": "Dear Diary, today at the mall I saw ____ and ____. Totally buggin'.",
+      "pick": 2
+    },
+    {
+      "text": "My lunchbox had a Fruit Roll-Up, a Capri Sun, and ____ and ____.",
+      "pick": 2
+    },
+    {
+      "text": "Mom, I promise I'll get off the internet as soon as ____ finishes downloading ____.",
+      "pick": 2
+    },
+    {
+      "text": "Y2K survival kit: one flashlight, ____ and ____.",
+      "pick": 2
+    }
+  ],
+  "answers": [
+    "The sound of dial-up internet.",
+    "Blowing into the cartridge and hoping.",
+    "A Tamagotchi that needs attention during a spelling test.",
+    "A Furby that refuses to go to sleep.",
+    "Beanie Babies with the tags still on.",
+    "A Beanie Baby college fund.",
+    "A shoebox of Pogs.",
+    "The holographic slammer.",
+    "A Pogo ball and a dream.",
+    "A Game Boy with a worm light.",
+    "A tiny Polly Pocket shoe lost in the carpet.",
+    "A Super Soaker filled with lemonade.",
+    "A slap bracelet to the wrist.",
+    "Saturday morning cartoons and a mixing bowl of cereal.",
+    "TGIF on a Friday night.",
+    "Nickelodeon green slime.",
+    "Getting slimed on live TV.",
+    "A boy band dance break.",
+    "Five guys on stools standing up for the key change.",
+    "Girl power!",
+    "A Walkman that eats tapes.",
+    "Rewinding a cassette with a pencil.",
+    "A mixtape with the radio DJ talking over the start.",
+    "Waiting by the radio to record a song.",
+    "AOL free trial discs.",
+    "Hearing \"You've got mail\" and feeling famous.",
+    "A pager that only beeps for Mom.",
+    "A 3.5-inch floppy disk.",
+    "Blockbuster on a Friday night.",
+    "A Blockbuster late fee.",
+    "A VHS tape that someone didn't rewind.",
+    "Taping over the wedding video.",
+    "A scrunchie on every wrist.",
+    "Frosted tips.",
+    "Overalls with one strap down.",
+    "JNCO jeans wide enough to camp in.",
+    "Jelly sandals.",
+    "An army of tiny claw clips.",
+    "A bucket hat.",
+    "A windbreaker that sounds like a bag of chips.",
+    "Light-up sneakers.",
+    "Zubaz pants.",
+    "Dunkaroos.",
+    "Gushers.",
+    "A Capri Sun straw stabbed straight through the pouch.",
+    "Bagel Bites.",
+    "Crystal Pepsi.",
+    "Lunchables.",
+    "Fruit by the Foot.",
+    "Surge soda.",
+    "Ecto Cooler.",
+    "Oregon Trail.",
+    "Fording the river.",
+    "A Lisa Frank rainbow leopard.",
+    "A Trapper Keeper with a loud Velcro rip.",
+    "The Scholastic Book Fair.",
+    "A pencil eraser shaped like a pizza.",
+    "The overhead projector.",
+    "The TV cart rolling into class.",
+    "Y2K panic.",
+    "A basement full of Y2K canned beans.",
+    "A computer that thinks it's 1900.",
+    "Tickle Me Elmo.",
+    "A Talkboy.",
+    "A Bop It.",
+    "A Magic 8-Ball that always says to ask again later.",
+    "Mom picking up the phone mid-download.",
+    "A chat room with ten people named Sk8rBoi.",
+    "An away message with song lyrics.",
+    "Hit counter on a personal web page.",
+    "A dancing baby animation.",
+    "Clippy the paperclip.",
+    "Minesweeper during computer class.",
+    "Solitaire on a beige computer.",
+    "A Lite-Brite.",
+    "Moon shoes.",
+    "A Skip-It.",
+    "Koosh balls.",
+    "Gak.",
+    "A Creepy Crawlers oven.",
+    "A Sky Dancer.",
+    "A Yak Bak recording of your little brother.",
+    "Pokémon cards in a binder.",
+    "A holographic Charizard.",
+    "A Nintendo 64 with four controllers.",
+    "The Konami code.",
+    "Laser tag at the birthday party.",
+    "A Discman that skips if you breathe.",
+    "A boom box on the shoulder.",
+    "Glow-in-the-dark stars on the ceiling.",
+    "An inflatable chair.",
+    "A lava lamp.",
+    "A Goosebumps book.",
+    "A Baby-Sitters Club meeting.",
+    "Saved by the Bell.",
+    "Zack Morris's giant cell phone.",
+    "A Fresh Prince theme song sing-along.",
+    "The Macarena.",
+    "The Electric Slide.",
+    "A Spice Girls lunchbox.",
+    "A boy band poster in a locker.",
+    "Tie-dye everything.",
+    "A choker necklace made of stretchy plastic.",
+    "A mood ring.",
+    "Gel pens.",
+    "A Furby speaking Furbish at 3 a.m.",
+    "Crimped hair.",
+    "Zig-zag headbands.",
+    "Rollerblades.",
+    "Starter jackets.",
+    "Pokémon Red.",
+    "Pikachu.",
+    "A Tamagotchi babysitter.",
+    "A floppy disk with a mysterious disk error.",
+    "Encarta encyclopedia.",
+    "The Where in the World Is Carmen Sandiego theme song.",
+    "Bill Nye the Science Guy.",
+    "A Reading Rainbow episode.",
+    "Telling someone to talk to the hand.",
+    "Saying \"As if\" with your whole chest.",
+    "A triumphant \"Booyah\" at the worst moment.",
+    "Adding \"Not\" to the end of a compliment.",
+    "A world-class \"Whatever\" with an eye roll.",
+    "A Hypercolor T-shirt.",
+    "A secret pager code that means call me.",
+    "A phone book.",
+    "A busy signal.",
+    "Calling a radio station for the 9th caller.",
+    "A fanny pack.",
+    "A rented VHS of Jurassic Park.",
+    "An Easy-Bake Oven cake.",
+    "A Super Nintendo.",
+    "A Polaroid camera.",
+    "A disposable camera.",
+    "A Lisa Frank sticker collection.",
+    "The mall arcade.",
+    "Spending Saturday at the mall.",
+    "A food court pretzel.",
+    "Claire's ear piercing.",
+    "A Tiger electronic handheld game.",
+    "Mad Libs.",
+    "Mall Santa.",
+    "An unreasonable amount of glitter.",
+    "A very confident raccoon.",
+    "My dad's dance moves.",
+    "A llama in sunglasses.",
+    "Grandma's secret recipe.",
+    "A suspiciously quiet hamster.",
+    "Spaghetti for breakfast.",
+    "A trampoline in the living room.",
+    "A substitute teacher who gives up.",
+    "Emotional support pizza.",
+    "A dramatic slow clap.",
+    "An extremely long receipt.",
+    "A thousand tiny marshmallows.",
+    "The world's smallest trophy.",
+    "Running in slow motion.",
+    "A goldfish with ambitions.",
+    "Twelve kids in a minivan.",
+    "Hiding vegetables in the couch.",
+    "Mom's \"I'm not mad, just disappointed\" face.",
+    "A school picture day disaster.",
+    "My little brother.",
+    "Dad's socks with sandals.",
+    "A haunted fanny pack.",
+    "A ninja in a bathrobe.",
+    "The last slice of pizza.",
+    "Accidentally calling the teacher Mom.",
+    "A pigeon wearing a tiny hat.",
+    "Interpretive dance.",
+    "Eating paste.",
+    "An uncle who knows magic tricks.",
+    "A cardboard box spaceship.",
+    "A sleepover where nobody sleeps.",
+    "Prank calling the pizza place.",
+    "The bowl-cut haircut.",
+    "A juice box emergency.",
+    "Pretending the floor is lava.",
+    "Triple-dog daring.",
+    "A rubber chicken.",
+    "A karaoke machine with no off switch.",
+    "Dad starting a story with back in my day.",
+    "Building a fort out of couch cushions.",
+    "A sunburn shaped like a backpack.",
+    "Way too many cats.",
+    "A disco ball.",
+    "Sock puppets with feelings.",
+    "A garage band with one song.",
+    "Grounding until the year 2000.",
+    "A pocket full of arcade quarters.",
+    "The ice cream truck driving away.",
+    "Riding bikes until the streetlights come on.",
+    "Getting kicked offline by call waiting.",
+    "A Furby and a Tamagotchi in a custody battle.",
+    "The Fresh Prince's backward hat.",
+    "A VCR blinking 12:00 forever.",
+    "Bubble letters on everything.",
+    "A CD-ROM full of screensavers.",
+    "The flying toasters screensaver.",
+    "The Rachel haircut.",
+    "Sitting in a coffee shop for eight hours like on Friends.",
+    "A Nerf blaster ambush."
+  ]
+}

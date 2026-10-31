@@ -1,6 +1,10 @@
 # Card text attribution
 
-The card text in this folder comes from **Cards Against Humanity** by Cards Against Humanity LLC
+**Original decks:** the themed family-friendly decks (`01a-disney` through `01g-food`) are original writing for Hot
+Take and are not Cards Against Humanity text. They mention films, shows, games and brands by name for fun; those
+names belong to their owners, and Hot Take isn't affiliated with or endorsed by any of them.
+
+**Cards Against Humanity decks:** all other card text in this folder comes from **Cards Against Humanity** by Cards Against Humanity LLC
 (https://www.cardsagainsthumanity.com), used under the
 [Creative Commons BY-NC-SA 4.0](https://creativecommons.org/licenses/by-nc-sa/4.0/) license.
 

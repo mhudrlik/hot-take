@@ -1,0 +1,434 @@
+{
+  "name": "Nerd Alert",
+  "description": "Family-friendly. Video games, D&D, sci-fi, comics, science and tech support.",
+  "prompts": [
+    {
+      "text": "My D&D character's tragic backstory: ____.",
+      "pick": 1
+    },
+    {
+      "text": "Level 1: ____. Final boss: ____.",
+      "pick": 2
+    },
+    {
+      "text": "IT support says: have you tried turning ____ off and on again?",
+      "pick": 1
+    },
+    {
+      "text": "The secret strategy for beating the final boss? ____.",
+      "pick": 1
+    },
+    {
+      "text": "The Dungeon Master sighed deeply when I tried ____.",
+      "pick": 1
+    },
+    {
+      "text": "Achievement unlocked: ____!",
+      "pick": 1
+    },
+    {
+      "text": "New from LEGO: the 4,000-piece ____ set.",
+      "pick": 1
+    },
+    {
+      "text": "The real reason the Wi-Fi is down: ____.",
+      "pick": 1
+    },
+    {
+      "text": "A long time ago, in a galaxy far, far away, there was ____.",
+      "pick": 1
+    },
+    {
+      "text": "Spotted at Comic-Con: a surprisingly accurate cosplay of ____.",
+      "pick": 1
+    },
+    {
+      "text": "Speedrunners just found a glitch that skips ____.",
+      "pick": 1
+    },
+    {
+      "text": "My superpower would be ____. Useless, but cool.",
+      "pick": 1
+    },
+    {
+      "text": "Patch notes, version 2.0: Removed ____. Added ____.",
+      "pick": 2
+    },
+    {
+      "text": "The Sorting Hat took one look at me and put me in the House of ____.",
+      "pick": 1
+    },
+    {
+      "text": "One does not simply walk into ____.",
+      "pick": 1
+    },
+    {
+      "text": "Captain's log, stardate 4523: We have encountered ____.",
+      "pick": 1
+    },
+    {
+      "text": "What's hiding in the mystery loot box?",
+      "pick": 1
+    },
+    {
+      "text": "IT support ticket #4,072: \"My computer smells like ____.\"",
+      "pick": 1
+    },
+    {
+      "text": "In the anime version, my big power-up comes from ____.",
+      "pick": 1
+    },
+    {
+      "text": "This year's science fair winner: ____.",
+      "pick": 1
+    },
+    {
+      "text": "The ancient prophecy foretold ____.",
+      "pick": 1
+    },
+    {
+      "text": "My password hint is \"____.\"",
+      "pick": 1
+    },
+    {
+      "text": "Error 404: ____ not found.",
+      "pick": 1
+    },
+    {
+      "text": "The Fellowship's real mission was never the ring. It was ____.",
+      "pick": 1
+    },
+    {
+      "text": "New side quest: Deliver ____ to ____.",
+      "pick": 2
+    },
+    {
+      "text": "My robot vacuum became self-aware and now demands ____.",
+      "pick": 1
+    },
+    {
+      "text": "The Avengers have assembled to stop ____.",
+      "pick": 1
+    },
+    {
+      "text": "Ten out of ten scientists agree: the answer is ____.",
+      "pick": 1
+    },
+    {
+      "text": "My supervillain origin story began with ____.",
+      "pick": 1
+    },
+    {
+      "text": "Grandpa thinks the internet is mostly ____.",
+      "pick": 1
+    },
+    {
+      "text": "The one thing you should never bring to a LAN party: ____.",
+      "pick": 1
+    },
+    {
+      "text": "Pro tip: ____ gives you +5 charisma.",
+      "pick": 1
+    },
+    {
+      "text": "I didn't choose the nerd life. ____ chose me.",
+      "pick": 1
+    },
+    {
+      "text": "My Wi-Fi network is named \"____.\"",
+      "pick": 1
+    },
+    {
+      "text": "What did the time traveler come back to warn us about?",
+      "pick": 1
+    },
+    {
+      "text": "In the next Pokémon game, you'll finally be able to catch ____.",
+      "pick": 1
+    },
+    {
+      "text": "The tavern keeper leans in and whispers, \"Beware of ____.\"",
+      "pick": 1
+    },
+    {
+      "text": "It's my turn on the game console, but I'm busy with ____.",
+      "pick": 1
+    },
+    {
+      "text": "My smart fridge keeps sending me notifications about ____.",
+      "pick": 1
+    },
+    {
+      "text": "This math problem would be way easier with ____.",
+      "pick": 1
+    },
+    {
+      "text": "Behold! The legendary sword, forged from ____.",
+      "pick": 1
+    },
+    {
+      "text": "Coming soon to streaming: ____: The Animated Series.",
+      "pick": 1
+    },
+    {
+      "text": "The hardest final exam at Hogwarts is Advanced ____.",
+      "pick": 1
+    },
+    {
+      "text": "Crossover event of the year: ____ meets ____!",
+      "pick": 2
+    },
+    {
+      "text": "I'd trade my rarest trading card for ____.",
+      "pick": 1
+    },
+    {
+      "text": "You can't call yourself a true nerd until you've experienced ____.",
+      "pick": 1
+    },
+    {
+      "text": "My Jedi training mostly consists of ____.",
+      "pick": 1
+    },
+    {
+      "text": "The robots took over, but honestly they just wanted ____.",
+      "pick": 1
+    },
+    {
+      "text": "I rolled a natural 20 on ____.",
+      "pick": 1
+    },
+    {
+      "text": "Teacher: \"Show your work.\" Me: ____.",
+      "pick": 1
+    },
+    {
+      "text": "The convention panel nobody asked for: \"The Complete History of ____.\"",
+      "pick": 1
+    },
+    {
+      "text": "Step 1: ____. Step 2: ____. Step 3: Beat the game.",
+      "pick": 2
+    },
+    {
+      "text": "NASA has just confirmed the moon is made of ____.",
+      "pick": 1
+    },
+    {
+      "text": "The hero wields ____ and fears only ____.",
+      "pick": 2
+    },
+    {
+      "text": "My phone is at 1% and I have to choose: ____ or ____.",
+      "pick": 2
+    }
+  ],
+  "answers": [
+    "Rolling a natural 1 at the worst possible moment.",
+    "Turning it off and on again.",
+    "A wizard who forgot to pack any spells.",
+    "The Wi-Fi password on a sticky note.",
+    "Pressing every key until something happens.",
+    "Grinding for loot for six straight hours.",
+    "Stepping on a single LEGO brick in the dark.",
+    "A dragon with a very strict bedtime.",
+    "The loading screen tips nobody reads.",
+    "An escort mission with a very slow walker.",
+    "A potion that only cures hiccups.",
+    "Accidentally selling the legendary sword.",
+    "A lightsaber that's also a flashlight.",
+    "Forgetting to save the game.",
+    "A spreadsheet of every Pokémon I've ever caught.",
+    "The printer that only works when nobody needs it.",
+    "Seventeen browser tabs about one dinosaur.",
+    "A bard who only knows one song.",
+    "A d20 that hates me personally.",
+    "My cosplay falling apart in the lobby.",
+    "Three hours of hot glue and hope.",
+    "The hidden cow level.",
+    "A cheat code from 1998.",
+    "Clipping through the wall to skip the boss.",
+    "A mimic disguised as a lunchbox.",
+    "The tiny lag spike that cost us the match.",
+    "A rubber duck that solves all my coding problems.",
+    "A missing semicolon.",
+    "Updating my drivers again.",
+    "Making the Kessel Run in under twelve parsecs.",
+    "A tribble with big ambitions.",
+    "Second breakfast.",
+    "Elevenses with a hobbit.",
+    "An owl delivering my overdue library books.",
+    "A Hogwarts letter that went to my spam folder.",
+    "Vibranium socks.",
+    "A utility belt full of snacks.",
+    "Hulk-sized stretchy pants.",
+    "A sidekick who is mostly a sandwich.",
+    "The power of friendship.",
+    "A transformation sequence that lasts twelve minutes.",
+    "Yelling the name of my attack.",
+    "Running with my arms straight back.",
+    "A dramatic training montage.",
+    "A giant robot piloted by three cats.",
+    "The Pythagorean theorem.",
+    "Pi to the 300th digit.",
+    "A baking soda volcano.",
+    "A periodic table shower curtain.",
+    "Schrödinger's cat, maybe.",
+    "A black hole in my sock drawer.",
+    "A tiny robot that can only say \"beep\" sadly.",
+    "Holding the router above my head.",
+    "A Bluetooth speaker that connects to the neighbor's house.",
+    "A phone charger that only works at one angle.",
+    "One bar of signal.",
+    "The spinning wheel of doom.",
+    "A USB stick that takes three tries to plug in.",
+    "Blowing into the game cartridge.",
+    "Reading the instruction manual for fun.",
+    "A campaign that's been running since 2009.",
+    "A character sheet covered in pizza grease.",
+    "A goblin with a business plan.",
+    "Splitting the party.",
+    "Asking the DM if I can pet the dragon.",
+    "A cursed ring from a garage sale.",
+    "Elves who are bad at archery.",
+    "The space station's very obvious exhaust port.",
+    "Stormtroopers practicing their aim.",
+    "A droid with a lot of opinions.",
+    "Grogu eating snacks he wasn't offered.",
+    "Getting beamed up mid-sandwich.",
+    "A Vulcan trying to tell a joke.",
+    "Warp speed through a drive-thru.",
+    "An Infinity Gauntlet for TV remotes.",
+    "Thor's hammer stuck under the couch.",
+    "A hobbit-sized sense of adventure.",
+    "A precious ring I keep losing.",
+    "Mount Doom, but it's the laundry pile.",
+    "A sentient spreadsheet.",
+    "Hitting reply-all on a company-wide email.",
+    "The blue screen of sadness.",
+    "An IT guy named Steve who knows everything.",
+    "Clearing my cache.",
+    "Typing my password into the username box.",
+    "Forty-seven pending software updates.",
+    "A smart toaster that judges me.",
+    "A 150-piece tiny screwdriver set.",
+    "An extension cord plugged into itself.",
+    "Speedrunning breakfast.",
+    "A world record by 0.03 seconds.",
+    "A frame-perfect jump.",
+    "The Konami code.",
+    "A boss with three health bars.",
+    "Respawning at the very start of the level.",
+    "Infinite lives.",
+    "A health potion that tastes like grape.",
+    "An inventory full of rocks.",
+    "A side character with way better lore than the hero.",
+    "The mysterious hooded figure in the corner of the tavern.",
+    "A treasure chest that bites.",
+    "Building a whole castle in Minecraft instead of doing chores.",
+    "Punching a tree for wood.",
+    "A creeper at the front door.",
+    "Pressing jump really, really hard.",
+    "A princess in another castle.",
+    "A super mushroom.",
+    "A blue shell on the final lap.",
+    "Rage-quitting Mario Kart.",
+    "A Tamagotchi that needs constant attention.",
+    "A comic book still in its plastic sleeve.",
+    "Mint-condition action figures nobody is allowed to touch.",
+    "A shelf of unpainted miniatures.",
+    "Painting a tiny goblin for nine hours.",
+    "A lanyard with forty enamel pins.",
+    "Waiting in line six hours for an autograph.",
+    "A foam sword with a detailed backstory.",
+    "Fan theories that are better than the actual show.",
+    "Spoilers.",
+    "The official timeline, which makes no sense.",
+    "A director's cut that's six hours long.",
+    "Saying \"Well, actually\" a lot.",
+    "Correcting someone's Star Wars trivia.",
+    "A deep, passionate love of spreadsheets.",
+    "A calculator watch.",
+    "Graph paper.",
+    "Mechanical keyboard noises.",
+    "RGB lighting on literally everything.",
+    "A gaming chair with lumbar support.",
+    "Cheese-puff dust on the controller.",
+    "Lag.",
+    "A beginner with ridiculous beginner's luck.",
+    "Getting carried by a ten-year-old.",
+    "A guild meeting about the guild meetings.",
+    "An NPC who won't stop talking about his farm.",
+    "A fairy yelling \"Hey! Listen!\" constantly.",
+    "A town guard who used to be an adventurer.",
+    "Cake that turns out to be real.",
+    "Sending a rover to Mars to look for my keys.",
+    "A lab coat worn only for dramatic effect.",
+    "Safety goggles as a fashion statement.",
+    "A hypothesis that went hilariously wrong.",
+    "Long division.",
+    "Showing my work in emoji.",
+    "Solving a Rubik's Cube in four seconds.",
+    "A time machine built out of a minivan.",
+    "A sonic screwdriver.",
+    "A phone booth that's bigger on the inside.",
+    "Mind-melding with my cat.",
+    "A raccoon in a tiny wizard hat.",
+    "Grandma's lasagna.",
+    "Aggressive interpretive dance.",
+    "An emotional support hamster.",
+    "A llama with a jetpack.",
+    "Socks with sandals.",
+    "Way too much glitter.",
+    "A goose with a grudge.",
+    "Dad's cargo shorts with fourteen pockets.",
+    "The last slice of pizza.",
+    "A surprise pop quiz.",
+    "Nap time.",
+    "A haunted waffle iron.",
+    "My cat sitting on the keyboard.",
+    "A tiny hat for a tiny frog.",
+    "Waving at someone who wasn't waving at me.",
+    "Running out of snacks.",
+    "An awkward high five.",
+    "A trampoline in the living room.",
+    "Way too many throw pillows.",
+    "A sock puppet with stage fright.",
+    "The ice cream truck song.",
+    "Pancakes shaped like spaceships.",
+    "A suspicious amount of cheese puffs.",
+    "Talking to my houseplants.",
+    "Hiding from the group project.",
+    "A bubble wrap emergency.",
+    "The world's longest group chat.",
+    "Unlimited breadsticks.",
+    "A dog wearing a cape.",
+    "A squirrel who has seen things.",
+    "A pillow fort with a moat.",
+    "Nachos at 2 a.m.",
+    "Pretending to understand the plot.",
+    "Laughing at a joke I didn't hear.",
+    "My entire allowance.",
+    "Bedtime negotiations.",
+    "A potato with googly eyes.",
+    "An inflatable dinosaur costume.",
+    "Interpretive yodeling.",
+    "A sandwich with the crusts cut off.",
+    "My mom's very supportive comments.",
+    "Dramatic slow-motion walking.",
+    "A very confident pigeon.",
+    "Zero-gravity karaoke.",
+    "The world's tiniest violin.",
+    "Hitting snooze eleven times.",
+    "A glowing rock I found in the backyard.",
+    "Twelve cats in a trench coat.",
+    "A foam dart battle in the office.",
+    "A friendship bracelet made of USB cables.",
+    "Hoarding every potion and never using one.",
+    "A jetpack powered by bubble tea.",
+    "Assembling IKEA furniture with leftover screws.",
+    "A wizard's staff that doubles as a selfie stick.",
+    "My browser history, which is all cat videos.",
+    "Explaining the rules for forty-five minutes."
+  ]
+}

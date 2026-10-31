@@ -117,3 +117,20 @@ test('invite endpoints: QR svg and join URL', async (t) => {
 
   assert.equal((await fetch(`${base}/rules`)).status, 200);
 });
+
+test('themed family decks stay family-safe and well-formed', () => {
+  const decks = loadDecks(path.join(__dirname, '..', 'data', 'decks')).filter((d) => /^01[a-z]-/.test(d.id));
+  assert.ok(decks.length >= 7, `expected the themed family decks, found ${decks.length}`);
+  // Whole words only, so "Buttercup", "peel" or "pool" stay allowed.
+  const banned = /\b(butts?|pee|peed|peeing|poop\w*|poo|farts?|farting|vomit\w*|barf\w*|puke[sd]?|puking|boogers?|toilets?|naked|sexy|sex|drunk\w*|beer|wine|kill\w*|dead|die|dies|died|murder\w*|blood\w*|hell|damn\w*|god|jesus|guns?|weapons?)\b/i;
+  for (const d of decks) {
+    assert.match(d.description, /family-friendly|safe for work/i, `${d.name}: description should say it's family/work safe`);
+    for (const p of d.prompts) {
+      assert.doesNotMatch(p.text, banned, `${d.name} prompt: ${p.text}`);
+      const blanks = (p.text.match(/_{3,}/g) || []).length;
+      assert.ok(blanks <= p.pick, `${d.name} prompt has more blanks than picks: ${p.text}`);
+      if (p.pick > 1) assert.equal(blanks, p.pick, `${d.name} pick-${p.pick} prompt needs ${p.pick} blanks: ${p.text}`);
+    }
+    for (const a of d.answers) assert.doesNotMatch(a.text, banned, `${d.name} answer: ${a.text}`);
+  }
+});
