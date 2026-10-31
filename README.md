@@ -420,7 +420,7 @@ rather than your real address.
 | Event | Image tags |
 |---|---|
 | Push to `main` | `latest`, `sha-<short commit>` |
-| Tag `v1.2.3` | `1.2.3`, `1.2`, `1` |
+| Tag `1.2.3` (or `v1.2.3`) | `1.2.3`, `1.2`, `1` |
 
 `latest` follows `main`, so it changes with every push. For a stack that only updates when you choose, pin a
 release instead, e.g. `image: ghcr.io/mhudrlik/hot-take:1` (any 1.x release) or `:1.0.0` (exactly that one).
@@ -436,9 +436,12 @@ Versions follow [semantic versioning](https://semver.org):
 ```bash
 npm version 1.1.0 --no-git-tag-version   # keep package.json in step with the tag
 git commit -am "Release 1.1.0"
-git tag -a v1.1.0 -m "Hot Take 1.1.0"
-git push origin main v1.1.0
+git tag -a 1.1.0 -m "Hot Take 1.1.0"
+git push origin main 1.1.0
 ```
+
+Or on GitHub: **Releases → Draft a new release → Choose a tag**, type `1.1.0`, **Create new tag on publish**, then
+**Publish release**. Either way, the workflow then publishes the `1.1.0`, `1.1` and `1` images.
 
 ---
 

@@ -6,9 +6,10 @@ decks in `data/decks/`. Run `npm test` before committing. See README.md for ever
 ## Releases: always remind the owner to tag
 
 The Docker image `ghcr.io/mhudrlik/hot-take` is published by `.github/workflows/docker-publish.yml`:
-every push to `main` updates `:latest`, and a `vX.Y.Z` git tag publishes `X.Y.Z`, `X.Y` and `X`.
+every push to `main` updates `:latest`, and a version tag (`X.Y.Z`, or `vX.Y.Z`) publishes `X.Y.Z`, `X.Y` and `X`.
+The owner's tags so far use the bare form (`1.0.0`), so suggest that form.
 
-**Whenever changes have been pushed to `main` and the commits since the latest `v*` tag change what players or
+**Whenever changes have been pushed to `main` and the commits since the latest version tag change what players or
 server admins get (anything other than docs, tests, screenshots or CI-only tweaks), end your reply with a release
 reminder.** It must include:
 
@@ -25,11 +26,13 @@ reminder.** It must include:
    ```bash
    npm version X.Y.Z --no-git-tag-version   # keep package.json in step with the tag
    git commit -am "Release X.Y.Z"
-   git tag -a vX.Y.Z -m "Hot Take X.Y.Z"
-   git push origin main vX.Y.Z
+   git tag -a X.Y.Z -m "Hot Take X.Y.Z"
+   git push origin main X.Y.Z
    ```
 
-Don't create or push a tag yourself unless the owner asks; just remind and suggest. If nothing release-worthy has
+Don't create or push a tag yourself unless the owner asks; just remind and suggest. (Cloud sessions can't push
+tags or start workflows at all, so there the owner must tag from GitHub's web UI: Releases → Draft a new release →
+Choose a tag → type the version → Create new tag on publish → Publish release.) If nothing release-worthy has
 changed since the last tag, don't remind.
 
 ## Commits
