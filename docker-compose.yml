@@ -1,3 +1,5 @@
+# Builds Hot Take from this checkout. To run the published image instead (e.g. as a
+# Portainer/Dockge stack), use compose.stack.yml.
 services:
   hot-take:
     build: .

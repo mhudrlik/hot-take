@@ -34,7 +34,26 @@ everyone joins from their own phone's browser. No app to install, no TV, no acco
 
 ## Quick start
 
-### Docker (recommended)
+### Docker stack (recommended)
+
+A ready-made image is published to GitHub Container Registry on every push to `main`, for
+`linux/amd64` and `linux/arm64` (Raspberry Pi and ARM NAS boxes included).
+[`compose.stack.yml`](compose.stack.yml) pulls it, so there's nothing to build:
+
+- **Portainer, Dockge, Komodo, CasaOS…** create a new stack and paste in the contents of `compose.stack.yml`.
+  Set `PUBLIC_URL` to the address phones will use, e.g. `http://192.168.1.20:3000`.
+- **Command line:**
+
+  ```bash
+  curl -O https://raw.githubusercontent.com/mhudrlik/hot-take/main/compose.stack.yml
+  PUBLIC_URL=http://192.168.1.20:3000 docker compose -f compose.stack.yml up -d
+  ```
+
+The stack file exposes every setting as a variable with a sensible default (`HOT_TAKE_PORT`, `PUBLIC_URL`,
+and the ones under [Configuration](#configuration)). It also runs hardened: read-only filesystem, non-root
+user, no privilege escalation, and capped logs.
+
+### Docker, built from source
 
 ```bash
 git clone https://github.com/mhudrlik/hot-take.git
@@ -348,11 +367,15 @@ hot-take/
 │   └── fonts/              # Outfit (OFL)
 ├── data/decks/             # deck JSON files + ATTRIBUTION.md
 ├── scripts/
-│   └── import-cah-decks.js # rebuilds data/decks from the master list
+│   ├── import-cah-decks.js # rebuilds data/decks from the master list
+│   └── take-screenshots.js # regenerates docs/screenshots (npm run screenshots)
 ├── test/                   # node:test suites
 ├── docs/screenshots/       # images used in this README
+├── .github/workflows/
+│   └── docker-publish.yml  # tests, then publishes the image to ghcr.io
 ├── Dockerfile
-└── docker-compose.yml
+├── docker-compose.yml      # build from source
+└── compose.stack.yml       # pull the published image (for stacks)
 ```
 
 ---
@@ -372,6 +395,28 @@ The tests cover:
 - **shipped decks:** every deck in `data/decks/` is valid and large enough for a full game.
 
 To change the look, edit the CSS variables at the top of `public/style.css`. To change the rules text, edit `public/rules.js`.
+
+### Regenerating the README screenshots
+
+After a UI change, refresh every image in `docs/screenshots/` (including the banner) with:
+
+```bash
+npx playwright install chromium   # once
+npm run screenshots
+```
+
+The script starts its own server on a free port and plays a scripted four-phone game on the default deck,
+replaying until the first round is "showcase" quality: the filled-in prompt fits above the hand without
+scrolling, and the cards on screen are free of bathroom, body and similar jokes. That filter is only used
+for the screenshots; the game itself is unaffected. A run usually takes a few minutes. It writes to a temp
+folder first, so a failed run never leaves a half-updated set. The lobby shows `http://192.168.1.20:3000`
+rather than your real address.
+
+### Publishing the Docker image
+
+[`.github/workflows/docker-publish.yml`](.github/workflows/docker-publish.yml) runs the tests, then builds and pushes
+`ghcr.io/mhudrlik/hot-take` on every push to `main` (tagged `latest` and the short commit SHA) and on `v*` tags
+(e.g. `v1.2.0` → `1.2.0`). It can also be started by hand from the Actions tab.
 
 ---
 

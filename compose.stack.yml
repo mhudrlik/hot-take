@@ -1,0 +1,42 @@
+# Hot Take as a ready-made stack: pulls the published image, nothing to build.
+#
+#   Portainer / Dockge / Komodo / CasaOS: paste this file in as a new stack.
+#   Command line:                         docker compose -f compose.stack.yml up -d
+#
+# The image is built from this repo by GitHub Actions on every push to main
+# (linux/amd64 and linux/arm64, so it runs on a Raspberry Pi or ARM NAS too).
+# To build from source instead, use docker-compose.yml.
+
+services:
+  hot-take:
+    image: ghcr.io/mhudrlik/hot-take:latest
+    container_name: hot-take
+    restart: unless-stopped
+    ports:
+      # host:container. Change the left side if port 3000 is taken on your server.
+      - "${HOT_TAKE_PORT:-3000}:3000"
+    environment:
+      # The address phones use to reach the game; it goes into the QR code and invite link.
+      # Inside Docker the server can't see your LAN IP, so set this, e.g. http://192.168.1.20:3000
+      # or https://cards.example.com behind a reverse proxy. Left empty, it uses whatever
+      # address the host opened the game with.
+      PUBLIC_URL: ${PUBLIC_URL:-}
+      # How long a dropped phone keeps its seat (ms).
+      DISCONNECT_GRACE_MS: ${DISCONNECT_GRACE_MS:-120000}
+      # Rooms with nobody connected are deleted after this long (ms).
+      ROOM_IDLE_MS: ${ROOM_IDLE_MS:-7200000}
+      MAX_ROOMS: ${MAX_ROOMS:-200}
+    # Uncomment to replace the built-in decks with your own folder of deck .json files.
+    # volumes:
+    #   - ./decks:/app/data/decks:ro
+    # The app writes nothing to disk, so the container can run read-only.
+    read_only: true
+    tmpfs:
+      - /tmp
+    security_opt:
+      - no-new-privileges:true
+    logging:
+      driver: json-file
+      options:
+        max-size: "1m"
+        max-file: "3"
