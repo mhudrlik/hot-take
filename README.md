@@ -415,8 +415,30 @@ rather than your real address.
 ### Publishing the Docker image
 
 [`.github/workflows/docker-publish.yml`](.github/workflows/docker-publish.yml) runs the tests, then builds and pushes
-`ghcr.io/mhudrlik/hot-take` on every push to `main` (tagged `latest` and the short commit SHA) and on `v*` tags
-(e.g. `v1.2.0` → `1.2.0`). It can also be started by hand from the Actions tab.
+`ghcr.io/mhudrlik/hot-take` for `linux/amd64` and `linux/arm64`. It can also be started by hand from the Actions tab.
+
+| Event | Image tags |
+|---|---|
+| Push to `main` | `latest`, `sha-<short commit>` |
+| Tag `v1.2.3` | `1.2.3`, `1.2`, `1` |
+
+`latest` follows `main`, so it changes with every push. For a stack that only updates when you choose, pin a
+release instead, e.g. `image: ghcr.io/mhudrlik/hot-take:1` (any 1.x release) or `:1.0.0` (exactly that one).
+
+### Releasing a version
+
+Versions follow [semantic versioning](https://semver.org):
+
+- **major** for anything that breaks an existing setup (env vars, deck format, ports, volumes),
+- **minor** for new features,
+- **patch** for fixes.
+
+```bash
+npm version 1.1.0 --no-git-tag-version   # keep package.json in step with the tag
+git commit -am "Release 1.1.0"
+git tag -a v1.1.0 -m "Hot Take 1.1.0"
+git push origin main v1.1.0
+```
 
 ---
 
