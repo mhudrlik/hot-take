@@ -116,6 +116,15 @@ test('invite endpoints: QR svg and join URL', async (t) => {
   assert.equal(proxied.url, 'https://cards.example.com/?room=BCDF');
 
   assert.equal((await fetch(`${base}/rules`)).status, 200);
+
+  // The TV/scoreboard display page and its link.
+  assert.equal(proxied.displayUrl, 'https://cards.example.com/display?room=BCDF');
+  const page = await fetch(`${base}/display?room=BCDF`);
+  assert.equal(page.status, 200);
+  assert.match(await page.text(), /display\.js/);
+  const tvQr = await fetch(`${base}/qr.svg?room=BCDF&target=display`);
+  assert.equal(tvQr.status, 200);
+  assert.notEqual(await tvQr.text(), await (await fetch(`${base}/qr.svg?room=BCDF`)).text(), 'display QR encodes a different URL');
 });
 
 test('themed family decks stay family-safe and well-formed', () => {
@@ -133,4 +142,62 @@ test('themed family decks stay family-safe and well-formed', () => {
     }
     for (const a of d.answers) assert.doesNotMatch(a.text, banned, `${d.name} answer: ${a.text}`);
   }
+});
+
+test('a TV display follows a room without taking a seat', async (t) => {
+  const decks = loadDecks(path.join(__dirname, '..', 'data', 'decks'));
+  const { server } = createServer({ decks, graceMs: 50 });
+  await new Promise((r) => server.listen(0, r));
+  const url = `http://localhost:${server.address().port}`;
+  const [a, b, c, tv] = [client(url), client(url), client(url), client(url)];
+  tv.views = [];
+  tv.on('display', (v) => tv.views.push(v));
+  let ended = false;
+  tv.on('room-ended', () => { ended = true; });
+  t.after(() => {
+    [a, b, c, tv].forEach((s) => s.close());
+    server.close();
+  });
+
+  assert.equal((await tv.call('watch', { code: 'ZZZZ' })).error, 'No game with that code.');
+  const { code } = await a.call('create', { name: 'Ana' });
+  assert.ok((await tv.call('watch', { code: code.toLowerCase() })).ok);
+  await settle();
+  assert.equal(tv.views.at(-1).phase, 'lobby');
+  assert.equal(a.latest.displays, 1, 'host sees the display count');
+
+  // A display is not a player: with only two players the game can't start.
+  await b.call('join', { code, name: 'Ben' });
+  assert.match((await a.call('action', { type: 'start' })).error, /at least 3/);
+  assert.equal(a.latest.players.length, 2);
+  await c.call('join', { code, name: 'Cy' });
+  assert.ok((await a.call('action', { type: 'start' })).ok);
+  await settle();
+  assert.equal(tv.views.at(-1).phase, 'submitting');
+  assert.ok(tv.views.at(-1).prompt.text);
+
+  const phones = [a, b, c];
+  const judge = phones.find((s) => s.latest.you.id === s.latest.judgeId);
+  const played = [];
+  for (const s of phones.filter((x) => x !== judge)) {
+    const cards = s.latest.you.hand.slice(0, s.latest.prompt.pick);
+    played.push(...cards.map((x) => x.text));
+    await s.call('action', { type: 'submit', cardIds: cards.map((x) => x.id) });
+  }
+  await settle();
+  assert.equal(tv.views.at(-1).phase, 'judging');
+  const everything = JSON.stringify(tv.views);
+  for (const text of played) assert.ok(!everything.includes(text), `display saw "${text}" before the pick`);
+
+  await judge.call('action', { type: 'pick', submissionId: judge.latest.submissions[0].id });
+  await settle();
+  const reveal = tv.views.at(-1);
+  assert.equal(reveal.phase, 'reveal');
+  const shown = reveal.history.at(-1).submissions.flatMap((s) => s.cards.map((x) => x.text));
+  assert.deepEqual(shown.sort(), played.sort());
+
+  // Displays are told when the game goes away.
+  for (const s of phones) await s.call('leave');
+  await settle();
+  assert.ok(ended, 'display was told the room ended');
 });

@@ -1,6 +1,7 @@
 'use strict';
 
 (() => {
+  const { readJSON, writeJSON, esc, plural, initial, fillPrompt, icons } = window.HotTake;
   const SESSION_KEY = 'hottake.session';
   const NAME_KEY = 'hottake.name';
 
@@ -13,28 +14,15 @@
   let state = null; // latest server view, or null when not in a game
   let session = readJSON(SESSION_KEY); // { code, token }
   let replaced = false;
-  // sheet: null | 'menu' | 'rules' | 'invite'
+  // sheet: null | 'menu' | 'rules' | 'invite' | 'tv'
   const ui = { roundKey: null, cards: [], entry: null, sheet: null, busy: false, invite: null };
 
-  // ---- storage (can throw in private mode, so always guarded) -----------
-
-  function readJSON(key) {
-    try { return JSON.parse(localStorage.getItem(key)); } catch { return null; }
-  }
-  function writeJSON(key, value) {
-    try {
-      if (value == null) localStorage.removeItem(key);
-      else localStorage.setItem(key, JSON.stringify(value));
-    } catch { /* storage unavailable: reconnect just won't survive a reload */ }
-  }
   function setSession(value) {
     session = value;
     writeJSON(SESSION_KEY, value);
   }
 
   // ---- helpers -----------------------------------------------------------
-
-  const esc = (s) => String(s).replace(/[&<>"']/g, (c) => ({ '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;', "'": '&#39;' })[c]);
 
   function toast(msg) {
     toastEl.textContent = msg;
@@ -66,36 +54,11 @@
     return res;
   }
 
-  /** Puts answers into the prompt's blanks (or appends them if it has none); empty blanks stay as lines. */
-  function fillPrompt(text, cards) {
-    const parts = String(text).split(/_{3,}/);
-    const fills = cards.map((c) => `<span class="fill">${esc(c.text.replace(/[.!?]+$/, ''))}</span>`);
-    if (parts.length - 1 < cards.length) {
-      return `${esc(text)} ${fills.join(' / ')}`;
-    }
-    return parts.map((p, i) => esc(p) + (i < parts.length - 1 ? (fills[i] ?? '<span class="blank"></span>') : '')).join('');
-  }
-
   const me = () => state.you;
   const nameOf = (id) => state.players.find((p) => p.id === id)?.name ?? '?';
   const isHost = () => state.hostId === state.you.id;
   const isJudge = () => state.judgeId === state.you.id;
-  const plural = (n, word) => `${n} ${word}${n === 1 ? '' : 's'}`;
   const busyAttr = () => (ui.busy ? ' disabled' : '');
-  const initial = (name) => esc([...String(name).trim()][0]?.toUpperCase() || '?');
-
-  // ---- icons (simple inline SVG, stroke = currentColor) ------------------
-
-  const svg = (body, cls = 'ico') => `<svg class="${cls}" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">${body}</svg>`;
-  const icons = {
-    menu: svg('<path d="M4 7h16M4 12h16M4 17h16"/>'),
-    info: svg('<circle cx="12" cy="12" r="9"/><path d="M12 11v6M12 7.5v.01"/>'),
-    users: svg('<circle cx="9" cy="8" r="3.2"/><path d="M3 19c.6-3.3 3-5 6-5s5.4 1.7 6 5"/><circle cx="17" cy="9" r="2.4"/><path d="M17 14c2.2.2 3.6 1.6 4 4"/>'),
-    link: svg('<path d="M10 14a4 4 0 0 0 5.7 0l3-3a4 4 0 0 0-5.7-5.7l-1 1"/><path d="M14 10a4 4 0 0 0-5.7 0l-3 3a4 4 0 0 0 5.7 5.7l1-1"/>'),
-    close: svg('<path d="M6 6l12 12M18 6L6 18"/>'),
-    // Hot Take's card mark: a small flame.
-    flame: `<svg class="mark" viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="M12.6 2.4c.5 3-1.2 4.6-2.6 6.1-1.5 1.6-3 3.3-3 6 0 3.6 2.6 6.5 5.6 6.5 3.4 0 6.4-2.6 6.4-6.6 0-2.6-1.3-4.4-2.4-5.6.1 1.6-.5 2.9-1.6 3.4.3-3.7-.7-7.6-2.4-9.8zm-.4 11.2c.7 1.3 2.6 2 2.6 4 0 1.5-1.2 2.7-2.7 2.7s-2.6-1.1-2.6-2.6c0-1.8 1.7-2.3 2.7-4.1z"/></svg>`,
-  };
 
   // ---- invite (QR + link) -----------------------------------------------
 
@@ -103,12 +66,12 @@
   function loadInvite() {
     const code = state.code;
     if (ui.invite?.code === code) return;
-    ui.invite = { code, url: `${location.origin}/?room=${code}`, reachable: true };
+    ui.invite = { code, url: `${location.origin}/?room=${code}`, displayUrl: `${location.origin}/display?room=${code}`, reachable: true };
     fetch(`/api/invite?room=${code}`)
       .then((r) => r.json())
       .then((info) => {
         if (ui.invite?.code !== code || !info.url) return;
-        ui.invite = { code, url: info.url, reachable: info.reachable };
+        ui.invite = { code, url: info.url, displayUrl: info.displayUrl || ui.invite.displayUrl, reachable: info.reachable };
         render();
       })
       .catch(() => { /* keep the location.origin fallback */ });
@@ -135,15 +98,7 @@
 
   // ---- wake lock: keep phones from sleeping mid-game ---------------------
 
-  let wakeLock = null;
-  async function keepAwake() {
-    if (!state || wakeLock || !('wakeLock' in navigator) || document.visibilityState !== 'visible') return;
-    try {
-      wakeLock = await navigator.wakeLock.request('screen');
-      wakeLock.addEventListener('release', () => { wakeLock = null; });
-    } catch { /* not allowed (e.g. low battery); harmless */ }
-  }
-  document.addEventListener('visibilitychange', keepAwake);
+  const keepAwake = window.HotTake.keepAwake(() => Boolean(state));
 
   // ---- socket events -----------------------------------------------------
 
@@ -294,6 +249,7 @@
           <button class="btn yellow" data-act="join"${busyAttr()}>Join game</button>
           <div class="divider">or</div>
           <button class="btn dark" data-act="create"${busyAttr()}>Start a new game</button>
+          <a class="text-link" href="/display">${icons.tv} Set up a TV or scoreboard display</a>
         </div>`,
     };
   }
@@ -541,6 +497,24 @@
       </div></div>`;
   }
 
+  /** How to put the scoreboard on a TV: open /display on the TV's device, or scan/open it from here. */
+  function tvBlock() {
+    loadInvite();
+    const { displayUrl } = ui.invite;
+    return `
+      <div class="invite">
+        <p class="muted">A display shows the scoreboard, each round's prompt and, once the judge picks, everyone's
+          answers. It doesn't take a seat in the game.</p>
+        <img class="qr" src="/qr.svg?room=${esc(state.code)}&target=display&v=${encodeURIComponent(displayUrl)}"
+             alt="QR code that opens the display for room ${esc(state.code)}" width="240" height="240">
+        <p class="eyebrow">On the TV's device, open</p>
+        <p class="url big">${esc(displayUrl)}</p>
+        <a class="btn yellow" href="${esc(displayUrl)}" target="_blank" rel="noopener">${icons.tv} Open the display here</a>
+        <p class="muted small">Casting from a phone? Open the link on that phone and cast its screen. On a laptop
+          plugged into a TV, open it and choose full screen from the display's menu.</p>
+      </div>`;
+  }
+
   function renderOverlay() {
     if (ui.sheet === 'rules') {
       const settings = state?.settings || {};
@@ -551,6 +525,7 @@
     }
     if (!state) return '';
     if (ui.sheet === 'invite') return sheet('Invite players', inviteBlock(true));
+    if (ui.sheet === 'tv') return sheet('Show on a TV', tvBlock());
     if (ui.sheet !== 'menu') return '';
 
     const inRound = state.phase === 'submitting' || state.phase === 'judging';
@@ -565,7 +540,9 @@
         ${playerList({ allowKick: isHost() })}
       </div>
       <button class="btn dark" data-act="invite">${icons.link} Invite players (QR code)</button>
+      <button class="btn dark" data-act="tv">${icons.tv} Show on a TV${state.displays ? ` · ${plural(state.displays, 'display')} connected` : ''}</button>
       <button class="btn dark" data-act="rules">${icons.info} How to play</button>
+      ${window.HotTake.layoutPicker()}
       ${hostTools}
       <button class="btn danger" data-act="leave">Leave game</button>`);
   }
@@ -623,9 +600,9 @@
     const sameScreen = app.dataset.screen === screenKey;
 
     app.innerHTML = `
-      <div class="shell">
+      <div class="shell${view.dock?.includes('class="hand') ? ' with-hand' : ''}">
         ${appbar()}
-        <main class="stage" data-keep-scroll="stage"><div class="stage-inner">${view.body}</div></main>
+        <main class="stage" data-keep-scroll="stage"><div class="stage-inner screen-${state ? state.phase : 'home'}">${view.body}</div></main>
         ${view.dock || ''}
       </div>`;
     app.dataset.screen = screenKey;
@@ -698,6 +675,14 @@
         replaced = false;
         if (socket.connected) socket.disconnect();
         socket.connect();
+        break;
+      case 'layout':
+        window.HotTake.setLayoutPref(el.dataset.value);
+        render();
+        break;
+      case 'tv':
+        ui.sheet = 'tv';
+        render();
         break;
       case 'menu':
       case 'rules':
@@ -794,6 +779,8 @@
       enter(app.querySelector('#code').value.trim() ? 'join' : 'create');
     }
   });
+
+  window.HotTake.onLayoutChange(() => render());
 
   render();
 })();

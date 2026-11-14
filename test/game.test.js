@@ -354,3 +354,51 @@ test('the too-small-deck error counts the combined pile', () => {
   room.updateSettings(host.id, { handSize: 5 });
   room.start(host.id); // 3 x (5 + 2) = 21 <= 24
 });
+
+test('finished rounds are kept in history and reset each game', () => {
+  const { room, host } = setup(3);
+  room.updateSettings(host.id, { pointsToWin: 3 });
+  room.start(host.id);
+  assert.deepEqual(room.history, []);
+  playAll(room);
+  const judgeName = room.player(room.judgeId).name;
+  room.pickWinner(room.judgeId, room.submissions[0].id);
+  assert.equal(room.history.length, 1);
+  assert.equal(room.history[0].round, 1);
+  assert.equal(room.history[0].judgeName, judgeName);
+  assert.equal(room.history[0].submissions.length, 2);
+  assert.ok(room.history[0].submissions.every((s) => s.playerName));
+  room.nextRound(host.id);
+  room.skipRound(host.id); // voided rounds have no winner, so they aren't history
+  assert.equal(room.history.length, 1);
+  while (room.phase !== 'gameOver') {
+    playAll(room);
+    room.pickWinner(room.judgeId, room.submissions[0].id);
+    if (room.phase === 'reveal') room.nextRound(host.id);
+  }
+  room.start(host.id);
+  assert.deepEqual(room.history, []);
+});
+
+test('display view never shows answers before the judge picks', () => {
+  const { room, host } = setup(4);
+  room.start(host.id);
+  const before = room.viewFor(host.id);
+  assert.equal(room.displayView().prompt.text, before.prompt.text, 'the current prompt is public');
+  playAll(room);
+  assert.equal(room.phase, 'judging');
+  const played = room.submissions.flatMap((s) => s.cards.map((c) => c.text));
+  const json = JSON.stringify(room.displayView());
+  for (const text of played) assert.ok(!json.includes(text), `leaked "${text}" during judging`);
+  for (const p of room.players) assert.ok(!json.includes(p.token), 'leaked a reconnect token');
+  assert.equal(room.displayView().submittedCount, 3);
+  assert.equal(room.displayView().needed, 3);
+
+  room.pickWinner(room.judgeId, room.submissions[0].id);
+  const view = room.displayView();
+  const last = view.history.at(-1);
+  assert.equal(last.round, 1);
+  assert.deepEqual(last.submissions.flatMap((s) => s.cards.map((c) => c.text)).sort(), played.sort());
+  assert.ok(last.submissions.every((s) => s.playerName && s.playerId));
+  assert.ok(!JSON.stringify(view).includes('"hand"'), 'never includes anyone\'s hand');
+});

@@ -1,0 +1,163 @@
+/* TV / scoreboard display. Builds on style.css; html.display[data-layout] is "phone" or "big" (common.js).
+   Big is designed for 1920x1080 with no scrolling and scales with the screen's height, so it also fits
+   720p laptops and tablets held sideways. Phone is a single column, or two columns held sideways. */
+
+html.display[data-layout="big"] { font-size: clamp(14px, 1.85vh + .1vw, 40px); }
+
+.display .shell { height: 100dvh; }
+.display main { flex: 1; min-height: 0; }
+
+html.display[data-layout="big"] .appbar { padding: .55rem 1.4rem; }
+html.display[data-layout="big"] .logo { font-size: 1.9rem; }
+html.display[data-layout="big"] .room-chip { height: auto; padding: .35rem .9rem; font-size: 1.4rem; letter-spacing: .14em; }
+html.display[data-layout="big"] .appbar .icon-btn { width: 2.6rem; height: 2.6rem; }
+
+/* ---- panels, headings, status -------------------------------------------- */
+
+.d-panel {
+  background: var(--panel); border: 3px solid var(--ink); border-radius: 1.2rem;
+  padding: 1rem 1.15rem; display: flex; flex-direction: column; gap: .85rem; min-height: 0;
+}
+.d-head { display: flex; align-items: baseline; justify-content: space-between; gap: .4rem .8rem; flex-wrap: wrap; }
+.d-head h2 { font-size: 1.45rem; }
+.d-current .d-head { justify-content: flex-start; }
+.d-status {
+  display: flex; align-items: center; gap: .8rem; flex-wrap: wrap;
+  background: var(--panel-2); border-radius: .9rem; padding: .7rem 1rem;
+  font-weight: 700; font-size: 1.1rem; color: #e7e7ef;
+}
+.d-status strong { color: #fff; }
+.d-dots { display: flex; gap: .35rem; flex-wrap: wrap; }
+.d-dots i { width: .85rem; height: .85rem; border-radius: 50%; background: #3a3b47; border: 2px solid var(--ink); transition: background .3s; }
+.d-dots i.on { background: var(--green); }
+.display .dots i { width: .5rem; height: .5rem; }
+.display .prompt-card p { font-size: 1.6rem; }
+.display .prompt-card.d-prompt { min-height: 0; }
+.display .prompt-card.d-prompt p { font-size: 2.2rem; }
+
+/* ---- scoreboard ----------------------------------------------------------------- */
+
+.d-players { list-style: none; margin: 0; padding: 0; display: flex; flex-direction: column; gap: .5rem; }
+.d-players li {
+  display: flex; align-items: center; gap: .65rem; padding: .5rem .6rem;
+  background: var(--panel-2); border-radius: .85rem; border: 2px solid transparent;
+}
+.d-players li.leader { border-color: var(--yellow); }
+.d-players li.off { opacity: .45; }
+.d-players .avatar { width: 2.2rem; height: 2.2rem; border-radius: .7rem; font-size: 1.05rem; flex: none; }
+.d-players .who { flex: 1; min-width: 0; display: flex; flex-direction: column; gap: .3rem; }
+/* The name keeps its width; the status tag drops below it when the column is narrow. */
+.d-players .top { display: flex; flex-wrap: wrap; align-items: center; gap: .2rem .45rem; min-width: 0; }
+.d-players .name { flex: 0 1 auto; max-width: 100%; font-weight: 800; font-size: 1.1rem; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
+.d-players .bar { height: .35rem; border-radius: 99px; background: #0a0a0d; overflow: hidden; }
+.d-players .bar i { display: block; height: 100%; background: var(--yellow); border-radius: 99px; transition: width .4s; }
+.d-players .tag { font-size: .62rem; padding: .2rem .45rem; flex: none; }
+.d-players .score { font-weight: 900; font-size: 1.6rem; min-width: 2ch; text-align: right; font-variant-numeric: tabular-nums; }
+
+/* ---- round results ------------------------------------------------------------------ */
+
+.d-result { display: flex; flex-direction: column; gap: .85rem; }
+.display .d-result .answer-card { font-size: 1.55rem; padding: 1rem 1.2rem; }
+.display .d-result .answer-card .who { font-size: .75rem; }
+.display .d-result .crown { font-size: .8rem; }
+.d-answers { display: grid; grid-template-columns: repeat(auto-fill, minmax(13rem, 1fr)); gap: .7rem; }
+.d-answer {
+  display: flex; flex-direction: column; justify-content: space-between; gap: .35rem;
+  background: var(--card); color: var(--card-ink); border: 3px solid var(--ink); border-radius: .9rem;
+  padding: .65rem .85rem; box-shadow: 0 4px 0 var(--ink);
+}
+.d-answer .txt { font-weight: 800; font-size: 1.05rem; line-height: 1.2; white-space: pre-line; overflow-wrap: anywhere; }
+.d-answer em { color: #6a3cf0; font-style: normal; }
+.d-answer .by { font-size: .7rem; font-weight: 900; letter-spacing: .12em; text-transform: uppercase; color: #6c6c7a; }
+.d-result.compact .answer-card { font-size: 1.15rem; }
+.d-result.compact .d-answers { grid-template-columns: repeat(auto-fill, minmax(10.5rem, 1fr)); gap: .55rem; }
+.d-result.compact .d-answer .txt { font-size: .88rem; }
+.d-last { display: flex; flex-direction: column; gap: .6rem; padding-top: .9rem; border-top: 2px dashed var(--line); }
+
+/* ---- round winners -------------------------------------------------------------------- */
+
+.d-rounds { list-style: none; margin: 0; padding: 0; display: flex; flex-direction: column; gap: .65rem; }
+.d-rounds li { background: var(--panel-2); border-radius: .9rem; padding: .65rem .85rem; display: flex; flex-direction: column; gap: .3rem; }
+.d-rounds .eyebrow { font-size: .68rem; }
+.d-rounds b { color: var(--yellow); font-weight: 900; }
+.d-rounds p { font-weight: 700; font-size: 1rem; line-height: 1.25; white-space: pre-line; overflow-wrap: anywhere; }
+
+/* ---- lobby ---------------------------------------------------------------------------- */
+
+.d-join { align-items: center; justify-content: center; text-align: center; gap: .6rem; }
+.d-join h1 { font-size: 2.2rem; }
+.d-join .qr { width: min(240px, 64vw); }
+.d-url { font-size: 1.2rem; font-weight: 800; overflow-wrap: anywhere; }
+.d-join .bigcode { font-size: 3.4rem; }
+.d-chips { list-style: none; margin: 0; padding: 0; display: grid; grid-template-columns: repeat(auto-fill, minmax(11rem, 1fr)); gap: .6rem; }
+.d-chips li {
+  display: flex; align-items: center; gap: .55rem; background: var(--panel-2); border-radius: .9rem;
+  padding: .55rem .75rem; font-weight: 800; font-size: 1.15rem; animation: pop .25s ease-out;
+}
+.d-chips li.off { opacity: .45; }
+.d-chips .avatar { width: 2rem; height: 2rem; border-radius: .65rem; flex: none; }
+.d-chips .tag { margin-left: auto; }
+.d-decks { display: flex; flex-direction: column; gap: .5rem; margin-top: auto; }
+@keyframes pop { from { transform: scale(.85); opacity: 0; } }
+
+/* ---- game over ------------------------------------------------------------------------- */
+
+.d-hero { text-align: center; display: flex; flex-direction: column; align-items: center; gap: .3rem; }
+.d-hero .trophy { font-size: 4.5rem; }
+.d-hero h1 { font-size: 3rem; }
+
+/* ---- connect screen --------------------------------------------------------------------- */
+
+.d-connect { display: grid; place-items: center; padding: 24px var(--gutter); overflow-y: auto; }
+.d-connect .panel { width: min(480px, 100%); }
+.d-connect-head { display: flex; align-items: center; gap: 10px; }
+.d-connect-head .ico { width: 30px; height: 30px; color: var(--yellow); }
+.d-connect-head h1 { font-size: 1.6rem; }
+
+/* ---- big layout: three columns, no scrolling at 1080p ------------------------------------- */
+
+html.display[data-layout="big"] .d-game {
+  display: grid; grid-template-columns: minmax(13rem, 22fr) minmax(0, 50fr) minmax(13rem, 28fr);
+  gap: 1.1rem; padding: 1.1rem 1.4rem 1.3rem; height: 100%;
+}
+html.display[data-layout="big"] .d-game > .d-panel { overflow-y: auto; scrollbar-width: thin; }
+html.display[data-layout="big"] .d-lobby {
+  display: grid; grid-template-columns: 42fr 58fr; gap: 1.4rem; padding: 1.4rem; height: 100%;
+}
+html.display[data-layout="big"] .d-lobby > .d-panel { overflow-y: auto; }
+html.display[data-layout="big"] .d-join h1 { font-size: 2.6rem; }
+html.display[data-layout="big"] .d-join .qr { width: min(44vh, 30vw); }
+html.display[data-layout="big"] .d-join .bigcode { font-size: 4.6rem; }
+html.display[data-layout="big"] .d-connect .panel { width: min(30rem, 100%); }
+
+/* ---- phone layout (and casting a phone's screen) ----------------------------------------- */
+
+html.display[data-layout="phone"] main { overflow-y: auto; }
+html.display[data-layout="phone"] .d-game,
+html.display[data-layout="phone"] .d-lobby {
+  display: flex; flex-direction: column; gap: 12px; padding: 12px var(--gutter) 24px; max-width: 760px; margin: 0 auto;
+}
+html.display[data-layout="phone"] .d-current { order: 1; }
+html.display[data-layout="phone"] .d-score { order: 2; }
+html.display[data-layout="phone"] .d-history { order: 3; }
+html.display[data-layout="phone"] .display .prompt-card.d-prompt p,
+html.display[data-layout="phone"] .prompt-card.d-prompt p { font-size: clamp(1.4rem, 6vw, 2rem); }
+html.display[data-layout="phone"] .d-result .answer-card { font-size: 1.25rem; }
+
+@media (min-width: 700px) {
+  html.display[data-layout="phone"] { font-size: 18px; }
+}
+
+/* A phone (or small screen) held sideways: current round on the left, scores and winners on the right. */
+@media (orientation: landscape) {
+  html.display[data-layout="phone"] .d-game {
+    display: grid; grid-template-columns: minmax(0, 1.35fr) minmax(0, 1fr); align-items: start; max-width: none;
+  }
+  html.display[data-layout="phone"] .d-current { grid-row: span 2; }
+  html.display[data-layout="phone"] .d-lobby {
+    display: grid; grid-template-columns: minmax(0, 1fr) minmax(0, 1.2fr); align-items: start; max-width: none;
+  }
+}
+
+/* In the phone layout the page scrolls, so panels keep their natural height. */
+html.display[data-layout="phone"] .d-panel { flex: none; min-height: auto; }

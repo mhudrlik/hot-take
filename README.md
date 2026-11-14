@@ -7,11 +7,13 @@
 **A party card game you play on your phones.** One player is the judge and reads a prompt card. Everyone
 else secretly plays their funniest answer card, and the judge picks a winner. It's the same game as
 Cards Against Humanity or Apples to Apples, played the way Jackbox games work: one small server, and
-everyone joins from their own phone's browser. No app to install, no TV, no accounts.
+everyone joins from their own phone's browser. No app to install, no accounts, and a TV is optional.
 
 - **Join in seconds.** Scan the QR code on the host's screen, or type a 4-letter room code.
 - **Built for phones.** Big tap targets, a swipeable hand of cards, the screen stays awake mid-game, and Android phones vibrate when it's your turn.
-- **Twelve decks out of the box**, starting with a kid-safe Family Edition as the default (card text from Cards Against Humanity, see [Credits](#credits-and-licenses)).
+- **Optional TV scoreboard.** Put a live scoreboard on a TV, laptop or tablet: the join QR code before the game, then each round's prompt, the answers once the judge picks, and every round's winner.
+- **Fits any screen.** Phones, tablets (iPad, Fire) and laptops each get a layout that suits them, picked automatically or chosen from the menu.
+- **Nineteen decks out of the box**, starting with a kid-safe Family Edition as the default, plus seven original family-friendly themed decks (other card text from Cards Against Humanity, see [Credits](#credits-and-licenses)).
 - **Survives real-world phones.** Lock your screen or lose Wi-Fi and you keep your seat and score for 2 minutes; reopening the link puts you right back.
 - **Runs anywhere.** One Docker container, or `npm start`. Works on a home network with no internet connection.
 
@@ -23,6 +25,8 @@ everyone joins from their own phone's browser. No app to install, no TV, no acco
 - [Getting everyone connected](#getting-everyone-connected)
 - [How to play](#how-to-play)
 - [Host controls](#host-controls)
+- [TV and scoreboard display](#tv-and-scoreboard-display)
+- [Layouts, tablets and big screens](#layouts-tablets-and-big-screens)
 - [Decks](#decks)
 - [Configuration](#configuration)
 - [How it works](#how-it-works)
@@ -214,6 +218,61 @@ If the host leaves, host passes to the next player.
 
 ---
 
+## TV and scoreboard display
+
+<table>
+  <tr>
+    <td width="50%"><img src="docs/screenshots/display-lobby.png" alt="TV display in the lobby: a large join QR code, the room code and the players who have joined"></td>
+    <td width="50%"><img src="docs/screenshots/display-reveal.png" alt="TV display after a round: scores, the winning answer and everyone else's answers with names"></td>
+  </tr>
+  <tr>
+    <td align="center"><b>Before the game.</b> A big QR code so the whole room can scan in.</td>
+    <td align="center"><b>After each pick.</b> Scores, the winner and everyone's answers.</td>
+  </tr>
+</table>
+
+Any TV, laptop or tablet can follow a game as a **display**. It doesn't take a seat, so it doesn't count toward the
+3-player minimum or the 12-player cap. A room allows up to 10 displays.
+
+**To put a game on a TV:**
+
+- On the TV's device (a laptop plugged into the TV, a smart-TV browser, a tablet, or a phone you cast), open
+  `http://<server>/display` and type the room code.
+- Or, from any player's phone, open **☰ → Show on a TV**. It shows the display link and a QR code for it, plus an
+  **Open the display here** button. The menu also tells the host how many displays are connected.
+
+**What it shows:**
+
+| When | On the display |
+|---|---|
+| Lobby | A large join QR code, the room code and address, who has joined, and the chosen decks |
+| Answers being played | The prompt, who's judging, and how many answers are in (e.g. "3 of 5"), with no answer text. The previous round's full reveal stays on screen. |
+| Judge choosing | The prompt and "Judge is choosing a winner…". Still no answers. |
+| Winner picked | The winning answer filled into the prompt, every other answer with who played it, and the updated scores |
+| Game over | The winner, final standings and every round's winner |
+
+A live scoreboard (ranked, with a progress bar toward the target score and who has played) and a list of round winners
+stay visible throughout. Nothing about a round is shown until the judge has picked, so the display never gives
+away who played what.
+
+The display reconnects on its own if Wi-Fi drops and keeps the screen awake. Its ☰ menu has the layout switch,
+**Full screen** (for laptops), and **Show a different game**.
+
+## Layouts, tablets and big screens
+
+Every screen, for players and displays alike, uses one of two layouts:
+
+| Layout | Used for | Players see | The display shows |
+|---|---|---|---|
+| **Phone** | Phones, and tablets held upright | The usual phone screens. Tablets get a wider column with bigger cards and text. | One column; two when a phone is held sideways. Good for casting a phone's screen to a TV. |
+| **Big screen** | Laptops, TVs, and tablets held sideways (iPad, Fire HD) | Your hand in a column beside the prompt, a two-column lobby, and answers in a grid | Scores, the current round and round winners side by side, sized for 1080p with no scrolling |
+
+The layout is picked automatically: any screen at least 900×560 in landscape gets **Big screen**. Phones turned
+sideways stay on **Phone**, because they're too short for side-by-side columns. To override it, open
+**☰ → Layout** and choose **Auto**, **Phone** or **Big screen**. The choice is saved on that device.
+
+---
+
 ## Decks
 
 Nineteen decks ship in `data/decks/`. **Family Edition is listed first and is the default**, so every new
@@ -321,6 +380,7 @@ All settings are environment variables.
 | `DISCONNECT_GRACE_MS` | `120000` | How long a dropped phone keeps its seat (ms) |
 | `ROOM_IDLE_MS` | `7200000` | Rooms with nobody connected are deleted after this long (ms) |
 | `MAX_ROOMS` | `200` | Maximum concurrent rooms |
+| `MAX_DISPLAYS` | `10` | Maximum TV/scoreboard displays per room |
 
 The image runs as a non-root user and has a health check on `GET /healthz`.
 
@@ -357,6 +417,7 @@ docker build --build-arg NODE_IMAGE=mirror.gcr.io/library/node:22-alpine -t hot-
 
   Every illegal move (playing as the judge, playing a card you don't hold, picking twice) is rejected on the server, whatever the phone sends.
 - **Each phone gets only its own view of the game.** Other players' hands, reconnect tokens, and who played which answer never leave the server until the reveal.
+- **Displays get a separate public view** (`displayView()` in `server/game.js`) on their own Socket.IO channel: scores, the current prompt, how many answers are in, and finished rounds. A round's answers, and who played them, only appear once the judge has picked; tests check that no answer text reaches a display before then.
 - **`server/index.js`** handles Express and Socket.IO:
   - 4-letter room codes made only of consonants, so they can't spell words, and without look-alike characters,
   - reconnect tokens kept in the phone's local storage,
@@ -376,7 +437,10 @@ hot-take/
 │   └── game.js             # rules engine
 ├── public/
 │   ├── index.html          # app shell
-│   ├── app.js              # client: rendering and input
+│   ├── app.js              # player client: rendering and input
+│   ├── display.html/.js    # TV/scoreboard display
+│   ├── display.css         # display styles (phone and 1080p layouts)
+│   ├── common.js           # helpers shared by both, including the layout switch
 │   ├── style.css           # theme (colors are CSS variables at the top)
 │   ├── rules.js            # rules text, shared by the pop-over and /rules
 │   ├── rules.html          # standalone rules page
@@ -401,7 +465,7 @@ hot-take/
 ```bash
 npm install
 npm run dev    # restarts the server when files change
-npm test       # 30 tests: rules engine, decks, sockets, invite endpoints
+npm test       # 34 tests: rules engine, decks, sockets, invite endpoints
 ```
 
 The tests cover:

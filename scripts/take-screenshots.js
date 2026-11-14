@@ -26,6 +26,7 @@ const { createServer } = require('../server/index');
 
 const OUT_DIR = path.join(__dirname, '..', 'docs', 'screenshots');
 const PHONE = { ...devices['iPhone 13'], deviceScaleFactor: 2 };
+const TV = { viewport: { width: 1920, height: 1080 }, deviceScaleFactor: 1 }; // the 1080p display layout
 const MAX_GAMES = 120;
 const PLAYERS = ['Ana', 'Ben', 'Cy', 'Dee'];
 
@@ -93,7 +94,12 @@ async function playGame(browser, url, dir) {
   await shot(host, 'rules');
   await host.click('.sheet [data-act=close]');
 
-  await fillRoom(url, pages);
+  const code = await fillRoom(url, pages);
+  // A TV/scoreboard display following the game at 1080p.
+  const tv = await (await browser.newContext(TV)).newPage();
+  tv.on('pageerror', (e) => errors.push(`TV: ${e.message}`));
+  await tv.goto(`${url}/display?room=${code}`);
+  await tv.waitForSelector('.d-lobby');
   // A short game (first to 3) so the game-over screen comes quickly.
   for (let i = 0; i < 4; i++) {
     await host.click('[data-act=setting][data-key=pointsToWin][data-delta="-1"]');
@@ -102,6 +108,7 @@ async function playGame(browser, url, dir) {
   await host.waitForSelector('.setting output:text("3")');
   await host.$eval('.stage', (s) => { s.scrollTop = 0; });
   await shot(host, 'lobby');
+  await shot(tv, 'display-lobby');
   await host.click('[data-act=start]');
 
   for (let round = 1; round <= 15; round++) {
@@ -151,6 +158,8 @@ async function playGame(browser, url, dir) {
     await Promise.all(pages.map((p) => p.waitForSelector('.answer-card.winner')));
     if (showcase) {
       await shot(players[2], 'reveal');
+      await tv.waitForSelector('.d-current .answer-card.winner');
+      await shot(tv, 'display-reveal');
       await players[2].click('[data-act=menu]');
       await players[2].waitForSelector('.sheet');
       await shot(players[2], 'menu');

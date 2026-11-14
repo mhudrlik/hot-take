@@ -4,6 +4,7 @@ const { randomUUID } = require('crypto');
 
 const MIN_PLAYERS = 3;
 const MAX_PLAYERS = 12;
+const DISPLAY_HISTORY = 50; // finished rounds sent to TV/scoreboard displays
 const MAX_NAME_LENGTH = 16;
 const SETTING_LIMITS = {
   handSize: { min: 5, max: 12, default: 7 },
@@ -111,6 +112,7 @@ class Room {
     this.prompt = null;
     this.submissions = [];
     this.lastResult = null;
+    this.history = []; // finished rounds this game, oldest first
     this.winnerId = null;
     this.notice = null;
     this.touch();
@@ -298,6 +300,7 @@ class Room {
     this.judgeId = null;
     this.prompt = null;
     this.lastResult = null;
+    this.history = [];
     this.winnerId = null;
     this.notice = null;
     this.startRound();
@@ -310,6 +313,7 @@ class Room {
     this.prompt = null;
     this.submissions = [];
     this.lastResult = null;
+    this.history = [];
     for (const p of this.players) p.hand = [];
     this.notice = notice;
   }
@@ -411,6 +415,8 @@ class Room {
     const winner = this.player(sub.playerId);
     winner.score += 1;
     this.lastResult = {
+      round: this.round,
+      judgeName: this.player(judgeId)?.name ?? '?',
       prompt: this.prompt,
       winnerId: winner.id,
       winnerName: winner.name,
@@ -422,6 +428,7 @@ class Room {
         playerName: this.player(s.playerId)?.name ?? '(left)',
       })),
     };
+    this.history.push(this.lastResult);
     for (const s of this.submissions) this.answers.discard(...s.cards);
 
     if (winner.score >= this.settings.pointsToWin) {
@@ -507,6 +514,40 @@ class Room {
       // Anonymous during judging; owners are only revealed in lastResult.
       submissions: showAnswers ? this.submissions.map((s) => ({ id: s.id, cards: s.cards })) : null,
       lastResult: this.phase === 'reveal' || this.phase === 'gameOver' ? this.lastResult : null,
+      winnerId: this.winnerId,
+      notice: this.notice,
+    };
+  }
+
+  /**
+   * What a TV/scoreboard display may see: public information only. The current prompt and who has played
+   * are public (the judge reads the prompt aloud), but answer text, and who played what, only appear once
+   * a round has been judged and moved into history.
+   */
+  displayView() {
+    const submitted = new Set(this.submissions.map((s) => s.playerId));
+    return {
+      code: this.code,
+      phase: this.phase,
+      round: this.round,
+      pointsToWin: this.settings.pointsToWin,
+      deckNames: this.decks.filter((d) => this.settings.deckIds.includes(d.id)).map((d) => d.name),
+      minPlayers: MIN_PLAYERS,
+      maxPlayers: MAX_PLAYERS,
+      hostId: this.hostId,
+      judgeId: this.judgeId,
+      players: this.players.map((p) => ({
+        id: p.id,
+        name: p.name,
+        score: p.score,
+        connected: p.connected,
+        submitted: submitted.has(p.id),
+      })),
+      prompt: this.phase === 'submitting' || this.phase === 'judging' || this.phase === 'reveal' || this.phase === 'gameOver'
+        ? this.prompt : null,
+      submittedCount: this.submissions.length,
+      needed: this.players.filter((p) => p.connected && p.id !== this.judgeId).length,
+      history: this.history.slice(-DISPLAY_HISTORY),
       winnerId: this.winnerId,
       notice: this.notice,
     };

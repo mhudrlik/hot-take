@@ -18,6 +18,8 @@ const DISCONNECT_GRACE_MS = Number(process.env.DISCONNECT_GRACE_MS) || 120_000;
 // Rooms with no activity for this long are deleted.
 const ROOM_IDLE_MS = Number(process.env.ROOM_IDLE_MS) || 2 * 60 * 60_000;
 const MAX_ROOMS = Number(process.env.MAX_ROOMS) || 200;
+// TV/scoreboard displays per room. They see only public information, but there's no reason for dozens.
+const MAX_DISPLAYS = Number(process.env.MAX_DISPLAYS) || 10;
 // No vowels, so codes can't spell words; no I/O/0/1 lookalikes.
 const CODE_ALPHABET = 'BCDFGHJKLMNPQRSTVWXZ';
 
@@ -79,7 +81,7 @@ function createServer({ decks = loadDecks(DECKS_DIR), graceMs = DISCONNECT_GRACE
     try {
       const code = roomParam(req);
       const { base, reachable } = inviteBase(req);
-      res.json({ url: `${base}/?room=${code}`, reachable });
+      res.json({ url: `${base}/?room=${code}`, displayUrl: `${base}/display?room=${code}`, reachable });
     } catch (err) {
       res.status(400).json({ error: err.message });
     }
@@ -87,7 +89,9 @@ function createServer({ decks = loadDecks(DECKS_DIR), graceMs = DISCONNECT_GRACE
 
   app.get('/qr.svg', async (req, res) => {
     try {
-      const url = `${inviteBase(req).base}/?room=${roomParam(req)}`;
+      // target=display encodes the TV/scoreboard page instead of the player join page.
+      const page = req.query.target === 'display' ? '/display' : '/';
+      const url = `${inviteBase(req).base}${page}?room=${roomParam(req)}`;
       const svg = await QRCode.toString(url, { type: 'svg', margin: 2, errorCorrectionLevel: 'M' });
       res.type('image/svg+xml').set('Cache-Control', 'no-store').send(svg);
     } catch (err) {
@@ -106,11 +110,23 @@ function createServer({ decks = loadDecks(DECKS_DIR), graceMs = DISCONNECT_GRACE
     throw new GameError('Could not allocate a room code. Try again.');
   }
 
+  // Displays (TV/scoreboard screens) join a Socket.IO room per game code and never hold a player seat.
+  const viewKey = (code) => `view:${code}`;
+  const displayCount = (code) => io.sockets.adapter.rooms.get(viewKey(code))?.size ?? 0;
+
   function broadcast(room) {
+    const displays = displayCount(room.code);
     for (const p of room.players) {
       const s = sockets.get(p.id);
-      if (s) s.emit('state', room.viewFor(p.id));
+      if (s) s.emit('state', { ...room.viewFor(p.id), displays });
     }
+    if (displays) io.to(viewKey(room.code)).emit('display', room.displayView());
+  }
+
+  function endRoom(code) {
+    rooms.delete(code);
+    io.to(viewKey(code)).emit('room-ended');
+    io.in(viewKey(code)).socketsLeave(viewKey(code));
   }
 
   function bind(socket, room, player) {
@@ -152,7 +168,7 @@ function createServer({ decks = loadDecks(DECKS_DIR), graceMs = DISCONNECT_GRACE
   }
 
   function cleanupRoom(room) {
-    if (room.players.length === 0) rooms.delete(room.code);
+    if (room.players.length === 0) endRoom(room.code);
     else broadcast(room);
   }
 
@@ -203,6 +219,31 @@ function createServer({ decks = loadDecks(DECKS_DIR), graceMs = DISCONNECT_GRACE
       unbind(socket, { remove: true });
     }));
 
+    // A TV/scoreboard display: follows a room without joining it as a player.
+    socket.on('watch', handler(({ code }) => {
+      const room = rooms.get(String(code ?? '').trim().toUpperCase());
+      if (!room) throw new GameError('No game with that code.');
+      unbind(socket, { remove: true });
+      const previous = socket.data.viewing;
+      if (previous !== room.code) {
+        if (displayCount(room.code) >= MAX_DISPLAYS) throw new GameError('This game already has the maximum number of displays.');
+        if (previous) socket.leave(viewKey(previous));
+        socket.join(viewKey(room.code));
+        socket.data.viewing = room.code;
+        if (previous && rooms.has(previous)) broadcast(rooms.get(previous));
+      }
+      broadcast(room); // sends this display its first state and updates the host's display count
+      return { code: room.code };
+    }));
+
+    socket.on('unwatch', handler(() => {
+      const code = socket.data.viewing;
+      if (!code) return;
+      socket.leave(viewKey(code));
+      socket.data.viewing = null;
+      if (rooms.has(code)) broadcast(rooms.get(code));
+    }));
+
     const actions = {
       settings: (room, id, p) => room.updateSettings(id, p.settings || {}),
       start: (room, id) => room.start(id),
@@ -231,13 +272,18 @@ function createServer({ decks = loadDecks(DECKS_DIR), graceMs = DISCONNECT_GRACE
       cleanupRoom(room);
     }));
 
-    socket.on('disconnect', () => unbind(socket, { remove: false }));
+    socket.on('disconnect', () => {
+      unbind(socket, { remove: false });
+      // Socket.IO has already removed this socket from its rooms, so the count is current.
+      const code = socket.data.viewing;
+      if (code && rooms.has(code)) broadcast(rooms.get(code));
+    });
   });
 
   const sweeper = setInterval(() => {
     const cutoff = Date.now() - ROOM_IDLE_MS;
     for (const [code, room] of rooms) {
-      if (room.updatedAt < cutoff && room.connectedCount === 0) rooms.delete(code);
+      if (room.updatedAt < cutoff && room.connectedCount === 0) endRoom(code);
     }
   }, 60_000);
   sweeper.unref();
